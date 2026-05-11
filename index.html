@@ -34,9 +34,9 @@
 <!-- ========== ①  HERO / BANNER ========== -->
 <header class="hero" id="hero">
     <div class="hero-content">
-        <p class="hero-tagline">Since 1998 · OEM Leather Specialist</p>
-        <h1>Guangzhou HASSION Leather Co., Ltd</h1>
-        <h2><span id="yearsCount"></span> Years of Leather Craftsmanship — OEM Partner for Global Brands</h2>
+        <p class="hero-tagline">Since 1998 · OEM &amp; ODM Leather Specialist</p>
+        <h1>Guangzhou Hassion Leather Ltd</h1>
+        <h2>1998-<span id="yearEnd"></span> · OEM &amp; ODM Partner for Global Brands</h2>
         <div class="hero-buttons">
             <a href="#contact" class="btn btn-primary">Get OEM Quote</a>
             <a href="#products" class="btn btn-outline">Explore Products</a>
@@ -341,10 +341,11 @@
     <!-- Dynamic year calculation (founded 1998) -->
     <script>
         var sinceYear = new Date().getFullYear() - 1998;
-        document.getElementById('yearsCount').textContent = sinceYear;
+        var currentYear = new Date().getFullYear();
+        document.getElementById('yearEnd').textContent = currentYear;
         document.getElementById('yearsCount2').textContent = sinceYear + '+';
         document.getElementById('yearsCount3').textContent = sinceYear;
-        document.getElementById('year').textContent = new Date().getFullYear();
+        document.getElementById('year').textContent = currentYear;
     </script>
 
 </body>
