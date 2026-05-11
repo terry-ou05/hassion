@@ -36,7 +36,7 @@
     <div class="hero-content">
         <p class="hero-tagline">Since 1998 · OEM &amp; ODM Leather Specialist</p>
         <h1>Guangzhou Hassion Leather Ltd</h1>
-        <h2>1998-<span id="yearEnd"></span> · OEM &amp; ODM Partner for Global Brands</h2>
+        <h2>1998-<span id="yearEnd"></span> · <span id="yearsCount"></span> Years of Leather Craftsmanship</h2>
         <div class="hero-buttons">
             <a href="#contact" class="btn btn-primary">Get OEM Quote</a>
             <a href="#products" class="btn btn-outline">Explore Products</a>
@@ -343,6 +343,7 @@
         var sinceYear = new Date().getFullYear() - 1998;
         var currentYear = new Date().getFullYear();
         document.getElementById('yearEnd').textContent = currentYear;
+        document.getElementById('yearsCount').textContent = sinceYear;
         document.getElementById('yearsCount2').textContent = sinceYear + '+';
         document.getElementById('yearsCount3').textContent = sinceYear;
         document.getElementById('year').textContent = currentYear;
