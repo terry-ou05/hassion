@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>HASSION Leather — OEM Leather Goods Manufacturer | Since 1998</title>
-    <meta name="description" content="Guangzhou HASSION Leather Co., Ltd. is a professional leather goods factory with 25+ years of OEM experience. We produce men's wallets, women's wallets, passport holders, card holders and more. Contact us for custom orders.">
+    <meta name="description" content="Guangzhou HASSION Leather Co., Ltd. — Since 1998. Professional leather goods factory specializing in OEM production of men's wallets, women's wallets, passport holders, card holders and more. Contact us for custom orders.">
     <meta name="keywords" content="leather wallet manufacturer, wallet OEM, leather goods factory, men's wallet wholesale, women's wallet supplier, passport holder manufacturer, Guangzhou leather factory">
     <link rel="stylesheet" href="style.css">
 </head>
@@ -32,19 +32,20 @@
 </nav>
 
 <!-- ========== ①  HERO / BANNER ========== -->
-<section class="hero" id="hero">
+<header class="hero" id="hero">
     <div class="hero-content">
         <p class="hero-tagline">Since 1998 · OEM Leather Specialist</p>
         <h1>Guangzhou HASSION Leather Co., Ltd</h1>
-        <h2>25 Years of Leather Craftsmanship — OEM Partner for Global Brands</h2>
+        <h2><span id="yearsCount"></span> Years of Leather Craftsmanship — OEM Partner for Global Brands</h2>
         <div class="hero-buttons">
             <a href="#contact" class="btn btn-primary">Get OEM Quote</a>
             <a href="#products" class="btn btn-outline">Explore Products</a>
         </div>
     </div>
-</section>
+</header>
 
 <!-- ========== ②  ABOUT ========== -->
+<main>
 <section class="section" id="about">
     <div class="container">
         <h2 class="section-title">About HASSION Leather</h2>
@@ -56,7 +57,7 @@
                 <p>Our products are exported to customers in <strong>Russia, Poland, Japan, Korea, USA, Germany, Italy, France, UK, Dubai, Saudi Arabia</strong>, and more. We are committed to quality craftsmanship, on-time delivery, and competitive pricing.</p>
                 <div class="about-stats">
                     <div class="stat-card">
-                        <span class="stat-number">25+</span>
+                        <span class="stat-number" id="yearsCount2"></span>
                         <span class="stat-label">Years</span>
                     </div>
                     <div class="stat-card">
@@ -251,6 +252,7 @@
                     <input type="hidden" name="_captcha" value="false">
                     <input type="hidden" name="_template" value="table">
                     <input type="hidden" name="_next" value="https://www.hassion.com/thanks.html">
+                    <input type="text" name="_honey" style="display:none">
                     <div class="form-row">
                         <div class="form-group">
                             <label for="name">Name *</label>
@@ -281,6 +283,7 @@
         </div>
     </div>
 </section>
+</main>
 
 <!-- ========== FOOTER ========== -->
 <footer class="footer">
@@ -288,7 +291,7 @@
         <div class="footer-grid">
             <div>
                 <h4>HASSION LEATHER CO., LTD</h4>
-                <p>25 Years of Quality Leather Manufacturing.<br>Your trusted OEM partner in China.</p>
+                <p><span id="yearsCount3"></span> Years of Quality Leather Manufacturing.<br>Your trusted OEM partner in China.</p>
             </div>
             <div>
                 <h4>Quick Links</h4>
@@ -305,7 +308,7 @@
             </div>
         </div>
         <div class="footer-bottom">
-            &copy; 2025 HASSION LEATHER CO., LTD. All rights reserved.
+            &copy; <span id="year"></span> HASSION LEATHER CO., LTD. All rights reserved.
         </div>
     </div>
 </footer>
@@ -334,6 +337,15 @@
         }
     });
 </script>
+
+    <!-- Dynamic year calculation (founded 1998) -->
+    <script>
+        var sinceYear = new Date().getFullYear() - 1998;
+        document.getElementById('yearsCount').textContent = sinceYear;
+        document.getElementById('yearsCount2').textContent = sinceYear + '+';
+        document.getElementById('yearsCount3').textContent = sinceYear;
+        document.getElementById('year').textContent = new Date().getFullYear();
+    </script>
 
 </body>
 </html>
