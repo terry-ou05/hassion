@@ -6,26 +6,223 @@
     <title>HASSION Leather — OEM Leather Goods Manufacturer | Since 1998</title>
     <meta name="description" content="Guangzhou HASSION Leather Co., Ltd. — Since 1998. Professional leather goods factory specializing in OEM production of men's wallets, women's wallets, passport holders, card holders and more. Contact us for custom orders.">
     <meta name="keywords" content="leather wallet manufacturer, wallet OEM, leather goods factory, men's wallet wholesale, women's wallet supplier, passport holder manufacturer, Guangzhou leather factory">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/gif" href="images/logo.gif">
+
+    <!-- Preload LCP hero image -->
+    <link rel="preload" as="image" href="images/banner.webp" type="image/webp">
+
+    <!-- JSON-LD Organization schema (TODO: 部署域名定下来后改 url 和 logo) -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "name": "Guangzhou Hassion Leather Co., Ltd.",
+      "alternateName": "HASSION Leather",
+      "url": "https://www.hassion.com/",
+      "logo": "https://www.hassion.com/images/logo.gif",
+      "foundingDate": "1998",
+      "email": "percy@hassion.com",
+      "telephone": "+86-20-37208008",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "No.46 Changban Industrial Street, Bldg B, 2F, Baiyun District",
+        "addressLocality": "Guangzhou",
+        "addressRegion": "Guangdong",
+        "addressCountry": "CN"
+      }
+    }
+    </script>
+
+    <!-- Open Graph / Twitter Card -->
+    <!-- TODO: 部署域名定下来后，把下方占位 URL 全部替换为实际域名 -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="HASSION Leather — OEM Leather Goods Manufacturer | Since 1998">
+    <meta property="og:description" content="Guangzhou HASSION Leather Co., Ltd. — Professional leather goods factory specializing in OEM wallets, passport holders, card holders. Since 1998.">
+    <meta property="og:image" content="https://www.hassion.com/images/banner.webp">
+    <meta property="og:url" content="https://www.hassion.com/">
+    <meta property="og:site_name" content="HASSION Leather">
+    <meta property="og:locale" content="en_US">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="HASSION Leather — OEM Leather Goods Manufacturer | Since 1998">
+    <meta name="twitter:description" content="Guangzhou HASSION Leather Co., Ltd. — Professional leather goods factory. Since 1998.">
+    <meta name="twitter:image" content="https://www.hassion.com/images/banner.webp">
+
+    <!-- TODO: 部署域名定下来后，补 canonical / hreflang（防止重复内容 SEO 扣分）
+    <link rel="canonical" href="https://实际英文URL/">
+    <link rel="alternate" hreflang="en" href="https://实际英文URL/">
+    <link rel="alternate" hreflang="zh" href="https://实际中文URL/">
+    <link rel="alternate" hreflang="x-default" href="https://实际英文URL/">
+    -->
+
     <link rel="stylesheet" href="style.css">
+
+    <!-- Local style — additive only, no modification of style.css existing rules -->
+    <style>
+        /* === Exhibitions (independent structure, does not reuse .cert-card) === */
+        .exhibition-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 30px;
+        }
+        .exhibition-card {
+            background: #fff;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 2px 12px rgba(0,0,0,0.06);
+        }
+        .exhibition-card img {
+            width: 100%;
+            height: clamp(240px, 32vw, 380px);
+            object-fit: cover;
+            display: block;
+        }
+        .exhibition-card .exhibition-label {
+            display: block;
+            padding: 14px 16px;
+            font-size: 0.85rem;
+            color: #555;
+            text-align: center;
+        }
+        @media (max-width: 768px) {
+            .exhibition-grid { grid-template-columns: 1fr; gap: 16px; }
+        }
+
+        /* === Product card: override object-fit to contain (better for full product view) === */
+        .product-card img {
+            height: 320px;
+            object-fit: contain;
+            background: #FDFBF7;
+        }
+        @media (max-width: 768px) { .product-card img { height: 240px; } }
+        @media (max-width: 480px) { .product-card img { height: 180px; } }
+
+        /* === Why Choose HASSION === */
+        .why-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 24px;
+        }
+        .why-card {
+            background: #fff;
+            border-radius: 8px;
+            padding: 28px 20px;
+            text-align: center;
+            border: 1px solid #eee;
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+        .why-card:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 6px 20px rgba(0,0,0,0.08);
+        }
+        .why-card .why-icon {
+            font-size: 2rem;
+            color: #C8945A;
+            margin-bottom: 12px;
+            display: block;
+        }
+        .why-card h3 {
+            font-size: 1rem;
+            color: #5C2D1A;
+            margin-bottom: 8px;
+        }
+        .why-card p {
+            font-size: 0.85rem;
+            color: #666;
+            line-height: 1.5;
+        }
+        @media (max-width: 768px) {
+            .why-grid { grid-template-columns: repeat(2, 1fr); gap: 16px; }
+        }
+        @media (max-width: 480px) {
+            .why-grid { grid-template-columns: 1fr; }
+        }
+
+        /* === Form select (match input visual since style.css selector only covers input/textarea) === */
+        .form-group select {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #ddd;
+            border-radius: 6px;
+            font-size: 0.95rem;
+            font-family: inherit;
+            background: #fff;
+            transition: border 0.2s;
+        }
+        .form-group select:focus {
+            outline: none;
+            border-color: #C8945A;
+        }
+
+        /* === OEM step h4 → h3 (preserve visual since .step-content h4 rule won't match h3) === */
+        .step-content h3 {
+            font-size: 1rem;
+            color: #333;
+            margin-bottom: 4px;
+        }
+
+        /* === Production Capability (same shape as why-grid) === */
+        .production-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 24px;
+        }
+        .production-card {
+            background: #FDFBF7;
+            border-radius: 8px;
+            padding: 24px;
+            border: 1px solid #eee;
+            text-align: center;
+        }
+        .production-card h3 {
+            font-size: 1rem;
+            color: #5C2D1A;
+            margin-bottom: 8px;
+        }
+        .production-card p {
+            font-size: 0.85rem;
+            color: #666;
+        }
+        .production-placeholder {
+            display: block;
+            font-size: 0.8rem;
+            color: #999;
+            font-style: italic;
+            margin-top: 10px;
+        }
+        @media (max-width: 768px) {
+            .production-grid { grid-template-columns: repeat(2, 1fr); }
+        }
+        @media (max-width: 480px) {
+            .production-grid { grid-template-columns: 1fr; }
+        }
+    </style>
 </head>
 <body>
+
+<!-- Skip to main content (accessibility) -->
+<a href="#main-content" class="skip-link" style="position:absolute;left:-9999px;top:0;background:#5C2D1A;color:#fff;padding:8px 16px;z-index:9999;text-decoration:none;font-weight:600;" onfocus="this.style.left='0'" onblur="this.style.left='-9999px'">Skip to main content</a>
 
 <!-- ========== NAVIGATION ========== -->
 <nav class="navbar">
     <div class="nav-inner">
         <a href="#hero" class="nav-logo">
-            <img src="images/logo.gif" alt="HASSION Leather">
+            <img src="images/logo.gif" alt="HASSION Leather" width="172" height="86">
         </a>
         <ul class="nav-links" id="navLinks">
             <li><a href="#hero" onclick="closeMenu()">Home</a></li>
             <li><a href="#about" onclick="closeMenu()">About</a></li>
+            <li><a href="#why-us" onclick="closeMenu()">Why Us</a></li>
+            <li><a href="#production" onclick="closeMenu()">Production</a></li>
             <li><a href="#products" onclick="closeMenu()">Products</a></li>
             <li><a href="#oem" onclick="closeMenu()">OEM</a></li>
-            <li><a href="#certifications" onclick="closeMenu()">Certifications</a></li>
+            <li><a href="#certifications" onclick="closeMenu()">Quality</a></li>
+            <li><a href="#clients" onclick="closeMenu()">Clients</a></li>
+            <li><a href="#exhibitions" onclick="closeMenu()">Exhibitions</a></li>
             <li><a href="#contact" onclick="closeMenu()">Contact</a></li>
-            <li><a href="https://www.hassion.com/" class="nav-chinese" onclick="closeMenu()">中文版</a></li>
         </ul>
-        <button class="hamburger" onclick="toggleMenu()" aria-label="Menu">
+        <button class="hamburger" onclick="toggleMenu()" aria-label="Menu" aria-expanded="false" aria-controls="navLinks">
             <span></span><span></span><span></span>
         </button>
     </div>
@@ -35,7 +232,7 @@
 <header class="hero" id="hero">
     <div class="hero-content">
         <p class="hero-tagline">Since 1998 · OEM &amp; ODM Leather Specialist</p>
-        <h1>Guangzhou Hassion Leather Ltd.</h1>
+        <h1>Leather Goods OEM Manufacturer · Guangzhou Hassion Leather Co., Ltd.</h1>
         <h2>1998-<span id="yearEnd"></span> · <span id="yearsCount"></span> Years of Leather Craftsmanship</h2>
         <div class="hero-buttons">
             <a href="#contact" class="btn btn-primary">Get OEM Quote</a>
@@ -45,8 +242,8 @@
 </header>
 
 <!-- ========== ②  ABOUT ========== -->
-<main>
-<section class="section" id="about">
+<main id="main-content">
+<section class="section" id="about" style="scroll-margin-top:64px;">
     <div class="container">
         <h2 class="section-title">About HASSION Leather</h2>
         <p class="section-subtitle">Your Trusted Leather Manufacturing Partner</p>
@@ -71,58 +268,138 @@
                 </div>
             </div>
             <div class="about-image">
-                <img src="images/factory.jpg" alt="HASSION Leather Factory Workshop">
+                <img src="images/factory.jpg" alt="HASSION Leather Factory Workshop" width="700" height="464" loading="lazy">
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ==========    WHY CHOOSE HASSION ========== -->
+<section class="section" id="why-us" style="background:#fff;scroll-margin-top:64px;">
+    <div class="container">
+        <h2 class="section-title">Why Choose HASSION</h2>
+        <p class="section-subtitle">A factory built for B2B OEM partners — proven, flexible, accountable</p>
+        <div class="why-grid">
+            <div class="why-card">
+                <span class="why-icon">★</span>
+                <h3>Since 1998</h3>
+                <p>25+ years of leather craftsmanship, serving global OEM clients</p>
+            </div>
+            <div class="why-card">
+                <span class="why-icon">⚙</span>
+                <h3>OEM &amp; ODM Support</h3>
+                <p>From your sketch to finished product — full custom service</p>
+            </div>
+            <div class="why-card">
+                <span class="why-icon">⏱</span>
+                <h3>Stable Lead Time</h3>
+                <p>~7 days sample · ~30 days mass production</p>
+            </div>
+            <div class="why-card">
+                <span class="why-icon">🌍</span>
+                <h3>Experienced Export Team</h3>
+                <p>Multi-language support · Exports to 11+ countries</p>
+            </div>
+            <div class="why-card">
+                <span class="why-icon">✓</span>
+                <h3>Strict Quality Control</h3>
+                <p>100% inspection before packing · Certified test reports</p>
+            </div>
+            <div class="why-card">
+                <span class="why-icon">$</span>
+                <h3>Factory Direct Pricing</h3>
+                <p>No middleman — quote straight from the production source</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ==========    PRODUCTION CAPABILITY (placeholder, will fill with photos later) ========== -->
+<section class="section" id="production" style="background:#FDFBF7;scroll-margin-top:64px;">
+    <div class="container">
+        <h2 class="section-title">Production Capability</h2>
+        <p class="section-subtitle">Built to deliver consistent quality at scale</p>
+        <div class="production-grid">
+            <div class="production-card">
+                <h3>Production Lines</h3>
+                <p>Multiple specialized lines for wallets, holders, and small leather accessories</p>
+                <span class="production-placeholder">Workshop photo coming</span>
+            </div>
+            <div class="production-card">
+                <h3>Skilled Workers</h3>
+                <p>400+ trained craftspeople · Average 8+ years experience</p>
+                <span class="production-placeholder">Team photo coming</span>
+            </div>
+            <div class="production-card">
+                <h3>QC Process</h3>
+                <p>3-stage inspection: raw material · mid-production · final packing</p>
+                <span class="production-placeholder">QC station photo coming</span>
+            </div>
+            <div class="production-card">
+                <h3>Monthly Capacity</h3>
+                <p>Stable output across all product categories — scalable on demand</p>
+                <span class="production-placeholder">Volume data coming</span>
+            </div>
+            <div class="production-card">
+                <h3>OEM Workflow</h3>
+                <p>Inquiry → Sample → Confirmation → Production → QC → Ship</p>
+                <span class="production-placeholder">Process diagram coming</span>
+            </div>
+            <div class="production-card">
+                <h3>Material Sourcing</h3>
+                <p>Direct partnerships with trusted leather mills and hardware suppliers</p>
+                <span class="production-placeholder">Warehouse photo coming</span>
             </div>
         </div>
     </div>
 </section>
 
 <!-- ========== ③  PRODUCTS ========== -->
-<section class="section" id="products">
+<section class="section" id="products" style="scroll-margin-top:64px;">
     <div class="container">
         <h2 class="section-title">Our Products</h2>
         <p class="section-subtitle">Premium Leather Goods for Every Need</p>
         <div class="products-grid">
             <div class="product-card">
-                <img src="images/product_mens_wallet.jpg" alt="Men's Leather Wallet">
+                <img src="images/product_mens_wallet.webp" alt="Men's Leather Wallet" width="993" height="1075" loading="lazy">
                 <div class="card-body">
-                    <span class="card-name">Men's Wallet</span>
-                    <a href="#contact" class="card-inquire">Inquire</a>
+                    <h3 class="card-name">Men's Wallet</h3>
+                    <a href="#contact" class="card-inquire" data-product="Men's Wallet" onclick="prefillInquiry(this)">Inquire</a>
                 </div>
             </div>
             <div class="product-card">
-                <img src="images/product_womens_wallet.jpg" alt="Women's Leather Wallet">
+                <img src="images/product_womens_wallet.webp" alt="Women's Leather Wallet" width="1254" height="1254" loading="lazy">
                 <div class="card-body">
-                    <span class="card-name">Women's Wallet</span>
-                    <a href="#contact" class="card-inquire">Inquire</a>
+                    <h3 class="card-name">Women's Wallet</h3>
+                    <a href="#contact" class="card-inquire" data-product="Women's Wallet" onclick="prefillInquiry(this)">Inquire</a>
                 </div>
             </div>
             <div class="product-card">
-                <img src="images/product_passport_holder.jpg" alt="Leather Passport Holder">
+                <img src="images/product_passport_holder.webp" alt="Leather Passport Holder" width="750" height="1288" loading="lazy">
                 <div class="card-body">
-                    <span class="card-name">Passport Holder</span>
-                    <a href="#contact" class="card-inquire">Inquire</a>
+                    <h3 class="card-name">Passport Holder</h3>
+                    <a href="#contact" class="card-inquire" data-product="Passport Holder" onclick="prefillInquiry(this)">Inquire</a>
                 </div>
             </div>
             <div class="product-card">
-                <img src="images/product_card_holder.jpg" alt="Leather Card Holder">
+                <img src="images/product_card_holder.webp" alt="Leather Card Holder" width="1254" height="1254" loading="lazy">
                 <div class="card-body">
-                    <span class="card-name">Card Holder</span>
-                    <a href="#contact" class="card-inquire">Inquire</a>
+                    <h3 class="card-name">Card Holder</h3>
+                    <a href="#contact" class="card-inquire" data-product="Card Holder" onclick="prefillInquiry(this)">Inquire</a>
                 </div>
             </div>
             <div class="product-card">
-                <img src="images/product_key_holder.jpg" alt="Leather Key Holder">
+                <img src="images/product_key_holder.webp" alt="Leather Key Holder" width="1254" height="1254" loading="lazy">
                 <div class="card-body">
-                    <span class="card-name">Key Holder</span>
-                    <a href="#contact" class="card-inquire">Inquire</a>
+                    <h3 class="card-name">Key Holder</h3>
+                    <a href="#contact" class="card-inquire" data-product="Key Holder" onclick="prefillInquiry(this)">Inquire</a>
                 </div>
             </div>
             <div class="product-card">
-                <img src="images/product_coin_case.jpg" alt="Leather Coin Case">
+                <img src="images/product_coin_case.webp" alt="Leather Coin Case" width="1254" height="1254" loading="lazy">
                 <div class="card-body">
-                    <span class="card-name">Coin Case</span>
-                    <a href="#contact" class="card-inquire">Inquire</a>
+                    <h3 class="card-name">Coin Case</h3>
+                    <a href="#contact" class="card-inquire" data-product="Coin Case" onclick="prefillInquiry(this)">Inquire</a>
                 </div>
             </div>
         </div>
@@ -130,7 +407,7 @@
 </section>
 
 <!-- ========== ④  OEM ========== -->
-<section class="section" id="oem">
+<section class="section" id="oem" style="scroll-margin-top:64px;">
     <div class="container">
         <h2 class="section-title">OEM &amp; Custom Manufacturing</h2>
         <p class="section-subtitle">Bring Your Design to Life — We Make It Easy</p>
@@ -139,42 +416,42 @@
                 <div class="oem-step">
                     <div class="step-number">1</div>
                     <div class="step-content">
-                        <h4>Send Inquiry</h4>
+                        <h3>Send Inquiry</h3>
                         <p>Tell us your product idea, quantity, and target price</p>
                     </div>
                 </div>
                 <div class="oem-step">
                     <div class="step-number">2</div>
                     <div class="step-content">
-                        <h4>Sample Making</h4>
+                        <h3>Sample Making</h3>
                         <p>We create samples based on your design or reference</p>
                     </div>
                 </div>
                 <div class="oem-step">
                     <div class="step-number">3</div>
                     <div class="step-content">
-                        <h4>Sample Confirmation</h4>
+                        <h3>Sample Confirmation</h3>
                         <p>You review and approve the sample, or request changes</p>
                     </div>
                 </div>
                 <div class="oem-step">
                     <div class="step-number">4</div>
                     <div class="step-content">
-                        <h4>Mass Production</h4>
+                        <h3>Mass Production</h3>
                         <p>We produce your order with strict quality control</p>
                     </div>
                 </div>
                 <div class="oem-step">
                     <div class="step-number">5</div>
                     <div class="step-content">
-                        <h4>Final Inspection</h4>
+                        <h3>Final Inspection</h3>
                         <p>Every piece is checked before packing</p>
                     </div>
                 </div>
                 <div class="oem-step">
                     <div class="step-number">6</div>
                     <div class="step-content">
-                        <h4>Shipping</h4>
+                        <h3>Shipping</h3>
                         <p>We handle export packaging and ship to your destination</p>
                     </div>
                 </div>
@@ -204,30 +481,74 @@
     </div>
 </section>
 
-<!-- ========== ⑤  CERTIFICATIONS ========== -->
-<section class="section" id="certifications">
+<!-- ========== ⑤  QUALITY & COMPLIANCE ========== -->
+<section class="section" id="certifications" style="scroll-margin-top:64px;">
     <div class="container">
-        <h2 class="section-title">Trusted by Leading Brands</h2>
-        <p class="section-subtitle">Quality certifications and long-term partnerships with major clients worldwide</p>
+        <h2 class="section-title">Quality &amp; Compliance</h2>
+        <p class="section-subtitle">Independent test reports and certified quality standards</p>
         <div class="certs-grid">
             <div class="cert-card">
-                <img src="images/test_report.jpg" alt="Product Quality Test Report">
+                <img src="images/test_report.jpg" alt="Product Quality Test Report" width="600" height="824" loading="lazy">
                 <span class="cert-label">Product Quality Test Report</span>
             </div>
+        </div>
+    </div>
+</section>
+
+<!-- ==========    TRUSTED CLIENTS ========== -->
+<section class="section" id="clients" style="background:#fff;scroll-margin-top:64px;">
+    <div class="container">
+        <h2 class="section-title">Trusted Clients</h2>
+        <p class="section-subtitle">Long-term partnerships with leading brands and corporate buyers</p>
+        <div class="certs-grid">
             <div class="cert-card">
-                <img src="images/client_boc.jpg" alt="Bank of China — Corporate Client">
+                <img src="images/client_boc.jpg" alt="Bank of China — Corporate Client" width="132" height="64" loading="lazy">
                 <span class="cert-label">Bank of China — Corporate Gift Supplier</span>
             </div>
             <div class="cert-card">
-                <img src="images/client_chinamobile.jpg" alt="China Mobile — Corporate Client">
+                <img src="images/client_chinamobile.jpg" alt="China Mobile — Corporate Client" width="132" height="64" loading="lazy">
                 <span class="cert-label">China Mobile — Corporate Gift Supplier</span>
             </div>
         </div>
     </div>
 </section>
 
+<!-- ==========  EXHIBITIONS & BUYER VISITS ========== -->
+<section class="section" id="exhibitions" style="background:#fff;scroll-margin-top:64px;">
+    <div class="container">
+        <h2 class="section-title">Exhibitions &amp; Buyer Visits</h2>
+        <p class="section-subtitle">HASSION at major trade shows · Buyers meeting our team at the factory</p>
+        <div class="exhibition-grid">
+            <div class="exhibition-card">
+                <img src="images/exhibition_1.jpg" alt="HASSION booth at international trade fair — overseas buyer inquiry" width="1280" height="1707" loading="lazy">
+                <span class="exhibition-label">HASSION Booth — Buyer Inquiry</span>
+            </div>
+            <div class="exhibition-card">
+                <img src="images/exhibition_2.jpg" alt="HASSION booth — European buyers selecting wallets at trade fair" width="1280" height="1707" loading="lazy">
+                <span class="exhibition-label">Trade Show — Live Sourcing</span>
+            </div>
+            <div class="exhibition-card">
+                <img src="images/exhibition_3.jpg" alt="HASSION team with European buyers at trade show" width="1280" height="1707" loading="lazy">
+                <span class="exhibition-label">Long-term Partner — Europe</span>
+            </div>
+            <div class="exhibition-card">
+                <img src="images/exhibition_4.jpg" alt="Overseas buyer visiting HASSION factory reception" width="1280" height="1707" loading="lazy">
+                <span class="exhibition-label">Factory Visit — Reception</span>
+            </div>
+            <div class="exhibition-card">
+                <img src="images/exhibition_5.jpg" alt="International buyers visiting HASSION production workshop" width="1280" height="1707" loading="lazy">
+                <span class="exhibition-label">Factory Visit — Production Floor</span>
+            </div>
+            <div class="exhibition-card">
+                <img src="images/exhibition_6.jpg" alt="HASSION team with South Asian buyers at trade fair" width="1280" height="1707" loading="lazy">
+                <span class="exhibition-label">Buyer Group — South Asia</span>
+            </div>
+        </div>
+    </div>
+</section>
+
 <!-- ========== ⑥  CONTACT ========== -->
-<section class="section" id="contact">
+<section class="section" id="contact" style="scroll-margin-top:64px;">
     <div class="container">
         <h2 class="section-title">Get in Touch</h2>
         <p class="section-subtitle">We'll reply within 24 hours</p>
@@ -256,28 +577,47 @@
                     <div class="form-row">
                         <div class="form-group">
                             <label for="name">Name *</label>
-                            <input type="text" id="name" name="name" required placeholder="Your full name">
+                            <input type="text" id="name" name="name" required placeholder="Your full name" autocomplete="name">
                         </div>
                         <div class="form-group">
                             <label for="email">Email *</label>
-                            <input type="email" id="email" name="email" required placeholder="your@email.com">
+                            <input type="email" id="email" name="email" required placeholder="your@email.com" autocomplete="email">
                         </div>
                     </div>
                     <div class="form-row">
                         <div class="form-group">
                             <label for="whatsapp">WhatsApp</label>
-                            <input type="text" id="whatsapp" name="whatsapp" placeholder="+ country code + number">
+                            <input type="tel" id="whatsapp" name="whatsapp" placeholder="+ country code + number" autocomplete="tel">
                         </div>
                         <div class="form-group">
                             <label for="country">Country</label>
-                            <input type="text" id="country" name="country" placeholder="Your country">
+                            <input type="text" id="country" name="country" placeholder="Your country" autocomplete="country-name">
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="product">Product of Interest</label>
+                            <select id="product" name="product">
+                                <option value="">— Select a product —</option>
+                                <option value="Men's Wallet">Men's Wallet</option>
+                                <option value="Women's Wallet">Women's Wallet</option>
+                                <option value="Passport Holder">Passport Holder</option>
+                                <option value="Card Holder">Card Holder</option>
+                                <option value="Key Holder">Key Holder</option>
+                                <option value="Coin Case">Coin Case</option>
+                                <option value="Other">Other / Custom design</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="quantity">Estimated Quantity</label>
+                            <input type="number" id="quantity" name="quantity" min="1" placeholder="e.g. 500" autocomplete="off">
                         </div>
                     </div>
                     <div class="form-group">
                         <label for="message">Message *</label>
-                        <textarea id="message" name="message" required placeholder="Tell us about your product needs, quantity, and any questions..."></textarea>
+                        <textarea id="message" name="message" required placeholder="Tell us about your product needs, target price, packaging requirements, and any questions..." autocomplete="off"></textarea>
                     </div>
-                    <button type="submit" class="btn btn-primary">Send Inquiry</button>
+                    <button type="submit" class="btn btn-primary">Get OEM Quotation · 24h Reply</button>
                 </form>
             </div>
         </div>
@@ -290,7 +630,7 @@
     <div class="container">
         <div class="footer-grid">
             <div>
-                <h4>HASSION LEATHER CO., LTD</h4>
+                <h4>HASSION LEATHER CO., LTD.</h4>
                 <p><span id="yearsCount3"></span> Years of Quality Leather Manufacturing.<br>Your trusted OEM partner in China.</p>
             </div>
             <div>
@@ -321,11 +661,15 @@
 <!-- ========== SCRIPTS ========== -->
 <script>
     function toggleMenu() {
-        document.getElementById('navLinks').classList.toggle('open');
+        var nav = document.getElementById('navLinks');
+        var btn = document.querySelector('.hamburger');
+        var isOpen = nav.classList.toggle('open');
+        btn.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
     }
 
     function closeMenu() {
         document.getElementById('navLinks').classList.remove('open');
+        document.querySelector('.hamburger').setAttribute('aria-expanded', 'false');
     }
 
     // Close menu when clicking outside
@@ -333,9 +677,27 @@
         var nav = document.getElementById('navLinks');
         var hamburger = document.querySelector('.hamburger');
         if (!nav.contains(e.target) && !hamburger.contains(e.target)) {
-            nav.classList.remove('open');
+            if (nav.classList.contains('open')) {
+                nav.classList.remove('open');
+                hamburger.setAttribute('aria-expanded', 'false');
+            }
         }
     });
+
+    // Prefill inquiry form when product Inquire button is clicked
+    function prefillInquiry(el) {
+        var product = el.getAttribute('data-product');
+        var sel = document.getElementById('product');
+        var msg = document.getElementById('message');
+        if (sel) {
+            for (var i = 0; i < sel.options.length; i++) {
+                if (sel.options[i].value === product) { sel.selectedIndex = i; break; }
+            }
+        }
+        if (msg && !msg.value) {
+            msg.value = "I'm interested in HASSION's " + product + ". Please send me OEM quotation including MOQ, sample lead time, and unit price.";
+        }
+    }
 </script>
 
     <!-- Dynamic year calculation (founded 1998) -->
