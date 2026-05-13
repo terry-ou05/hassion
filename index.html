@@ -210,6 +210,67 @@
         @media (max-width: 480px) {
             .production-grid { grid-template-columns: 1fr; }
         }
+
+        /* === Hero trust badges === */
+        .hero-trust {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 18px 28px;
+            margin-top: 28px;
+            max-width: 760px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        .hero-trust span {
+            color: #FDFBF7;
+            font-size: 0.85rem;
+            letter-spacing: 0.3px;
+            opacity: 0.92;
+            position: relative;
+            padding-left: 18px;
+        }
+        .hero-trust span::before {
+            content: "✓";
+            position: absolute;
+            left: 0;
+            color: #C8945A;
+            font-weight: 700;
+        }
+        @media (max-width: 768px) {
+            .hero-trust { gap: 10px 18px; margin-top: 22px; }
+            .hero-trust span { font-size: 0.78rem; }
+        }
+
+        /* === Product card description === */
+        .card-desc {
+            font-size: 0.82rem;
+            color: #666;
+            line-height: 1.5;
+            margin: 4px 0 12px;
+        }
+
+        /* === OEM urgent note === */
+        .oem-note {
+            font-size: 0.85rem;
+            color: #5C2D1A;
+            background: #FDFBF7;
+            border-left: 3px solid #C8945A;
+            padding: 12px 14px;
+            margin: 16px 0 20px;
+            line-height: 1.55;
+            border-radius: 0 4px 4px 0;
+        }
+
+        /* === Quality compliance note === */
+        .quality-note {
+            max-width: 720px;
+            margin: -8px auto 28px;
+            text-align: center;
+            font-size: 0.9rem;
+            color: #666;
+            line-height: 1.6;
+        }
     </style>
 </head>
 <body>
@@ -226,13 +287,9 @@
         <ul class="nav-links" id="navLinks">
             <li><a href="#hero" onclick="closeMenu()">Home</a></li>
             <li><a href="#about" onclick="closeMenu()">About</a></li>
-            <li><a href="#why-us" onclick="closeMenu()">Why Us</a></li>
-            <li><a href="#production" onclick="closeMenu()">Production</a></li>
             <li><a href="#products" onclick="closeMenu()">Products</a></li>
             <li><a href="#oem" onclick="closeMenu()">OEM</a></li>
             <li><a href="#certifications" onclick="closeMenu()">Quality</a></li>
-            <li><a href="#clients" onclick="closeMenu()">Clients</a></li>
-            <li><a href="#exhibitions" onclick="closeMenu()">Exhibitions</a></li>
             <li><a href="#contact" onclick="closeMenu()">Contact</a></li>
         </ul>
         <button class="hamburger" onclick="toggleMenu()" aria-label="Menu" aria-expanded="false" aria-controls="navLinks">
@@ -244,12 +301,17 @@
 <!-- ========== ①  HERO / BANNER ========== -->
 <header class="hero" id="hero">
     <div class="hero-content">
-        <p class="hero-tagline">Since 1998 · OEM &amp; ODM Leather Specialist</p>
-        <h1>Leather Goods OEM Manufacturer · Guangzhou Hassion Leather Ltd.</h1>
-        <h2>1998-<span id="yearEnd"></span> · <span id="yearsCount"></span> Years of Leather Craftsmanship</h2>
+        <p class="hero-tagline">Since 1998 · OEM/ODM Leather Goods Factory in Guangzhou</p>
+        <h1>Custom Leather Wallets &amp; Small Leather Goods Manufacturer</h1>
+        <h2>MOQ 200 pcs · 7-Day Sample · 30-Day Production · 200+ Skilled Workers</h2>
         <div class="hero-buttons">
-            <a href="#contact" class="btn btn-primary">Get OEM Quote</a>
-            <a href="#products" class="btn btn-outline">Explore Products</a>
+            <a href="#contact" class="btn btn-primary">Get OEM Quotation</a>
+            <a href="#products" class="btn btn-outline">View Product Categories</a>
+        </div>
+        <div class="hero-trust">
+            <span><span id="trustYears"></span>+ Years Factory Experience</span>
+            <span>10,000㎡ Production Facility</span>
+            <span>Exported to USA, Europe, Japan &amp; Middle East</span>
         </div>
     </div>
 </header>
@@ -262,9 +324,9 @@
         <p class="section-subtitle">Your Trusted Leather Manufacturing Partner</p>
         <div class="about-grid">
             <div class="about-text">
-                <p>Guangzhou HASSION Leather Ltd. is a professional leather goods manufacturer based in Baiyun District, Guangzhou, China. Founded in 1998, we have grown into a <strong>10,000-square-meter facility with over 200 skilled workers</strong>.</p>
-                <p>We specialize in OEM and ODM production of men's wallets, women's wallets, passport holders, card holders, key cases, coin cases, and other leather accessories. We own two brands — <strong>"HASSION"</strong> and <strong>"Dr. KOFFER"</strong>.</p>
-                <p>Our products are exported to customers in <strong>Russia, Poland, Japan, Korea, USA, Germany, Italy, France, UK, Dubai, Saudi Arabia</strong>, and more. We are committed to quality craftsmanship, on-time delivery, and competitive pricing.</p>
+                <p>Guangzhou HASSION Leather Ltd. is a leather goods manufacturer based in Baiyun District, Guangzhou, China. <strong>Founded in 1998</strong>, we operate a <strong>10,000㎡ production facility with 200+ skilled workers</strong>, supporting overseas buyers with stable OEM and ODM capacity.</p>
+                <p>We specialize in <strong>OEM/ODM leather wallets, passport holders, card holders, key holders, coin cases</strong> and related small leather goods. Each project is supported by in-house sampling, material sourcing, hardware customization and logo finishing (embossing, hot stamping, metal plate). We own two brands — <strong>"HASSION"</strong> and <strong>"Dr. KOFFER"</strong>.</p>
+                <p>Our products are exported to buyers across <strong>USA, Europe, Japan, Korea and the Middle East</strong>. We focus on consistent quality, flexible customization and on-time delivery — working with both established brands and growing wholesale buyers.</p>
                 <div class="about-stats">
                     <div class="stat-card">
                         <span class="stat-number" id="yearsCount2"></span>
@@ -359,7 +421,7 @@
                 <p>Inquiry → Sample → Confirmation → Production → QC → Shipment</p>
             </div>
             <div class="production-card">
-                <div class="production-stat">28 Yrs</div>
+                <div class="production-stat">Since 1998</div>
                 <h3>Material Expertise</h3>
                 <p>Long-term partnerships with trusted leather mills and hardware suppliers</p>
             </div>
@@ -377,6 +439,7 @@
                 <img src="images/product_mens_wallet.webp" alt="Men's Leather Wallet" width="993" height="1075" loading="lazy">
                 <div class="card-body">
                     <h3 class="card-name">Men's Wallet</h3>
+                    <p class="card-desc">Custom bifold, trifold, slim and RFID wallet options</p>
                     <a href="#contact" class="card-inquire" data-product="Men's Wallet" onclick="prefillInquiry(this)">Inquire</a>
                 </div>
             </div>
@@ -384,6 +447,7 @@
                 <img src="images/product_womens_wallet.webp" alt="Women's Leather Wallet" width="1254" height="1254" loading="lazy">
                 <div class="card-body">
                     <h3 class="card-name">Women's Wallet</h3>
+                    <p class="card-desc">Long wallet, compact wallet and branded packaging options</p>
                     <a href="#contact" class="card-inquire" data-product="Women's Wallet" onclick="prefillInquiry(this)">Inquire</a>
                 </div>
             </div>
@@ -391,6 +455,7 @@
                 <img src="images/product_passport_holder.webp" alt="Leather Passport Holder" width="750" height="1288" loading="lazy">
                 <div class="card-body">
                     <h3 class="card-name">Passport Holder</h3>
+                    <p class="card-desc">Custom logo, color, lining and travel set options</p>
                     <a href="#contact" class="card-inquire" data-product="Passport Holder" onclick="prefillInquiry(this)">Inquire</a>
                 </div>
             </div>
@@ -398,6 +463,7 @@
                 <img src="images/product_card_holder.webp" alt="Leather Card Holder" width="1254" height="1254" loading="lazy">
                 <div class="card-body">
                     <h3 class="card-name">Card Holder</h3>
+                    <p class="card-desc">Slim card case, business card holder and RFID options</p>
                     <a href="#contact" class="card-inquire" data-product="Card Holder" onclick="prefillInquiry(this)">Inquire</a>
                 </div>
             </div>
@@ -405,6 +471,7 @@
                 <img src="images/product_key_holder.webp" alt="Leather Key Holder" width="1254" height="1254" loading="lazy">
                 <div class="card-body">
                     <h3 class="card-name">Key Holder</h3>
+                    <p class="card-desc">Custom leather, hardware and logo finishing available</p>
                     <a href="#contact" class="card-inquire" data-product="Key Holder" onclick="prefillInquiry(this)">Inquire</a>
                 </div>
             </div>
@@ -412,6 +479,7 @@
                 <img src="images/product_coin_case.webp" alt="Leather Coin Case" width="1254" height="1254" loading="lazy">
                 <div class="card-body">
                     <h3 class="card-name">Coin Case</h3>
+                    <p class="card-desc">Compact coin pouch with custom material and color options</p>
                     <a href="#contact" class="card-inquire" data-product="Coin Case" onclick="prefillInquiry(this)">Inquire</a>
                 </div>
             </div>
@@ -488,6 +556,7 @@
                     <p><strong>Production Time:</strong> ~30 days</p>
                     <p><strong>Payment:</strong> 30% deposit, 70% before shipment</p>
                 </div>
+                <p class="oem-note">For urgent or special projects, please contact us with your target quantity and delivery date.</p>
 
                 <a href="#contact" class="btn btn-primary">Request a Quote</a>
             </div>
@@ -500,6 +569,7 @@
     <div class="container">
         <h2 class="section-title">Quality &amp; Compliance</h2>
         <p class="section-subtitle">Independent test reports and certified quality standards</p>
+        <p class="quality-note">Test reports and material compliance documents can be provided according to your target market requirements.</p>
         <div class="certs-grid">
             <div class="cert-card">
                 <img src="images/test_report.jpg" alt="Product Quality Test Report" width="600" height="824" loading="lazy">
@@ -572,7 +642,7 @@
                 <p><strong>Address:</strong><br>2nd Floor, Build-B, No.46, Changban Industrial Street,<br>Changhong Village, Jiahe Street, Baiyun District, Guangzhou City, China</p>
                 <p><strong>Phone:</strong><br>+86-20-37208008<br>+86 13925017288 (Percy)</p>
                 <p><strong>Email:</strong><br>percy@hassion.com</p>
-                <a href="https://wa.me/8613925017288?text=Hello%2C%20I%27m%20interested%20in%20your%20leather%20goods%20OEM%20service.%20Please%20send%20me%20more%20information%20about%20MOQ%2C%20pricing%2C%20and%20sample%20lead%20time." target="_blank" rel="noopener" class="whatsapp-link">
+                <a href="https://wa.me/8613925017288?text=Hello%20HASSION%2C%20I%20am%20interested%20in%20your%20OEM%20leather%20goods.%20Please%20send%20me%20more%20details%20about%20MOQ%2C%20sample%20time%20and%20quotation." target="_blank" rel="noopener" class="whatsapp-link">
                     Chat on WhatsApp
                 </a>
                 <p style="font-size:0.8rem;color:#888;margin-top:8px;">⚡ Fastest response · Replies in hours, not days</p>
@@ -628,9 +698,25 @@
                             <input type="number" id="quantity" name="quantity" min="1" placeholder="e.g. 500" autocomplete="off">
                         </div>
                     </div>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="target-market">Target Market</label>
+                            <input type="text" id="target-market" name="target_market" placeholder="e.g. USA, Germany, Japan" autocomplete="off">
+                        </div>
+                        <div class="form-group">
+                            <label for="custom-logo">Custom Logo Required?</label>
+                            <select id="custom-logo" name="custom_logo">
+                                <option value="Not sure yet">Not sure yet</option>
+                                <option value="Yes, embossed logo">Yes, embossed logo</option>
+                                <option value="Yes, hot stamping logo">Yes, hot stamping logo</option>
+                                <option value="Yes, metal logo">Yes, metal logo</option>
+                                <option value="No logo needed">No logo needed</option>
+                            </select>
+                        </div>
+                    </div>
                     <div class="form-group">
                         <label for="message">Message *</label>
-                        <textarea id="message" name="message" required placeholder="Tell us about your product needs, target price, packaging requirements, and any questions..." autocomplete="off"></textarea>
+                        <textarea id="message" name="message" required placeholder="Please tell us your product type, quantity, material preference, logo requirement, target price and delivery schedule." autocomplete="off"></textarea>
                     </div>
                     <button type="submit" class="btn btn-primary">Get OEM Quotation · 24h Reply</button>
                 </form>
@@ -670,7 +756,7 @@
 </footer>
 
 <!-- ========== WHATSAPP FLOATING ========== -->
-<a href="https://wa.me/8613925017288?text=Hello%2C%20I%27m%20interested%20in%20your%20leather%20goods%20OEM%20service.%20Please%20send%20me%20more%20information%20about%20MOQ%2C%20pricing%2C%20and%20sample%20lead%20time." target="_blank" rel="noopener" class="whatsapp-float" aria-label="Chat on WhatsApp">
+<a href="https://wa.me/8613925017288?text=Hello%20HASSION%2C%20I%20am%20interested%20in%20your%20OEM%20leather%20goods.%20Please%20send%20me%20more%20details%20about%20MOQ%2C%20sample%20time%20and%20quotation." target="_blank" rel="noopener" class="whatsapp-float" aria-label="Chat on WhatsApp">
     <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
 </a>
 
@@ -720,8 +806,8 @@
     <script>
         var sinceYear = new Date().getFullYear() - 1998;
         var currentYear = new Date().getFullYear();
-        document.getElementById('yearEnd').textContent = currentYear;
-        document.getElementById('yearsCount').textContent = sinceYear;
+        var trustEl = document.getElementById('trustYears');
+        if (trustEl) trustEl.textContent = sinceYear;
         document.getElementById('yearsCount2').textContent = sinceYear + '+';
         document.getElementById('yearsCount3').textContent = sinceYear;
         document.getElementById('year').textContent = currentYear;
