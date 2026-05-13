@@ -60,8 +60,20 @@
 
     <!-- Local style — additive only, no modification of style.css existing rules -->
     <style>
-        /* === Nav logo: prevent any width constraint from distorting aspect ratio === */
-        .nav-logo img { width: auto; }
+        /* === Nav logo: override style.css height:36px, preserve original aspect ratio === */
+        .nav-logo img {
+            width: auto;
+            height: 56px;
+            max-width: 172px;
+            object-fit: contain;
+            display: block;
+        }
+        @media (max-width: 768px) {
+            .nav-logo img {
+                height: 48px;
+                max-width: 150px;
+            }
+        }
         /* === Exhibitions (independent structure, does not reuse .cert-card) === */
         .exhibition-grid {
             display: grid;
@@ -149,6 +161,17 @@
             .why-grid { grid-template-columns: 1fr; }
         }
 
+        /* === Why Choose featured cards === */
+        .why-card-featured {
+            background: #FDFBF7;
+            border-color: rgba(200, 148, 90, 0.35);
+            box-shadow: 0 8px 24px rgba(92,45,26,0.08);
+        }
+        .why-card-featured .why-icon {
+            background: #5C2D1A;
+            color: #C8945A;
+        }
+
         /* === Form select (match input visual since style.css selector only covers input/textarea) === */
         .form-group select {
             width: 100%;
@@ -211,6 +234,18 @@
             .production-grid { grid-template-columns: 1fr; }
         }
 
+        /* === Production featured cards === */
+        .production-card-featured {
+            background: #fff;
+            border-color: rgba(200, 148, 90, 0.35);
+            box-shadow: 0 8px 24px rgba(92,45,26,0.08);
+            transform: translateY(-2px);
+        }
+        .production-card-featured .production-stat {
+            font-size: 2.2rem;
+            color: #C8945A;
+        }
+
         /* === Hero trust badges === */
         .hero-trust {
             display: flex;
@@ -242,12 +277,50 @@
             .hero-trust span { font-size: 0.78rem; }
         }
 
-        /* === Product card description === */
+        /* === Hero specs badge === */
+        .hero-specs {
+            display: inline-block;
+            color: #FDFBF7;
+            font-weight: 600;
+            font-size: 0.95rem;
+            letter-spacing: 0.04em;
+            background: rgba(92, 45, 26, 0.42);
+            border: 1px solid rgba(200, 148, 90, 0.35);
+            border-radius: 999px;
+            padding: 8px 18px;
+            margin: 12px 0 0;
+        }
+        @media (max-width: 768px) {
+            .hero-specs { font-size: 0.8rem; padding: 6px 14px; }
+        }
+
+        /* === Product card layout === */
+        .product-card .card-body {
+            display: flex;
+            flex-direction: column;
+        }
         .card-desc {
-            font-size: 0.82rem;
+            font-size: 0.85rem;
             color: #666;
             line-height: 1.5;
             margin: 4px 0 12px;
+        }
+        .card-inquire {
+            margin-top: auto;
+        }
+        @media (max-width: 480px) {
+            .product-card .card-body { padding: 12px; }
+            .card-name { font-size: 0.95rem; }
+            .card-desc {
+                font-size: 0.78rem;
+                line-height: 1.45;
+                margin: 4px 0 10px;
+                display: -webkit-box;
+                -webkit-line-clamp: 2;
+                line-clamp: 2;
+                -webkit-box-orient: vertical;
+                overflow: hidden;
+            }
         }
 
         /* === OEM urgent note === */
@@ -270,6 +343,43 @@
             font-size: 0.9rem;
             color: #666;
             line-height: 1.6;
+        }
+
+        /* === Exhibition & Clients mobile image fix === */
+        @media (max-width: 768px) {
+            .exhibition-card img {
+                height: auto;
+                max-height: none;
+                object-fit: contain;
+                background: #FDFBF7;
+            }
+            #clients .cert-card img {
+                width: 100%;
+                max-width: 220px;
+                height: auto;
+                object-fit: contain;
+                background: #fff;
+                margin: 0 auto;
+            }
+        }
+
+        /* === Hero desktop spacing === */
+        @media (min-width: 769px) {
+            .hero {
+                min-height: 760px;
+                padding-top: 120px;
+                padding-bottom: 90px;
+            }
+            .hero-content { max-width: 980px; }
+            .hero h1 { margin-bottom: 14px; }
+            .hero h2 { margin-bottom: 14px; }
+            .hero-specs { margin-top: 14px; }
+            .hero-buttons { margin-top: 26px; }
+            .hero-trust { margin-top: 28px; }
+        }
+        @media (max-width: 768px) {
+            .hero h1 { font-size: 1.7rem; }
+            .hero h2 { font-size: 0.95rem; margin-bottom: 8px; }
         }
     </style>
 </head>
@@ -302,8 +412,9 @@
 <header class="hero" id="hero">
     <div class="hero-content">
         <p class="hero-tagline">Since 1998 · OEM/ODM Leather Goods Factory in Guangzhou</p>
-        <h1>Custom Leather Wallets &amp; Small Leather Goods Manufacturer</h1>
-        <h2>MOQ 200 pcs · 7-Day Sample · 30-Day Production · 200+ Skilled Workers</h2>
+        <h1>Guangzhou Hassion Leather Ltd.</h1>
+        <h2>Leather Wallets &amp; Small Leather Goods OEM/ODM Manufacturer</h2>
+        <p class="hero-specs">MOQ 200 pcs · 7-Day Sample · 30-Day Production · 200+ Skilled Workers</p>
         <div class="hero-buttons">
             <a href="#contact" class="btn btn-primary">Get OEM Quotation</a>
             <a href="#products" class="btn btn-outline">View Product Categories</a>
@@ -355,17 +466,17 @@
         <h2 class="section-title">Why Choose HASSION</h2>
         <p class="section-subtitle">A factory built for B2B OEM partners — proven, flexible, accountable</p>
         <div class="why-grid">
-            <div class="why-card">
+            <div class="why-card why-card-featured">
                 <span class="why-icon">★</span>
                 <h3>Since 1998</h3>
-                <p>28+ years of leather craftsmanship, serving global OEM clients</p>
+                <p>Since 1998, serving global OEM clients with leather goods manufacturing experience</p>
             </div>
-            <div class="why-card">
+            <div class="why-card why-card-featured">
                 <span class="why-icon">⚙</span>
                 <h3>OEM &amp; ODM Support</h3>
                 <p>From your sketch to finished product — full custom service</p>
             </div>
-            <div class="why-card">
+            <div class="why-card why-card-featured">
                 <span class="why-icon">⏱</span>
                 <h3>Stable Lead Time</h3>
                 <p>~7 days sample · ~30 days mass production</p>
@@ -389,41 +500,41 @@
     </div>
 </section>
 
-<!-- ==========    PRODUCTION CAPABILITY (placeholder, will fill with photos later) ========== -->
+<!-- ========== PRODUCTION CAPABILITY ========== -->
 <section class="section" id="production" style="background:#FDFBF7;scroll-margin-top:64px;">
     <div class="container">
         <h2 class="section-title">Production Capability</h2>
         <p class="section-subtitle">Built to deliver consistent quality at scale</p>
         <div class="production-grid">
-            <div class="production-card">
+            <div class="production-card production-card-featured">
                 <div class="production-stat">3,000㎡</div>
                 <h3>Factory Facility</h3>
                 <p>Integrated workshop for cutting, stitching, assembly, QC and packing</p>
             </div>
-            <div class="production-card">
+            <div class="production-card production-card-featured">
                 <div class="production-stat">200+</div>
                 <h3>Skilled Workers</h3>
-                <p>Trained craftspeople with average 8+ years of leather manufacturing experience</p>
+                <p>Experienced leather goods team supporting stable OEM production</p>
+            </div>
+            <div class="production-card production-card-featured">
+                <div class="production-stat">~30 Days</div>
+                <h3>Production Lead Time</h3>
+                <p>Standard lead time after sample approval and deposit confirmation</p>
             </div>
             <div class="production-card">
                 <div class="production-stat">3-Stage</div>
                 <h3>QC Inspection</h3>
-                <p>Raw material · mid-production · final packing — every order checked</p>
-            </div>
-            <div class="production-card">
-                <div class="production-stat">~30 Days</div>
-                <h3>Production Lead Time</h3>
-                <p>7-day sample · ~30-day mass production · on-schedule delivery</p>
+                <p>Raw material check · in-line inspection · final packing inspection</p>
             </div>
             <div class="production-card">
                 <div class="production-stat">6-Step</div>
                 <h3>OEM Workflow</h3>
-                <p>Inquiry → Sample → Confirmation → Production → QC → Shipment</p>
+                <p>Inquiry → Sample → Approval → Production → QC → Shipment</p>
             </div>
             <div class="production-card">
                 <div class="production-stat">Since 1998</div>
                 <h3>Material Expertise</h3>
-                <p>Long-term partnerships with trusted leather mills and hardware suppliers</p>
+                <p>Long-term experience with wallets, holders and small leather goods</p>
             </div>
         </div>
     </div>
@@ -731,7 +842,7 @@
     <div class="container">
         <div class="footer-grid">
             <div>
-                <h4>HASSION LEATHER CO., LTD.</h4>
+                <h4>Guangzhou Hassion Leather Ltd.</h4>
                 <p><span id="yearsCount3"></span> Years of Quality Leather Manufacturing.<br>Your trusted OEM partner in China.</p>
             </div>
             <div>
@@ -750,7 +861,7 @@
             </div>
         </div>
         <div class="footer-bottom">
-            &copy; <span id="year"></span> HASSION LEATHER CO., LTD. All rights reserved.
+            &copy; <span id="year"></span> Guangzhou Hassion Leather Ltd. All rights reserved.
         </div>
     </div>
 </footer>
