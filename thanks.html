@@ -3,49 +3,162 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Thank You — HASSION Leather</title>
+    <title>Thank You - HASSION Leather</title>
+    <meta name="description" content="Thank you for contacting HASSION Leather. Our export team will reply to your OEM leather goods inquiry within 24 hours.">
+    <link rel="icon" type="image/gif" href="images/logo.gif">
     <style>
+        *, *::before, *::after {
+            box-sizing: border-box;
+        }
+
         body {
             font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
             background: #FDFBF7;
-            display: flex;
-            align-items: center;
-            justify-content: center;
             min-height: 100vh;
             margin: 0;
-            padding: 20px;
+            color: #333;
+        }
+
+        .thanks-page {
+            min-height: 100vh;
+            display: grid;
+            place-items: center;
+            padding: 40px 20px;
+        }
+
+        .thanks-box {
+            width: min(100%, 640px);
+            background: #fff;
+            border: 1px solid rgba(92, 45, 26, 0.12);
+            border-radius: 8px;
+            padding: 42px;
+            box-shadow: 0 10px 32px rgba(92, 45, 26, 0.08);
             text-align: center;
         }
-        .thanks-box {
-            max-width: 480px;
+
+        .brand-logo {
+            width: 126px;
+            height: auto;
+            margin: 0 auto 22px;
         }
-        .thanks-box h1 {
+
+        .status-mark {
+            width: 54px;
+            height: 54px;
+            border-radius: 50%;
+            background: #C8945A;
+            color: #fff;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            font-weight: 700;
+            margin-bottom: 18px;
+        }
+
+        h1 {
             color: #5C2D1A;
-            font-size: 2rem;
-            margin-bottom: 1rem;
+            font-size: 2.1rem;
+            line-height: 1.2;
+            margin: 0 0 14px;
         }
-        .thanks-box p {
+
+        p {
             color: #666;
             font-size: 1.05rem;
             line-height: 1.7;
-            margin-bottom: 1.5rem;
+            margin: 0;
         }
-        .thanks-box a {
+
+        .reply-note {
+            margin-top: 18px;
+            padding: 16px;
+            background: #FDFBF7;
+            border-left: 3px solid #C8945A;
+            text-align: left;
+            font-size: 0.95rem;
+        }
+
+        .action-row {
+            display: flex;
+            justify-content: center;
+            gap: 12px;
+            flex-wrap: wrap;
+            margin-top: 28px;
+        }
+
+        .btn {
             display: inline-block;
             padding: 12px 28px;
-            background: #C8945A;
-            color: #fff;
             text-decoration: none;
             border-radius: 6px;
             font-weight: 600;
+            border: 2px solid transparent;
+            transition: background 0.2s, border-color 0.2s, color 0.2s;
+        }
+
+        .btn-primary {
+            background: #C8945A;
+            border-color: #C8945A;
+            color: #fff;
+        }
+
+        .btn-primary:hover {
+            background: #b5834a;
+            border-color: #b5834a;
+        }
+
+        .btn-outline {
+            background: transparent;
+            border-color: #5C2D1A;
+            color: #5C2D1A;
+        }
+
+        .btn-outline:hover {
+            background: #5C2D1A;
+            color: #fff;
+        }
+
+        .small-links {
+            margin-top: 22px;
+            font-size: 0.9rem;
+            color: #777;
+        }
+
+        .small-links a {
+            color: #5C2D1A;
+            font-weight: 600;
+        }
+
+        @media (max-width: 520px) {
+            .thanks-box {
+                padding: 30px 22px;
+            }
+
+            h1 {
+                font-size: 1.7rem;
+            }
+
+            .btn {
+                width: 100%;
+            }
         }
     </style>
 </head>
 <body>
-    <div class="thanks-box">
-        <h1>Thank You!</h1>
-        <p>Your inquiry has been received. We'll get back to you within 24 hours.</p>
-        <a href="index.html">Back to Home</a>
-    </div>
+    <main class="thanks-page">
+        <section class="thanks-box" aria-labelledby="thanks-title">
+            <img class="brand-logo" src="images/logo.gif" alt="HASSION Leather" width="172" height="86">
+            <div class="status-mark" aria-hidden="true">✓</div>
+            <h1 id="thanks-title">Thank you for your inquiry</h1>
+            <p>Your message has been received by HASSION Leather. Our export team will review your OEM request and reply within 24 hours.</p>
+            <p class="reply-note">For urgent projects, please contact Percy on WhatsApp and include your product type, quantity, target market and delivery schedule.</p>
+            <div class="action-row">
+                <a class="btn btn-primary" href="https://wa.me/8613925017288?text=Hello%20HASSION%2C%20I%20just%20submitted%20an%20inquiry%20from%20your%20website.%20Please%20help%20confirm%20the%20details." target="_blank" rel="noopener">Chat on WhatsApp</a>
+                <a class="btn btn-outline" href="index.html#products">View Products</a>
+            </div>
+            <p class="small-links">Prefer email? Contact us at <a href="mailto:percy@hassion.com">percy@hassion.com</a></p>
+        </section>
+    </main>
 </body>
 </html>
