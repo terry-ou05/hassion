@@ -109,63 +109,137 @@
         @media (max-width: 480px) { .product-card img { height: 180px; } }
 
         /* === Why Choose HASSION === */
-        .why-grid {
+        .why-layout {
             display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 24px;
-        }
-        .why-card {
-            background: #fff;
-            border-radius: 12px;
-            padding: 32px 24px;
-            text-align: center;
-            border: 1px solid #eee;
-            box-shadow: 0 2px 8px rgba(0,0,0,0.04);
-            transition: transform 0.2s, box-shadow 0.2s;
-        }
-        .why-card:hover {
-            transform: translateY(-4px);
-            box-shadow: 0 10px 28px rgba(92,45,26,0.1);
-        }
-        .why-card .why-icon {
-            width: 56px;
-            height: 56px;
-            border-radius: 50%;
-            background: #C8945A;
-            color: #fff;
-            font-size: 1.4rem;
-            display: flex;
+            grid-template-columns: minmax(0, 0.92fr) minmax(420px, 1.08fr);
+            gap: 48px;
             align-items: center;
-            justify-content: center;
-            margin: 0 auto 18px;
         }
-        .why-card h3 {
-            font-size: 1rem;
+        .why-copy {
+            max-width: 560px;
+        }
+        .why-intro {
+            font-size: 0.98rem;
+            color: #555;
+            line-height: 1.7;
+            margin-bottom: 28px;
+        }
+        .why-reasons {
+            display: flex;
+            flex-direction: column;
+            gap: 18px;
+        }
+        .why-reason {
+            display: grid;
+            grid-template-columns: 42px 1fr;
+            gap: 16px;
+            padding: 18px 0;
+            border-top: 1px solid rgba(92,45,26,0.12);
+        }
+        .why-reason:last-child {
+            border-bottom: 1px solid rgba(92,45,26,0.12);
+        }
+        .why-reason-number {
+            color: #C8945A;
+            font-size: 0.92rem;
+            font-weight: 700;
+            letter-spacing: 0.08em;
+            line-height: 1.4;
+        }
+        .why-reason h3 {
             color: #5C2D1A;
-            margin-bottom: 8px;
+            font-size: 1.18rem;
+            line-height: 1.25;
+            margin-bottom: 6px;
             font-weight: 700;
         }
-        .why-card p {
-            font-size: 0.85rem;
-            color: #666;
+        .why-reason p {
+            color: #555;
+            font-size: 0.95rem;
             line-height: 1.6;
         }
-        @media (max-width: 768px) {
-            .why-grid { grid-template-columns: repeat(2, 1fr); gap: 16px; }
+        .why-proof-grid {
+            display: grid;
+            grid-template-columns: repeat(3, minmax(0, 1fr));
+            gap: 18px;
+            margin-top: 34px;
         }
-        @media (max-width: 480px) {
-            .why-grid { grid-template-columns: 1fr; }
-        }
-
-        /* === Why Choose featured cards === */
-        .why-card-featured {
+        .why-proof {
             background: #FDFBF7;
-            border-color: rgba(200, 148, 90, 0.35);
+            border: 1px solid rgba(92,45,26,0.12);
+            border-radius: 8px;
+            overflow: hidden;
             box-shadow: 0 8px 24px rgba(92,45,26,0.08);
         }
-        .why-card-featured .why-icon {
-            background: #5C2D1A;
-            color: #C8945A;
+        .why-proof img {
+            width: 100%;
+            aspect-ratio: 16 / 10;
+            object-fit: cover;
+            display: block;
+        }
+        .why-proof strong {
+            display: block;
+            color: #5C2D1A;
+            font-size: 0.98rem;
+            line-height: 1.25;
+            padding: 13px 14px 4px;
+        }
+        .why-proof span {
+            display: block;
+            color: #666;
+            font-size: 0.8rem;
+            line-height: 1.4;
+            padding: 0 14px 14px;
+        }
+        .why-media {
+            position: relative;
+            overflow: hidden;
+            border-radius: 10px;
+            border: 1px solid rgba(92,45,26,0.12);
+            box-shadow: 0 18px 42px rgba(92,45,26,0.14);
+            background: #FDFBF7;
+        }
+        .why-media img {
+            width: 100%;
+            aspect-ratio: 4 / 3;
+            object-fit: cover;
+            object-position: 55% center;
+            display: block;
+        }
+        .why-media-caption {
+            position: absolute;
+            left: 18px;
+            bottom: 18px;
+            background: rgba(253,251,247,0.9);
+            color: #5C2D1A;
+            border-left: 3px solid #C8945A;
+            padding: 10px 12px;
+            border-radius: 0 6px 6px 0;
+            font-size: 0.82rem;
+            font-weight: 600;
+            line-height: 1.4;
+            max-width: 280px;
+        }
+        @media (max-width: 768px) {
+            .why-layout {
+                grid-template-columns: 1fr;
+                gap: 28px;
+            }
+            .why-media {
+                order: -1;
+            }
+            .why-media img {
+                aspect-ratio: 16 / 11;
+                object-fit: contain;
+                background: #FDFBF7;
+            }
+            .why-proof-grid {
+                grid-template-columns: 1fr;
+                gap: 14px;
+            }
+            .why-proof img {
+                aspect-ratio: 16 / 9;
+            }
         }
 
         /* === Form select (match input visual since style.css selector only covers input/textarea) === */
@@ -253,7 +327,7 @@
             margin-left: auto;
             margin-right: auto;
         }
-        .hero-trust span {
+        .hero-trust > span {
             color: #FDFBF7;
             font-size: 0.85rem;
             letter-spacing: 0.3px;
@@ -261,7 +335,7 @@
             position: relative;
             padding-left: 18px;
         }
-        .hero-trust span::before {
+        .hero-trust > span::before {
             content: "✓";
             position: absolute;
             left: 0;
@@ -270,7 +344,7 @@
         }
         @media (max-width: 768px) {
             .hero-trust { gap: 10px 18px; margin-top: 22px; }
-            .hero-trust span { font-size: 0.78rem; }
+            .hero-trust > span { font-size: 0.78rem; }
         }
 
         /* === Hero specs badge === */
@@ -287,7 +361,18 @@
             margin: 12px 0 0;
         }
         @media (max-width: 768px) {
-            .hero-specs { font-size: 0.8rem; padding: 6px 14px; }
+            .hero-specs {
+                display: block;
+                width: 100%;
+                max-width: 300px;
+                box-sizing: border-box;
+                margin-left: auto;
+                margin-right: auto;
+                white-space: normal;
+                font-size: 0.72rem;
+                line-height: 1.55;
+                padding: 6px 14px;
+            }
         }
 
         /* === Product card layout === */
@@ -374,8 +459,55 @@
             .hero-trust { margin-top: 28px; }
         }
         @media (max-width: 768px) {
-            .hero h1 { font-size: 1.7rem; }
-            .hero h2 { font-size: 0.95rem; margin-bottom: 8px; }
+            .hero-content {
+                width: 100%;
+                max-width: 300px;
+                margin-left: auto;
+                margin-right: auto;
+                padding-left: 0;
+                padding-right: 0;
+                overflow-wrap: anywhere;
+            }
+            .hero h1 {
+                max-width: 280px;
+                margin-left: auto;
+                margin-right: auto;
+                font-size: 1.35rem;
+                overflow-wrap: anywhere;
+            }
+            .hero h2 {
+                max-width: 260px;
+                margin-left: auto;
+                margin-right: auto;
+                font-size: 0.76rem;
+                margin-bottom: 8px;
+                overflow-wrap: anywhere;
+            }
+            .hero-tagline {
+                max-width: 260px;
+                margin-left: auto;
+                margin-right: auto;
+                font-size: 0.72rem;
+                letter-spacing: 0.12em;
+                overflow-wrap: anywhere;
+            }
+            .hero-trust {
+                flex-direction: column;
+                align-items: center;
+                max-width: 300px;
+            }
+            .hero-trust > span {
+                max-width: 100%;
+                font-size: 0.72rem;
+                text-align: center;
+                line-height: 1.45;
+            }
+        }
+        @media (max-width: 480px) {
+            .hero-tagline {
+                letter-spacing: 0.16em;
+                line-height: 1.7;
+            }
         }
     </style>
 </head>
@@ -461,36 +593,53 @@
     <div class="container">
         <h2 class="section-title">Why Choose HASSION</h2>
         <p class="section-subtitle">A factory built for B2B OEM partners — proven, flexible, accountable</p>
-        <div class="why-grid">
-            <div class="why-card why-card-featured">
-                <span class="why-icon">★</span>
-                <h3>Since 1998</h3>
-                <p>Since 1998, serving global OEM clients with leather goods manufacturing experience</p>
+        <div class="why-layout">
+            <div class="why-copy">
+                <p class="why-intro">HASSION supports overseas buyers with practical OEM experience, clear communication, stable production planning and inspection before packing.</p>
+                <div class="why-reasons">
+                    <div class="why-reason">
+                        <span class="why-reason-number">01</span>
+                        <div>
+                            <h3>Since 1998</h3>
+                            <p>Since 1998, serving global OEM clients with leather goods manufacturing experience.</p>
+                        </div>
+                    </div>
+                    <div class="why-reason">
+                        <span class="why-reason-number">02</span>
+                        <div>
+                            <h3>OEM &amp; ODM Support</h3>
+                            <p>From sketch, material and logo to packaging and mass production.</p>
+                        </div>
+                    </div>
+                    <div class="why-reason">
+                        <span class="why-reason-number">03</span>
+                        <div>
+                            <h3>Stable Production &amp; QC</h3>
+                            <p>~7 days sample, ~30 days mass production with inspection before packing.</p>
+                        </div>
+                    </div>
+                </div>
             </div>
-            <div class="why-card why-card-featured">
-                <span class="why-icon">⚙</span>
-                <h3>OEM &amp; ODM Support</h3>
-                <p>From your sketch to finished product — full custom service</p>
+            <div class="why-media">
+                <img src="images/why_quality.webp" alt="HASSION leather goods quality inspection with white gloves" width="1680" height="945" loading="lazy">
+                <span class="why-media-caption">Real factory process and quality inspection support for OEM orders</span>
             </div>
-            <div class="why-card why-card-featured">
-                <span class="why-icon">⏱</span>
-                <h3>Stable Lead Time</h3>
-                <p>~7 days sample · ~30 days mass production</p>
+        </div>
+        <div class="why-proof-grid">
+            <div class="why-proof">
+                <img src="images/why_oem_odm.webp" alt="Leather goods logo customization process" width="1680" height="945" loading="lazy">
+                <strong>Logo Customization</strong>
+                <span>Logo, material and finishing support for OEM projects.</span>
             </div>
-            <div class="why-card">
-                <span class="why-icon">🌍</span>
-                <h3>Experienced Export Team</h3>
-                <p>English communication · Exports to USA, Europe, Japan, Korea and Middle East</p>
+            <div class="why-proof">
+                <img src="images/why_lead_time.webp" alt="Leather goods stitching process" width="1680" height="945" loading="lazy">
+                <strong>Stitching Process</strong>
+                <span>Real production process for wallets and small leather goods.</span>
             </div>
-            <div class="why-card">
-                <span class="why-icon">✓</span>
-                <h3>Strict Quality Control</h3>
-                <p>100% inspection before packing · Certified test reports</p>
-            </div>
-            <div class="why-card">
-                <span class="why-icon">$</span>
-                <h3>Factory Direct Pricing</h3>
-                <p>No middleman — quote straight from the production source</p>
+            <div class="why-proof">
+                <img src="images/why_quality.webp" alt="Leather wallet quality inspection" width="1680" height="945" loading="lazy">
+                <strong>QC Inspection</strong>
+                <span>Inspection before packing to support stable bulk orders.</span>
             </div>
         </div>
     </div>
