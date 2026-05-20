@@ -507,14 +507,57 @@
 
         @media (max-width: 768px) {
             .whatsapp-float {
-                width: min(58px, 15vw);
-                height: min(58px, 15vw);
-                right: 14px;
-                bottom: 14px;
+                display: none !important;
             }
-            .whatsapp-float svg {
-                width: 27px;
-                height: 27px;
+        }
+
+        .products-whatsapp-cta {
+            background: #FDFBF7;
+            border: 1px solid rgba(92,45,26,0.14);
+            border-radius: 8px;
+            padding: 20px 22px;
+            margin: 0 auto 42px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 18px;
+            box-shadow: 0 6px 18px rgba(92,45,26,0.06);
+        }
+        .products-whatsapp-cta h3 {
+            color: #5C2D1A;
+            font-size: 1.05rem;
+            line-height: 1.25;
+            margin-bottom: 4px;
+        }
+        .products-whatsapp-cta p {
+            color: #555;
+            font-size: 0.9rem;
+            line-height: 1.55;
+            margin: 0;
+        }
+        .products-whatsapp-cta .whatsapp-link {
+            flex: 0 0 auto;
+            background: #25D366;
+            color: #fff;
+            padding: 10px 18px;
+            border-radius: 999px;
+            font-size: 0.88rem;
+            font-weight: 700;
+            text-decoration: none;
+            white-space: nowrap;
+        }
+        @media (max-width: 768px) {
+            .products-whatsapp-cta {
+                margin-bottom: 30px;
+                padding: 16px;
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 12px;
+            }
+            .products-whatsapp-cta .whatsapp-link {
+                width: 100%;
+                text-align: center;
+                padding: 11px 16px;
             }
         }
 
@@ -859,6 +902,16 @@
 </section>
 
 <!-- ========== ④  OEM ========== -->
+<div class="container">
+    <div class="products-whatsapp-cta">
+        <div>
+            <h3>Need a quick quote?</h3>
+            <p>Send us your product idea, quantity or reference photo on WhatsApp.</p>
+        </div>
+        <a href="https://wa.me/8613925017288?text=Hello%20HASSION%2C%20I%20am%20interested%20in%20your%20OEM%20leather%20goods.%20Please%20send%20me%20more%20details%20about%20MOQ%2C%20sample%20time%20and%20quotation." target="_blank" rel="noopener" class="whatsapp-link">Chat on WhatsApp</a>
+    </div>
+</div>
+
 <section class="section" id="oem" style="scroll-margin-top:64px;">
     <div class="container">
         <h2 class="section-title">OEM &amp; Custom Manufacturing</h2>
