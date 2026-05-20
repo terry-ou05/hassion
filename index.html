@@ -103,10 +103,17 @@
         .product-card img {
             height: 320px;
             object-fit: contain;
+            object-position: center;
             background: #FDFBF7;
         }
         @media (max-width: 768px) { .product-card img { height: 240px; } }
-        @media (max-width: 480px) { .product-card img { height: 180px; } }
+        @media (max-width: 480px) {
+            .product-card img {
+                height: 180px;
+                object-fit: contain;
+                object-position: center;
+            }
+        }
 
         /* === Why Choose HASSION === */
         .why-layout {
@@ -498,6 +505,19 @@
             }
         }
 
+        @media (max-width: 768px) {
+            .whatsapp-float {
+                width: min(58px, 15vw);
+                height: min(58px, 15vw);
+                right: 14px;
+                bottom: 14px;
+            }
+            .whatsapp-float svg {
+                width: 27px;
+                height: 27px;
+            }
+        }
+
         /* === OEM urgent note === */
         .oem-note {
             font-size: 0.85rem;
@@ -789,7 +809,7 @@
                 <img src="images/product_mens_wallet.webp" alt="Men's Leather Wallet" width="1254" height="1254" loading="lazy">
                 <div class="card-body">
                     <h3 class="card-name">Men's Wallet</h3>
-                    <p class="card-desc">Custom bifold, trifold, slim and RFID wallet options</p>
+                    <p class="card-desc">Bifold, trifold, slim and RFID wallet styles.</p>
                     <a href="#contact" class="card-inquire" data-product="Men's Wallet" onclick="prefillInquiry(this)">Inquire</a>
                 </div>
             </div>
@@ -797,7 +817,7 @@
                 <img src="images/product_womens_wallet.webp" alt="Women's Leather Wallet" width="1448" height="1086" loading="lazy">
                 <div class="card-body">
                     <h3 class="card-name">Women's Wallet</h3>
-                    <p class="card-desc">Long wallet, compact wallet and branded packaging options</p>
+                    <p class="card-desc">Long, compact and branded wallet styles.</p>
                     <a href="#contact" class="card-inquire" data-product="Women's Wallet" onclick="prefillInquiry(this)">Inquire</a>
                 </div>
             </div>
@@ -805,7 +825,7 @@
                 <img src="images/product_passport_holder.webp" alt="Leather Passport Holder" width="1448" height="1086" loading="lazy">
                 <div class="card-body">
                     <h3 class="card-name">Passport Holder</h3>
-                    <p class="card-desc">Custom logo, color, lining and travel set options</p>
+                    <p class="card-desc">Travel holders with logo and color options.</p>
                     <a href="#contact" class="card-inquire" data-product="Passport Holder" onclick="prefillInquiry(this)">Inquire</a>
                 </div>
             </div>
@@ -813,7 +833,7 @@
                 <img src="images/product_card_holder.webp" alt="Leather Card Holder" width="1448" height="1086" loading="lazy">
                 <div class="card-body">
                     <h3 class="card-name">Card Holder</h3>
-                    <p class="card-desc">Slim card case, business card holder and RFID options</p>
+                    <p class="card-desc">Slim card cases for business and retail.</p>
                     <a href="#contact" class="card-inquire" data-product="Card Holder" onclick="prefillInquiry(this)">Inquire</a>
                 </div>
             </div>
@@ -821,7 +841,7 @@
                 <img src="images/product_key_holder.webp" alt="Leather Key Holder" width="1448" height="1086" loading="lazy">
                 <div class="card-body">
                     <h3 class="card-name">Key Holder</h3>
-                    <p class="card-desc">Custom leather, hardware and logo finishing available</p>
+                    <p class="card-desc">Zipper key pouches with metal hardware.</p>
                     <a href="#contact" class="card-inquire" data-product="Key Holder" onclick="prefillInquiry(this)">Inquire</a>
                 </div>
             </div>
@@ -829,7 +849,7 @@
                 <img src="images/product_coin_case.webp" alt="Leather Coin Case" width="1448" height="1086" loading="lazy">
                 <div class="card-body">
                     <h3 class="card-name">Coin Case</h3>
-                    <p class="card-desc">Compact coin pouch with custom material and color options</p>
+                    <p class="card-desc">Small coin pouches and creative leather cases.</p>
                     <a href="#contact" class="card-inquire" data-product="Coin Case" onclick="prefillInquiry(this)">Inquire</a>
                 </div>
             </div>
