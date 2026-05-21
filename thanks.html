@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Thank You - HASSION Leather</title>
-    <meta name="description" content="Thank you for contacting HASSION Leather. Our export team will reply to your OEM leather goods inquiry within 24 hours.">
+    <meta name="description" content="Thank you for contacting HASSION Leather. Our team will reply to your OEM leather goods inquiry soon.">
     <link rel="icon" type="image/gif" href="images/logo.gif">
     <style>
         *, *::before, *::after {
@@ -12,100 +12,77 @@
         }
 
         body {
-            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
-            background: #FDFBF7;
-            min-height: 100vh;
             margin: 0;
-            color: #333;
+            min-height: 100vh;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+            color: #333333;
+            background: #FDFBF7;
+            line-height: 1.7;
         }
 
         .thanks-page {
             min-height: 100vh;
-            display: grid;
-            place-items: center;
-            padding: 40px 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 48px 20px;
         }
 
-        .thanks-box {
-            width: min(100%, 640px);
-            background: #fff;
-            border: 1px solid rgba(92, 45, 26, 0.12);
-            border-radius: 8px;
-            padding: 42px;
-            box-shadow: 0 10px 32px rgba(92, 45, 26, 0.08);
+        .thanks-content {
+            width: 100%;
+            max-width: 620px;
             text-align: center;
         }
 
         .brand-logo {
-            width: 126px;
+            width: 138px;
             height: auto;
-            margin: 0 auto 22px;
-        }
-
-        .status-mark {
-            width: 54px;
-            height: 54px;
-            border-radius: 50%;
-            background: #C8945A;
-            color: #fff;
-            display: inline-flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 1.5rem;
-            font-weight: 700;
-            margin-bottom: 18px;
+            margin: 0 auto 30px;
         }
 
         h1 {
             color: #5C2D1A;
-            font-size: 2.1rem;
+            font-size: 2.2rem;
             line-height: 1.2;
-            margin: 0 0 14px;
+            margin: 0 0 16px;
         }
 
         p {
-            color: #666;
-            font-size: 1.05rem;
-            line-height: 1.7;
-            margin: 0;
+            max-width: 520px;
+            margin: 0 auto;
+            color: #555;
+            font-size: 1rem;
         }
 
-        .reply-note {
-            margin-top: 18px;
-            padding: 16px;
-            background: #FDFBF7;
-            border-left: 3px solid #C8945A;
-            text-align: left;
-            font-size: 0.95rem;
-        }
-
-        .action-row {
+        .actions {
             display: flex;
             justify-content: center;
-            gap: 12px;
+            gap: 14px;
             flex-wrap: wrap;
-            margin-top: 28px;
+            margin-top: 34px;
         }
 
         .btn {
             display: inline-block;
-            padding: 12px 28px;
-            text-decoration: none;
-            border-radius: 6px;
-            font-weight: 600;
+            min-width: 180px;
+            padding: 13px 26px;
             border: 2px solid transparent;
+            border-radius: 6px;
+            font-size: 0.96rem;
+            font-weight: 600;
+            text-decoration: none;
             transition: background 0.2s, border-color 0.2s, color 0.2s;
         }
 
         .btn-primary {
-            background: #C8945A;
-            border-color: #C8945A;
+            background: #25D366;
+            border-color: #25D366;
             color: #fff;
         }
 
         .btn-primary:hover {
-            background: #b5834a;
-            border-color: #b5834a;
+            background: #1ea84d;
+            border-color: #1ea84d;
         }
 
         .btn-outline {
@@ -119,45 +96,46 @@
             color: #fff;
         }
 
-        .small-links {
-            margin-top: 22px;
-            font-size: 0.9rem;
-            color: #777;
-        }
-
-        .small-links a {
-            color: #5C2D1A;
-            font-weight: 600;
-        }
-
         @media (max-width: 520px) {
-            .thanks-box {
-                padding: 30px 22px;
+            .thanks-page {
+                padding: 38px 18px;
+            }
+
+            .brand-logo {
+                width: 124px;
+                margin-bottom: 24px;
             }
 
             h1 {
-                font-size: 1.7rem;
+                font-size: 1.75rem;
+            }
+
+            p {
+                font-size: 0.94rem;
+            }
+
+            .actions {
+                gap: 12px;
+                margin-top: 28px;
             }
 
             .btn {
                 width: 100%;
+                min-width: 0;
             }
         }
     </style>
 </head>
 <body>
     <main class="thanks-page">
-        <section class="thanks-box" aria-labelledby="thanks-title">
+        <section class="thanks-content" aria-labelledby="thanks-title">
             <img class="brand-logo" src="images/logo.gif" alt="HASSION Leather" width="172" height="86">
-            <div class="status-mark" aria-hidden="true">✓</div>
             <h1 id="thanks-title">Thank you for your inquiry</h1>
-            <p>Your message has been received by HASSION Leather. Our export team will review your OEM request and reply within 24 hours.</p>
-            <p class="reply-note">For urgent projects, please contact Percy on WhatsApp and include your product type, quantity, target market and delivery schedule.</p>
-            <div class="action-row">
+            <p>Your message has been received. The HASSION team will review your OEM leather goods request and reply as soon as possible.</p>
+            <div class="actions">
                 <a class="btn btn-primary" href="https://wa.me/8613925017288?text=Hello%20HASSION%2C%20I%20just%20submitted%20an%20inquiry%20from%20your%20website.%20Please%20help%20confirm%20the%20details." target="_blank" rel="noopener">Chat on WhatsApp</a>
-                <a class="btn btn-outline" href="index.html#products">View Products</a>
+                <a class="btn btn-outline" href="index.html">Back to Homepage</a>
             </div>
-            <p class="small-links">Prefer email? Contact us at <a href="mailto:percy@hassion.com">percy@hassion.com</a></p>
         </section>
     </main>
 </body>
