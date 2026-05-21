@@ -70,7 +70,7 @@
                 max-width: 150px;
             }
         }
-        /* === Exhibitions (independent structure, does not reuse .cert-card) === */
+        /* === Exhibitions === */
         .exhibition-grid {
             display: grid;
             grid-template-columns: repeat(3, 1fr);
@@ -573,31 +573,13 @@
             border-radius: 0 4px 4px 0;
         }
 
-        /* === Quality compliance note === */
-        .quality-note {
-            max-width: 720px;
-            margin: -8px auto 28px;
-            text-align: center;
-            font-size: 0.9rem;
-            color: #666;
-            line-height: 1.6;
-        }
-
-        /* === Exhibition & Clients mobile image fix === */
+        /* === Exhibition mobile image fix === */
         @media (max-width: 768px) {
             .exhibition-card img {
                 height: auto;
                 max-height: none;
                 object-fit: contain;
                 background: #FDFBF7;
-            }
-            #clients .cert-card img {
-                width: 100%;
-                max-width: 220px;
-                height: auto;
-                object-fit: contain;
-                background: #fff;
-                margin: 0 auto;
             }
         }
 
@@ -684,7 +666,6 @@
             <li><a href="#about" onclick="closeMenu()">About</a></li>
             <li><a href="#products" onclick="closeMenu()">Products</a></li>
             <li><a href="#oem" onclick="closeMenu()">OEM</a></li>
-            <li><a href="#certifications" onclick="closeMenu()">Quality</a></li>
             <li><a href="#contact" onclick="closeMenu()">Contact</a></li>
         </ul>
         <button class="hamburger" type="button" aria-label="Menu" aria-expanded="false" aria-controls="navLinks">
@@ -982,39 +963,6 @@
                 <p class="oem-note">For urgent or special projects, please contact us with your target quantity and delivery date.</p>
 
                 <a href="#contact" class="btn btn-primary">Request a Quote</a>
-            </div>
-        </div>
-    </div>
-</section>
-
-<!-- ========== ⑤  QUALITY & COMPLIANCE ========== -->
-<section class="section" id="certifications" style="scroll-margin-top:64px;">
-    <div class="container">
-        <h2 class="section-title">Quality &amp; Compliance</h2>
-        <p class="section-subtitle">Independent test reports and certified quality standards</p>
-        <p class="quality-note">Test reports and material compliance documents can be provided according to your target market requirements.</p>
-        <div class="certs-grid">
-            <div class="cert-card">
-                <img src="images/test_report.jpg" alt="Product Quality Test Report" width="600" height="824" loading="lazy">
-                <span class="cert-label">Product Quality Test Report</span>
-            </div>
-        </div>
-    </div>
-</section>
-
-<!-- ==========    TRUSTED CLIENTS ========== -->
-<section class="section" id="clients" style="background:#fff;scroll-margin-top:64px;">
-    <div class="container">
-        <h2 class="section-title">Trusted Clients</h2>
-        <p class="section-subtitle">Long-term partnerships with leading brands and corporate buyers</p>
-        <div class="certs-grid">
-            <div class="cert-card">
-                <img src="images/client_boc.jpg" alt="Bank of China — Corporate Client" width="132" height="64" loading="lazy">
-                <span class="cert-label">Bank of China — Corporate Gift Supplier</span>
-            </div>
-            <div class="cert-card">
-                <img src="images/client_chinamobile.jpg" alt="China Mobile — Corporate Client" width="132" height="64" loading="lazy">
-                <span class="cert-label">China Mobile — Corporate Gift Supplier</span>
             </div>
         </div>
     </div>

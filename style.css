@@ -425,37 +425,6 @@ img {
     margin-top: 24px;
 }
 
-/* === Certifications Section === */
-#certifications {
-    background: #FDFBF7;
-}
-
-.certs-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 30px;
-}
-
-.cert-card {
-    background: #fff;
-    border-radius: 8px;
-    padding: 20px;
-    text-align: center;
-    box-shadow: 0 2px 12px rgba(0,0,0,0.06);
-}
-
-.cert-card img {
-    height: 200px;
-    width: 100%;
-    object-fit: contain;
-    margin-bottom: 12px;
-}
-
-.cert-card .cert-label {
-    font-size: 0.85rem;
-    color: #777;
-}
-
 /* === Contact Section === */
 #contact {
     background: #fff;
@@ -736,12 +705,6 @@ img {
 
     .oem-checklist {
         grid-template-columns: 1fr;
-    }
-
-    /* Certs */
-    .certs-grid {
-        grid-template-columns: 1fr;
-        gap: 16px;
     }
 
     /* Contact */
