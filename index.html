@@ -740,17 +740,29 @@
 <nav class="navbar">
     <div class="nav-inner">
         <a href="#hero" class="nav-logo" aria-label="HASSION Leather home">HASSION</a>
-        <ul class="nav-links" id="navLinks">
-            <li><a href="#hero" onclick="closeMenu()">Home</a></li>
-            <li><a href="#about" onclick="closeMenu()">About</a></li>
+        <ul class="nav-links" id="navLinks" aria-label="Main navigation">
+            <li class="nav-drawer-head">
+                <span>HASSION Leather</span>
+                <button class="nav-close" type="button" aria-label="Close menu">Close</button>
+            </li>
             <li><a href="#products" onclick="closeMenu()">Products</a></li>
-            <li><a href="#oem" onclick="closeMenu()">OEM</a></li>
+            <li><a href="#why-us" onclick="closeMenu()">Craftsmanship</a></li>
+            <li><a href="#production" onclick="closeMenu()">Factory</a></li>
+            <li><a href="#about" onclick="closeMenu()">About</a></li>
             <li><a href="#contact" onclick="closeMenu()">Contact</a></li>
+            <li class="nav-drawer-secondary" aria-label="Manufacturing capabilities">
+                <span>OEM Leather Goods</span>
+                <span>Custom Manufacturing</span>
+                <span>Quality Inspection</span>
+                <span>Material &amp; Hardware</span>
+                <span>Packaging</span>
+            </li>
         </ul>
-        <button class="hamburger" type="button" aria-label="Menu" aria-expanded="false" aria-controls="navLinks">
-            <span></span><span></span><span></span>
+        <button class="hamburger nav-toggle" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="navLinks">
+            <span class="menu-label">MENU</span>
         </button>
     </div>
+    <button class="nav-overlay" type="button" aria-label="Close menu"></button>
 </nav>
 
 <!-- ========== ①  HERO / BANNER ========== -->
@@ -1214,17 +1226,27 @@
 <script>
     var navLinks = document.getElementById('navLinks');
     var hamburger = document.querySelector('.hamburger');
+    var navbar = document.querySelector('.navbar');
+    var navOverlay = document.querySelector('.nav-overlay');
+    var navClose = document.querySelector('.nav-close');
 
     function toggleMenu() {
         if (!navLinks || !hamburger) return;
-        var isOpen = navLinks.classList.toggle('open');
+        var isOpen = !navLinks.classList.contains('open');
+        setMenuState(isOpen);
+    }
+
+    function setMenuState(isOpen) {
+        if (!navLinks || !hamburger) return;
+        navLinks.classList.toggle('open', isOpen);
+        if (navbar) navbar.classList.toggle('menu-open', isOpen);
+        document.body.classList.toggle('nav-open', isOpen);
         hamburger.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+        hamburger.setAttribute('aria-label', isOpen ? 'Close menu' : 'Open menu');
     }
 
     function closeMenu() {
-        if (!navLinks || !hamburger) return;
-        navLinks.classList.remove('open');
-        hamburger.setAttribute('aria-expanded', 'false');
+        setMenuState(false);
     }
 
     if (hamburger) {
@@ -1232,6 +1254,14 @@
             e.stopPropagation();
             toggleMenu();
         });
+    }
+
+    if (navOverlay) {
+        navOverlay.addEventListener('click', closeMenu);
+    }
+
+    if (navClose) {
+        navClose.addEventListener('click', closeMenu);
     }
 
     if (navLinks) {
