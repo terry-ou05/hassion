@@ -52,22 +52,28 @@
     <link rel="alternate" hreflang="en" href="https://terry-ou05.github.io/hassion/">
     <link rel="alternate" hreflang="x-default" href="https://terry-ou05.github.io/hassion/">
 
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500&family=Inter:wght@400;500&display=swap" rel="stylesheet">
+
     <link rel="stylesheet" href="style.css">
 
     <!-- Local style — additive only, no modification of style.css existing rules -->
     <style>
-        /* === Nav logo: override style.css height:36px, preserve original aspect ratio === */
-        .nav-logo img {
-            width: auto;
-            height: 56px;
-            max-width: 172px;
-            object-fit: contain;
-            display: block;
+        /* === Nav wordmark === */
+        .nav-logo {
+            font-family: "Cormorant Garamond", Georgia, serif;
+            font-size: 22px;
+            font-weight: 500;
+            letter-spacing: 0.24em;
+            color: #E0D7CB;
+            line-height: 1;
+            text-transform: uppercase;
         }
         @media (max-width: 768px) {
-            .nav-logo img {
-                height: 48px;
-                max-width: 150px;
+            .nav-logo {
+                font-size: 20px;
+                letter-spacing: 0.2em;
             }
         }
         /* === Exhibitions === */
@@ -593,15 +599,50 @@
         @media (min-width: 769px) {
             .hero {
                 min-height: 760px;
-                padding-top: 120px;
-                padding-bottom: 90px;
+                padding-top: 132px;
+                padding-bottom: 108px;
             }
-            .hero-content { max-width: 980px; }
-            .hero h1 { margin-bottom: 14px; }
-            .hero h2 { margin-bottom: 14px; }
-            .hero-specs { margin-top: 14px; }
-            .hero-buttons { margin-top: 34px; }
-            .hero-trust { margin-top: 28px; }
+            .hero-content {
+                max-width: 680px;
+                padding: 20px 0;
+            }
+            .hero-tagline { margin-bottom: 22px; }
+            .hero h1 {
+                font-size: 64px;
+                margin-bottom: 0;
+            }
+            .hero h2 { margin: 22px auto 0; }
+            .hero-buttons { margin-top: 40px; }
+            .hero-trust { margin-top: 52px; }
+        }
+        .hero .btn {
+            border-radius: 2px;
+            padding: 16px 28px;
+            font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+            font-size: 12px;
+            font-weight: 400;
+            letter-spacing: 0.12em;
+            line-height: 1;
+            text-transform: uppercase;
+        }
+        .hero .btn-primary {
+            background: #8A5A36;
+            border-color: #8A5A36;
+            color: #fff;
+        }
+        .hero .btn-outline {
+            background: transparent;
+            border-color: rgba(253, 251, 247, 0.42);
+            color: rgba(253, 251, 247, 0.86);
+        }
+        .hero .btn-primary:hover {
+            background: #9A6842;
+            border-color: #9A6842;
+        }
+        .hero .btn-outline:hover {
+            background: rgba(253, 251, 247, 0.08);
+            border-color: rgba(253, 251, 247, 0.68);
+            color: rgba(253, 251, 247, 0.96);
         }
         @media (max-width: 768px) {
             .hero-content {
@@ -614,18 +655,19 @@
                 overflow-wrap: anywhere;
             }
             .hero h1 {
-                max-width: 280px;
+                max-width: 320px;
                 margin-left: auto;
                 margin-right: auto;
-                font-size: 1.35rem;
+                font-size: 40px;
                 overflow-wrap: anywhere;
             }
             .hero h2 {
-                max-width: 260px;
+                max-width: 290px;
                 margin-left: auto;
                 margin-right: auto;
-                font-size: 0.76rem;
-                margin-bottom: 8px;
+                font-size: 0.9rem;
+                margin-top: 18px;
+                margin-bottom: 0;
                 overflow-wrap: anywhere;
             }
             .hero-tagline {
@@ -664,9 +706,7 @@
 <!-- ========== NAVIGATION ========== -->
 <nav class="navbar">
     <div class="nav-inner">
-        <a href="#hero" class="nav-logo">
-            <img src="images/logo.gif" alt="HASSION Leather" width="172" height="86">
-        </a>
+        <a href="#hero" class="nav-logo" aria-label="HASSION Leather home">HASSION</a>
         <ul class="nav-links" id="navLinks">
             <li><a href="#hero" onclick="closeMenu()">Home</a></li>
             <li><a href="#about" onclick="closeMenu()">About</a></li>
