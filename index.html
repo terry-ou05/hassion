@@ -431,61 +431,25 @@
             display: flex;
             flex-wrap: wrap;
             justify-content: center;
-            gap: 18px 28px;
-            margin-top: 28px;
-            max-width: 760px;
+            gap: 12px 24px;
+            margin-top: 24px;
+            max-width: 700px;
             margin-left: auto;
             margin-right: auto;
         }
         .hero-trust > span {
             color: #FDFBF7;
-            font-size: 0.85rem;
-            letter-spacing: 0.3px;
-            opacity: 0.92;
+            font-size: 0.78rem;
+            letter-spacing: 0.02em;
+            opacity: 0.76;
             position: relative;
-            padding-left: 18px;
         }
         .hero-trust > span::before {
-            content: "✓";
-            position: absolute;
-            left: 0;
-            color: #C8945A;
-            font-weight: 700;
+            content: none;
         }
         @media (max-width: 768px) {
             .hero-trust { gap: 10px 18px; margin-top: 22px; }
             .hero-trust > span { font-size: 0.78rem; }
-        }
-
-        /* === Hero specs badge === */
-        .hero-specs {
-            display: inline-block;
-            color: #FDFBF7;
-            font-weight: 600;
-            font-size: 0.95rem;
-            letter-spacing: 0.04em;
-            background: rgba(92, 45, 26, 0.42);
-            border: 1px solid rgba(200, 148, 90, 0.35);
-            border-radius: 999px;
-            padding: 8px 18px;
-            margin: 12px 0 0;
-        }
-        .hero-specs + .hero-buttons {
-            margin-top: 28px;
-        }
-        @media (max-width: 768px) {
-            .hero-specs {
-                display: block;
-                width: 100%;
-                max-width: 300px;
-                box-sizing: border-box;
-                margin-left: auto;
-                margin-right: auto;
-                white-space: normal;
-                font-size: 0.72rem;
-                line-height: 1.55;
-                padding: 6px 14px;
-            }
         }
 
         /* === Product card layout === */
@@ -715,12 +679,14 @@
                 flex-direction: column;
                 align-items: center;
                 max-width: 300px;
+                gap: 8px;
             }
             .hero-trust > span {
                 max-width: 100%;
                 font-size: 0.72rem;
                 text-align: center;
                 line-height: 1.45;
+                opacity: 0.78;
             }
         }
         @media (max-width: 480px) {
@@ -771,7 +737,6 @@
         <p class="hero-tagline">Since 1998 · OEM/ODM Leather Goods Factory in Guangzhou</p>
         <h1>Guangzhou Hassion Leather Ltd.</h1>
         <h2>Leather Wallets &amp; Small Leather Goods OEM/ODM Manufacturer</h2>
-        <p class="hero-specs">MOQ 200 pcs · 7-Day Sample · 30-Day Production · 200+ Skilled Workers</p>
         <div class="hero-buttons">
             <a href="#contact" class="btn btn-primary">Get OEM Quotation</a>
             <a href="#products" class="btn btn-outline">View Product Categories</a>
