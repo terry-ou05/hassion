@@ -163,7 +163,7 @@ img {
 /* === Hero / Banner === */
 .hero {
     min-height: 100vh;
-    background: url('images/banner.webp') center/cover no-repeat;
+    background: url('images/hero_craftsmanship.png') center/cover no-repeat;
     display: flex;
     align-items: center;
     justify-content: center;

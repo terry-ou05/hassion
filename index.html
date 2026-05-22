@@ -11,7 +11,7 @@
     <link rel="icon" type="image/gif" href="images/logo.gif">
 
     <!-- Preload LCP hero image -->
-    <link rel="preload" as="image" href="images/banner.webp" type="image/webp">
+    <link rel="preload" as="image" href="images/hero_craftsmanship.png" type="image/png">
 
     <!-- JSON-LD Organization schema -->
     <script type="application/ld+json">
@@ -39,14 +39,14 @@
     <meta property="og:type" content="website">
     <meta property="og:title" content="HASSION Leather — OEM Leather Goods Manufacturer | Since 1998">
     <meta property="og:description" content="Guangzhou HASSION Leather Ltd. — Professional leather goods factory specializing in OEM wallets, passport holders, card holders. Since 1998.">
-    <meta property="og:image" content="https://terry-ou05.github.io/hassion/images/banner.webp">
+    <meta property="og:image" content="https://terry-ou05.github.io/hassion/images/hero_craftsmanship.png">
     <meta property="og:url" content="https://terry-ou05.github.io/hassion/">
     <meta property="og:site_name" content="HASSION Leather">
     <meta property="og:locale" content="en_US">
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="HASSION Leather — OEM Leather Goods Manufacturer | Since 1998">
     <meta name="twitter:description" content="Guangzhou HASSION Leather Ltd. — Professional leather goods factory. Since 1998.">
-    <meta name="twitter:image" content="https://terry-ou05.github.io/hassion/images/banner.webp">
+    <meta name="twitter:image" content="https://terry-ou05.github.io/hassion/images/hero_craftsmanship.png">
 
     <link rel="canonical" href="https://terry-ou05.github.io/hassion/">
     <link rel="alternate" hreflang="en" href="https://terry-ou05.github.io/hassion/">
@@ -643,6 +643,39 @@
             background: rgba(253, 251, 247, 0.08);
             border-color: rgba(253, 251, 247, 0.68);
             color: rgba(253, 251, 247, 0.96);
+        }
+
+        /* === Quiet scroll reveal === */
+        .reveal {
+            opacity: 0;
+            transform: translateY(24px);
+            transition:
+                opacity 1.2s cubic-bezier(0.22, 0.61, 0.36, 1),
+                transform 1.2s cubic-bezier(0.22, 0.61, 0.36, 1);
+            transition-delay: var(--reveal-delay, 0ms);
+            will-change: opacity, transform;
+        }
+        .reveal.reveal-visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        .product-card.reveal {
+            transition:
+                opacity 1.2s cubic-bezier(0.22, 0.61, 0.36, 1),
+                transform 1.2s cubic-bezier(0.22, 0.61, 0.36, 1),
+                box-shadow 0.3s;
+        }
+        .product-card.reveal.reveal-visible:hover {
+            transform: translateY(-6px);
+        }
+        @media (prefers-reduced-motion: reduce) {
+            .reveal {
+                opacity: 1;
+                transform: none;
+                transition: none;
+                transition-delay: 0ms;
+                will-change: auto;
+            }
         }
         @media (max-width: 768px) {
             .hero-content {
@@ -1242,6 +1275,66 @@
             msg.value = "I'm interested in HASSION's " + product + ". Please send me OEM quotation including MOQ, sample lead time, and unit price.";
         }
     }
+
+    // Quiet scroll reveal for primary content only.
+    (function() {
+        var reduceMotion = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+        var selectors = [
+            '.hero .hero-tagline',
+            '.hero h1',
+            '.hero h2',
+            '.hero .hero-buttons',
+            '.hero .hero-trust',
+            'main section:not(#contact) .section-title',
+            'main section:not(#contact) .section-subtitle',
+            '#about .about-text p',
+            '#about .about-image',
+            '#why-us .why-intro',
+            '#why-us .why-reason',
+            '#why-us .why-media',
+            '#why-us .why-proof',
+            '#production .production-card',
+            '#products .product-card',
+            '#oem .oem-step',
+            '#oem .oem-right h3',
+            '#oem .oem-checklist',
+            '#oem .oem-info',
+            '#oem .oem-note',
+            '#exhibitions .exhibition-card'
+        ];
+        var elements = Array.prototype.slice.call(document.querySelectorAll(selectors.join(',')));
+
+        if (reduceMotion || !('IntersectionObserver' in window)) {
+            elements.forEach(function(el) {
+                el.classList.add('reveal-visible');
+            });
+            return;
+        }
+
+        elements.forEach(function(el) {
+            el.classList.add('reveal');
+        });
+
+        Array.prototype.slice.call(document.querySelectorAll('#products .product-card')).forEach(function(card, index) {
+            card.classList.add('reveal-stagger');
+            card.style.setProperty('--reveal-delay', (index % 3) * 100 + 'ms');
+        });
+
+        var revealObserver = new IntersectionObserver(function(entries, observer) {
+            entries.forEach(function(entry) {
+                if (!entry.isIntersecting) return;
+                entry.target.classList.add('reveal-visible');
+                observer.unobserve(entry.target);
+            });
+        }, {
+            threshold: 0.14,
+            rootMargin: '0px 0px -8% 0px'
+        });
+
+        elements.forEach(function(el) {
+            revealObserver.observe(el);
+        });
+    })();
 </script>
 
     <!-- Dynamic year calculation (founded 1998) -->
