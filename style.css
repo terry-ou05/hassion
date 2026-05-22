@@ -163,7 +163,15 @@ img {
 /* === Hero / Banner === */
 .hero {
     min-height: 100vh;
-    background: url('images/hero_craftsmanship.png') center/cover no-repeat;
+    background-image: url('images/hero_craftsmanship.png');
+    background-image: image-set(
+        url('images/hero_craftsmanship.avif') type("image/avif"),
+        url('images/hero_craftsmanship.webp') type("image/webp"),
+        url('images/hero_craftsmanship.png') type("image/png")
+    );
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -701,6 +709,15 @@ img {
     }
 
     /* Hero */
+    .hero {
+        background-image: url('images/hero_craftsmanship_mobile.webp');
+        background-image: image-set(
+            url('images/hero_craftsmanship_mobile.avif') type("image/avif"),
+            url('images/hero_craftsmanship_mobile.webp') type("image/webp")
+        );
+        background-position: center center;
+    }
+
     .hero h1 {
         font-size: 40px;
         line-height: 1.05;
