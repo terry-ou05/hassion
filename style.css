@@ -872,8 +872,17 @@ img {
 
     /* Contact */
     .contact-grid {
-        grid-template-columns: 1fr;
+        display: flex;
+        flex-direction: column;
         gap: 24px;
+    }
+
+    .contact-form {
+        order: 1;
+    }
+
+    .contact-info {
+        order: 2;
     }
 
     .form-row {
@@ -903,7 +912,12 @@ img {
 
     .contact-map {
         margin-top: 18px;
-        height: 180px;
+        height: 150px;
+    }
+
+    .contact-map iframe {
+        filter: grayscale(1) saturate(0.45) contrast(0.95);
+        opacity: 0.82;
     }
 
     .contact-form {
