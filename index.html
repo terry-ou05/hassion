@@ -1271,6 +1271,16 @@
         }
     }
 
+    document.querySelectorAll('a[href="#contact"]').forEach(function(link) {
+        link.addEventListener('click', function() {
+            window.setTimeout(function() {
+                if (window.location.hash === '#contact') {
+                    history.replaceState(null, '', window.location.pathname + window.location.search);
+                }
+            }, 300);
+        });
+    });
+
     // Quiet scroll reveal for primary content only.
     (function() {
         var reduceMotion = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
