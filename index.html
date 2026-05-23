@@ -1189,6 +1189,26 @@
 
 <!-- ========== SCRIPTS ========== -->
 <script>
+    if ('scrollRestoration' in history) {
+        history.scrollRestoration = 'manual';
+    }
+
+    window.addEventListener('load', function() {
+        var hash = window.location.hash;
+        if (hash && hash !== '#contact') return;
+
+        if (hash === '#contact') {
+            history.replaceState(null, '', window.location.pathname + window.location.search);
+        }
+
+        window.requestAnimationFrame(function() {
+            window.scrollTo(0, 0);
+            window.setTimeout(function() {
+                window.scrollTo(0, 0);
+            }, 80);
+        });
+    });
+
     var navLinks = document.getElementById('navLinks');
     var hamburger = document.querySelector('.hamburger');
     var navbar = document.querySelector('.navbar');
