@@ -459,11 +459,162 @@
             }
         }
 
-        /* === OEM step h4 → h3 (preserve visual since .step-content h4 rule won't match h3) === */
-        .step-content h3 {
+        /* === OEM Development Process === */
+        #oem .section-title,
+        #oem .section-subtitle {
+            text-align: left;
+        }
+        #oem .section-title {
+            font-size: 2rem;
+            line-height: 1.2;
+            margin-bottom: 14px;
+        }
+        #oem .section-subtitle {
+            max-width: 560px;
+            color: #555;
             font-size: 1rem;
+            line-height: 1.75;
+            margin: 0;
+        }
+        #oem .oem-grid {
+            grid-template-columns: minmax(0, 0.88fr) minmax(460px, 1.12fr);
+            gap: clamp(40px, 6vw, 76px);
+            align-items: start;
+        }
+        #oem .oem-copy {
+            max-width: 560px;
+        }
+        #oem .oem-eyebrow {
+            display: block;
+            color: rgba(92,45,26,0.62);
+            font-size: 0.72rem;
+            letter-spacing: 0.18em;
+            line-height: 1.2;
+            margin-bottom: 14px;
+            text-transform: uppercase;
+        }
+        #oem .oem-summary {
+            color: #555;
+            font-size: 0.94rem;
+            line-height: 1.75;
+            margin-top: 22px;
+        }
+        #oem .oem-meta {
+            display: grid;
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+            gap: 12px 22px;
+            margin-top: 30px;
+            padding-top: 24px;
+            border-top: 1px solid rgba(92,45,26,0.12);
+        }
+        #oem .oem-meta-item {
+            min-width: 0;
+        }
+        #oem .oem-meta-label {
+            display: block;
+            color: rgba(92,45,26,0.6);
+            font-size: 0.68rem;
+            letter-spacing: 0.14em;
+            line-height: 1.3;
+            margin-bottom: 5px;
+            text-transform: uppercase;
+        }
+        #oem .oem-meta-value {
             color: #333;
-            margin-bottom: 4px;
+            display: block;
+            font-size: 0.9rem;
+            line-height: 1.45;
+        }
+        #oem .oem-copy .btn {
+            margin-top: 30px;
+        }
+        #oem .oem-steps {
+            gap: 0;
+            border-top: 1px solid rgba(92,45,26,0.12);
+        }
+        #oem .oem-step {
+            display: grid;
+            grid-template-columns: 42px minmax(0, 1fr);
+            gap: 18px;
+            padding: 18px 0;
+            border-bottom: 1px solid rgba(92,45,26,0.1);
+        }
+        #oem .step-number {
+            width: auto;
+            height: auto;
+            background: transparent;
+            color: rgba(200,148,90,0.92);
+            border-radius: 0;
+            display: block;
+            font-size: 0.78rem;
+            font-weight: 600;
+            letter-spacing: 0.14em;
+            line-height: 1.45;
+        }
+        #oem .step-content h3 {
+            color: #5C2D1A;
+            font-size: 1rem;
+            font-weight: 600;
+            line-height: 1.35;
+            margin-bottom: 5px;
+        }
+        #oem .step-content p {
+            color: #666;
+            font-size: 0.9rem;
+            line-height: 1.65;
+        }
+        @media (max-width: 768px) {
+            #oem .section-title {
+                font-size: 1.5rem;
+                line-height: 1.25;
+                margin-bottom: 12px;
+            }
+            #oem .section-subtitle {
+                font-size: 0.9rem;
+                line-height: 1.68;
+            }
+            #oem .oem-grid {
+                grid-template-columns: 1fr;
+                gap: 30px;
+            }
+            #oem .oem-summary {
+                font-size: 0.86rem;
+                line-height: 1.65;
+                margin-top: 18px;
+            }
+            #oem .oem-meta {
+                grid-template-columns: 1fr;
+                gap: 11px;
+                margin-top: 24px;
+                padding-top: 20px;
+            }
+            #oem .oem-meta-label {
+                font-size: 0.64rem;
+                margin-bottom: 3px;
+            }
+            #oem .oem-meta-value {
+                font-size: 0.84rem;
+            }
+            #oem .oem-copy .btn {
+                margin-top: 24px;
+            }
+            #oem .oem-step {
+                grid-template-columns: 34px minmax(0, 1fr);
+                gap: 14px;
+                padding: 15px 0;
+            }
+            #oem .step-number {
+                font-size: 0.7rem;
+                letter-spacing: 0.12em;
+            }
+            #oem .step-content h3 {
+                font-size: 0.92rem;
+                margin-bottom: 4px;
+            }
+            #oem .step-content p {
+                font-size: 0.8rem;
+                line-height: 1.55;
+            }
         }
 
         /* === Production Capability === */
@@ -1109,74 +1260,75 @@
 
 <section class="section" id="oem" style="scroll-margin-top:64px;">
     <div class="container">
-        <h2 class="section-title">OEM &amp; Custom Manufacturing</h2>
-        <p class="section-subtitle">Bring Your Design to Life — We Make It Easy</p>
         <div class="oem-grid">
+            <div class="oem-copy">
+                <span class="oem-eyebrow">Private-Label Manufacturing</span>
+                <h2 class="section-title">OEM Development Process</h2>
+                <p class="section-subtitle">From sample development to bulk production, we support private-label leather goods projects with clear communication, practical production planning, and quality control.</p>
+                <p class="oem-summary">Our team helps overseas buyers refine materials, color, size, logo placement, hardware, packaging and finishing details before production begins.</p>
+                <div class="oem-meta" aria-label="OEM project information">
+                    <div class="oem-meta-item">
+                        <span class="oem-meta-label">MOQ</span>
+                        <span class="oem-meta-value">200 pcs per style per color</span>
+                    </div>
+                    <div class="oem-meta-item">
+                        <span class="oem-meta-label">Sample Time</span>
+                        <span class="oem-meta-value">~7 days</span>
+                    </div>
+                    <div class="oem-meta-item">
+                        <span class="oem-meta-label">Production Time</span>
+                        <span class="oem-meta-value">~30 days</span>
+                    </div>
+                    <div class="oem-meta-item">
+                        <span class="oem-meta-label">Customization</span>
+                        <span class="oem-meta-value">Material, color, size, logo, hardware and packaging</span>
+                    </div>
+                </div>
+                <a href="#contact" class="btn btn-primary">Request a Quote</a>
+            </div>
             <div class="oem-steps">
                 <div class="oem-step">
-                    <div class="step-number">1</div>
+                    <div class="step-number">01</div>
                     <div class="step-content">
-                        <h3>Send Inquiry</h3>
-                        <p>Tell us your product idea, quantity, and target price</p>
+                        <h3>Inquiry &amp; Brief</h3>
+                        <p>Share product type, quantity, material, logo requirement and target market.</p>
                     </div>
                 </div>
                 <div class="oem-step">
-                    <div class="step-number">2</div>
+                    <div class="step-number">02</div>
                     <div class="step-content">
-                        <h3>Sample Making</h3>
-                        <p>We create samples based on your design or reference</p>
+                        <h3>Sample Development</h3>
+                        <p>We prepare samples based on your reference, drawing or existing product.</p>
                     </div>
                 </div>
                 <div class="oem-step">
-                    <div class="step-number">3</div>
+                    <div class="step-number">03</div>
                     <div class="step-content">
-                        <h3>Sample Confirmation</h3>
-                        <p>You review and approve the sample, or request changes</p>
+                        <h3>Sample Review</h3>
+                        <p>Confirm size, material, color, logo placement, packaging and finishing details.</p>
                     </div>
                 </div>
                 <div class="oem-step">
-                    <div class="step-number">4</div>
+                    <div class="step-number">04</div>
                     <div class="step-content">
-                        <h3>Mass Production</h3>
-                        <p>We produce your order with strict quality control</p>
+                        <h3>Bulk Production</h3>
+                        <p>Production starts after sample approval and deposit confirmation.</p>
                     </div>
                 </div>
                 <div class="oem-step">
-                    <div class="step-number">5</div>
+                    <div class="step-number">05</div>
                     <div class="step-content">
-                        <h3>Final Inspection</h3>
-                        <p>Every piece is checked before packing</p>
+                        <h3>QC &amp; Packing</h3>
+                        <p>Inspection before packing, including stitching, edge finishing, logo and hardware.</p>
                     </div>
                 </div>
                 <div class="oem-step">
-                    <div class="step-number">6</div>
+                    <div class="step-number">06</div>
                     <div class="step-content">
-                        <h3>Shipping</h3>
-                        <p>We handle export packaging and ship to your destination</p>
+                        <h3>Shipment</h3>
+                        <p>Export packaging and shipment support based on your order requirements.</p>
                     </div>
                 </div>
-            </div>
-            <div class="oem-right">
-                <h3>Customization Options</h3>
-                <ul class="oem-checklist">
-                    <li>Material — genuine leather, PU, canvas, etc.</li>
-                    <li>Color — any Pantone color match</li>
-                    <li>Size — custom dimensions</li>
-                    <li>Logo — embossing, hot stamping, metal plate, printing</li>
-                    <li>Hardware — zipper, buckle, snap button</li>
-                    <li>Packaging — gift box, pouch, custom branding</li>
-                </ul>
-
-                <h3>Key Information</h3>
-                <div class="oem-info">
-                    <p><strong>MOQ:</strong> 200 pcs per style per color</p>
-                    <p><strong>Sample Time:</strong> ~7 days</p>
-                    <p><strong>Production Time:</strong> ~30 days</p>
-                    <p><strong>Payment:</strong> 30% deposit, 70% before shipment</p>
-                </div>
-                <p class="oem-note">For urgent or special projects, please contact us with your target quantity and delivery date.</p>
-
-                <a href="#contact" class="btn btn-primary">Request a Quote</a>
             </div>
         </div>
     </div>
@@ -1466,11 +1618,9 @@
             '#why-us .why-proof',
             '#production .production-card',
             '#products .product-card',
+            '#oem .oem-copy',
+            '#oem .oem-meta-item',
             '#oem .oem-step',
-            '#oem .oem-right h3',
-            '#oem .oem-checklist',
-            '#oem .oem-info',
-            '#oem .oem-note',
             '#exhibitions .exhibition-card'
         ];
         var elements = Array.prototype.slice.call(document.querySelectorAll(selectors.join(',')));
