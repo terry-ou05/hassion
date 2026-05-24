@@ -76,33 +76,117 @@
                 letter-spacing: 0.2em;
             }
         }
-        /* === Exhibitions === */
-        .exhibition-grid {
+        /* === Client Meetings === */
+        #exhibitions {
+            background: #fff;
+        }
+        .exhibition-editorial {
             display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 30px;
+            grid-template-columns: minmax(0, 0.88fr) minmax(420px, 1.12fr);
+            gap: clamp(34px, 5vw, 72px);
+            align-items: center;
+        }
+        .exhibition-copy {
+            max-width: 500px;
+        }
+        .exhibition-eyebrow {
+            display: block;
+            color: rgba(92,45,26,0.62);
+            font-size: 0.72rem;
+            letter-spacing: 0.18em;
+            line-height: 1.2;
+            margin-bottom: 14px;
+            text-transform: uppercase;
+        }
+        .exhibition-copy .section-title {
+            font-size: 2.12rem;
+            font-weight: 700;
+            line-height: 1.2;
+            text-align: left;
+            margin-bottom: 22px;
+        }
+        .exhibition-copy p {
+            color: #555;
+            font-size: 1.04rem;
+            line-height: 1.86;
+            margin: 0;
+        }
+        .exhibition-note {
+            color: rgba(92,45,26,0.72);
+            display: block;
+            font-size: 0.84rem;
+            font-weight: 500;
+            line-height: 1.45;
+            letter-spacing: 0.04em;
+            margin-top: 22px;
+            text-transform: uppercase;
+        }
+        .exhibition-media {
+            display: grid;
+            gap: 14px;
+        }
+        .exhibition-supporting {
+            display: grid;
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+            gap: 14px;
         }
         .exhibition-card {
-            background: #fff;
-            border-radius: 8px;
+            background: #FDFBF7;
+            border: 1px solid rgba(92,45,26,0.1);
+            border-radius: 6px;
             overflow: hidden;
-            box-shadow: 0 2px 12px rgba(0,0,0,0.06);
         }
         .exhibition-card img {
             width: 100%;
-            height: clamp(240px, 32vw, 380px);
             object-fit: cover;
             display: block;
+            filter: saturate(0.72) contrast(0.92) sepia(0.06);
         }
-        .exhibition-card .exhibition-label {
-            display: block;
-            padding: 14px 16px;
-            font-size: 0.85rem;
-            color: #555;
-            text-align: center;
+        .exhibition-main img {
+            aspect-ratio: 4 / 3;
+            object-position: 42% 68%;
+        }
+        .exhibition-supporting img {
+            aspect-ratio: 4 / 3;
+        }
+        .exhibition-discussion img {
+            object-position: 50% 55%;
+        }
+        .exhibition-visit img {
+            object-position: 52% 50%;
         }
         @media (max-width: 768px) {
-            .exhibition-grid { grid-template-columns: 1fr; gap: 16px; }
+            .exhibition-editorial {
+                grid-template-columns: 1fr;
+                gap: 28px;
+            }
+            .exhibition-copy {
+                max-width: none;
+            }
+            .exhibition-copy .section-title {
+                font-size: 1.5rem;
+                margin-bottom: 18px;
+            }
+            .exhibition-copy p {
+                font-size: 0.9rem;
+                line-height: 1.7;
+            }
+            .exhibition-note {
+                margin-top: 18px;
+                font-size: 0.72rem;
+                line-height: 1.5;
+            }
+            .exhibition-media,
+            .exhibition-supporting {
+                gap: 12px;
+            }
+            .exhibition-supporting {
+                grid-template-columns: 1fr;
+            }
+            .exhibition-main img,
+            .exhibition-supporting img {
+                aspect-ratio: 4 / 3;
+            }
         }
 
         /* === Product card: override object-fit to contain (better for full product view) === */
@@ -633,16 +717,6 @@
             border-radius: 0 4px 4px 0;
         }
 
-        /* === Exhibition mobile image fix === */
-        @media (max-width: 768px) {
-            .exhibition-card img {
-                height: auto;
-                max-height: none;
-                object-fit: contain;
-                background: #FDFBF7;
-            }
-        }
-
         /* === Hero desktop spacing === */
         @media (min-width: 769px) {
             .hero {
@@ -1108,35 +1182,28 @@
     </div>
 </section>
 
-<!-- ==========  EXHIBITIONS & BUYER VISITS ========== -->
+<!-- ==========  CLIENT MEETINGS & SAMPLE REVIEWS ========== -->
 <section class="section" id="exhibitions" style="background:#fff;scroll-margin-top:64px;">
     <div class="container">
-        <h2 class="section-title">Exhibitions &amp; Buyer Visits</h2>
-        <p class="section-subtitle">HASSION at major trade shows · Buyers meeting our team at the factory</p>
-        <div class="exhibition-grid">
-            <div class="exhibition-card">
-                <img src="images/exhibition_1.jpg" alt="HASSION booth at international trade fair — overseas buyer inquiry" width="1280" height="1707" loading="lazy">
-                <span class="exhibition-label">HASSION Booth — Buyer Inquiry</span>
+        <div class="exhibition-editorial">
+            <div class="exhibition-copy">
+                <span class="exhibition-eyebrow">Client Communication</span>
+                <h2 class="section-title">Client Meetings &amp;<br><span class="title-indent">Sample Reviews</span></h2>
+                <p>Before production, we work closely with overseas clients to review samples, confirm materials, align logo placement, packaging, and finishing details. Trade fair and buyer visit experience helps us communicate clearly with private-label brands worldwide.</p>
+                <span class="exhibition-note">OEM / private-label development support</span>
             </div>
-            <div class="exhibition-card">
-                <img src="images/exhibition_2.jpg" alt="HASSION booth — European buyers selecting wallets at trade fair" width="1280" height="1707" loading="lazy">
-                <span class="exhibition-label">Trade Show — Live Sourcing</span>
-            </div>
-            <div class="exhibition-card">
-                <img src="images/exhibition_3.jpg" alt="HASSION team with European buyers at trade show" width="1280" height="1707" loading="lazy">
-                <span class="exhibition-label">Long-term Partner — Europe</span>
-            </div>
-            <div class="exhibition-card">
-                <img src="images/exhibition_4.jpg" alt="Overseas buyer visiting HASSION factory reception" width="1280" height="1707" loading="lazy">
-                <span class="exhibition-label">Factory Visit — Reception</span>
-            </div>
-            <div class="exhibition-card">
-                <img src="images/exhibition_5.jpg" alt="International buyers visiting HASSION production workshop" width="1280" height="1707" loading="lazy">
-                <span class="exhibition-label">Factory Visit — Production Floor</span>
-            </div>
-            <div class="exhibition-card">
-                <img src="images/exhibition_6.jpg" alt="HASSION team with South Asian buyers at trade fair" width="1280" height="1707" loading="lazy">
-                <span class="exhibition-label">Buyer Group — South Asia</span>
+            <div class="exhibition-media" aria-label="Client meetings and factory visit details">
+                <figure class="exhibition-card exhibition-main">
+                    <img src="images/client-meetings-client-sample-review-main.jpg" alt="Overseas buyer inquiry and sample review at HASSION booth" width="1280" height="1707" loading="lazy">
+                </figure>
+                <div class="exhibition-supporting">
+                    <figure class="exhibition-card exhibition-discussion">
+                        <img src="images/client-meetings-trade-show-discussion.jpg" alt="Trade show discussion with overseas buyers reviewing leather goods samples" width="1280" height="1707" loading="lazy">
+                    </figure>
+                    <figure class="exhibition-card exhibition-visit">
+                        <img src="images/client-meetings-factory-visit-review.jpg" alt="Overseas clients visiting HASSION production workshop" width="1280" height="1707" loading="lazy">
+                    </figure>
+                </div>
             </div>
         </div>
     </div>
