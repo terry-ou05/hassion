@@ -1,36 +1,38 @@
 {
-  "UserPromptSubmit": [
-    {
-      "hooks": [
-        {
-          "type": "command",
-          "command": "python .codex/hooks/user_prompt_guard.py",
-          "command_windows": "python .codex\\hooks\\user_prompt_guard.py"
-        }
-      ]
-    }
-  ],
-  "PreToolUse": [
-    {
-      "matcher": "*",
-      "hooks": [
-        {
-          "type": "command",
-          "command": "python .codex/hooks/pre_tool_guard.py",
-          "command_windows": "python .codex\\hooks\\pre_tool_guard.py"
-        }
-      ]
-    }
-  ],
-  "Stop": [
-    {
-      "hooks": [
-        {
-          "type": "command",
-          "command": "python .codex/hooks/stop_check.py",
-          "command_windows": "python .codex\\hooks\\stop_check.py"
-        }
-      ]
-    }
-  ]
+  "hooks": {
+    "UserPromptSubmit": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "python .codex/hooks/user_prompt_guard.py",
+            "commandWindows": "python .codex\\hooks\\user_prompt_guard.py"
+          }
+        ]
+      }
+    ],
+    "PreToolUse": [
+      {
+        "matcher": "*",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "python .codex/hooks/pre_tool_guard.py",
+            "commandWindows": "python .codex\\hooks\\pre_tool_guard.py"
+          }
+        ]
+      }
+    ],
+    "Stop": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "python .codex/hooks/stop_check.py",
+            "commandWindows": "python .codex\\hooks\\stop_check.py"
+          }
+        ]
+      }
+    ]
+  }
 }
