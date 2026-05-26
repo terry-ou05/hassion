@@ -156,6 +156,44 @@ Use colorful items only for future Custom Color / Material Options sections.
 
 ---
 
+## Product Detail Page Rules
+
+Product detail pages should feel like premium brand catalog pages, not retail ecommerce pages.
+
+Primary goal:
+Help overseas B2B buyers understand product quality, materials, craftsmanship, customization options, and OEM capability, then guide them to inquiry.
+
+Preferred page structure:
+1. Large clean product visual
+2. Product name and short B2B-focused description
+3. Key specifications
+4. Material / color / logo customization options
+5. Craftsmanship and quality details
+6. OEM inquiry CTA
+
+Avoid:
+- prices
+- discount labels
+- stock counters
+- add-to-cart UI
+- consumer reviews
+- fake urgency
+- marketplace-style icon grids
+- cluttered selling points
+- Taobao / Amazon product detail layout
+
+Visual direction:
+- large product imagery
+- generous whitespace
+- restrained typography
+- calm premium tone
+- brand catalog feeling
+- close-up craftsmanship details when available
+
+Do not create cart, checkout, payment, account, or review features unless explicitly requested.
+
+---
+
 ## Responsive Rules
 
 Mobile quality is critical.
@@ -264,7 +302,16 @@ If `CLAUDE.md` or `AGENTS.md` is modified, commit it separately from website UI 
 
 ## Current Near-Term Priority
 
-Next priority:
-Replace the 6 Products section images with consistent product photos.
+Current priority:
+1. Finalize product and factory photography.
+2. Replace the 6 Products section images with consistent product photos.
+3. Prepare product detail page structure after real product photos and material details are ready.
 
-Do not redesign Hero, Production, OEM, or Contact until product images are finalized.
+Do not redesign Hero, Production, OEM, or Contact until product images and product detail direction are finalized.
+
+For now, avoid large visual redesigns. Focus on:
+- better product imagery
+- consistent product cards
+- clean product detail page planning
+- mobile readability
+- inquiry conversion
