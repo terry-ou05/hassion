@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RFID Leather Passport Holder | HASSION Leather</title>
+    <meta name="description" content="RFID leather passport holder for OEM and private-label travel accessory projects by Guangzhou Hassion Leather Ltd.">
+    <link rel="icon" type="image/gif" href="../images/logo.gif">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500&family=Inter:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../style.css">
+    <style>
+        body {
+            background: #FDFBF7;
+        }
+        .page-nav {
+            background: #5C2D1A;
+            color: #FDFBF7;
+            padding: 22px 0;
+        }
+        .page-nav-inner {
+            align-items: center;
+            display: flex;
+            justify-content: space-between;
+            gap: 24px;
+        }
+        .page-logo {
+            color: #E0D7CB;
+            font-family: "Cormorant Garamond", Georgia, serif;
+            font-size: 22px;
+            letter-spacing: 0.24em;
+            line-height: 1;
+            text-transform: uppercase;
+        }
+        .page-nav a {
+            color: rgba(253,251,247,0.82);
+            font-size: 0.78rem;
+            letter-spacing: 0.12em;
+            text-transform: uppercase;
+        }
+        .detail-hero {
+            background: #fff;
+            padding: 72px 0;
+        }
+        .detail-hero-grid {
+            align-items: center;
+            display: grid;
+            gap: clamp(42px, 6vw, 72px);
+            grid-template-columns: minmax(0, 0.92fr) minmax(420px, 1.08fr);
+        }
+        .hero-copy {
+            max-width: 640px;
+        }
+        .page-kicker {
+            color: rgba(92,45,26,0.62);
+            display: block;
+            font-size: 0.72rem;
+            letter-spacing: 0.18em;
+            margin-bottom: 16px;
+            text-transform: uppercase;
+        }
+        h1 {
+            color: #5C2D1A;
+            font-family: "Cormorant Garamond", Georgia, serif;
+            font-size: clamp(2.4rem, 5vw, 4.3rem);
+            font-weight: 500;
+            line-height: 1.06;
+            margin-bottom: 20px;
+        }
+        .lead {
+            color: #555;
+            font-size: 1rem;
+            line-height: 1.82;
+            max-width: 620px;
+        }
+        .hero-specs {
+            border-top: 1px solid rgba(92,45,26,0.12);
+            display: grid;
+            gap: 14px 22px;
+            grid-template-columns: repeat(3, minmax(0, 1fr));
+            margin-top: 30px;
+            padding-top: 22px;
+        }
+        .hero-specs span {
+            color: #5C2D1A;
+            font-size: 0.78rem;
+            font-weight: 600;
+            letter-spacing: 0.08em;
+            line-height: 1.45;
+            text-transform: uppercase;
+        }
+        .hero-image {
+            background: #FDFBF7;
+            border: 1px solid rgba(92,45,26,0.1);
+            border-radius: 8px;
+            overflow: hidden;
+            padding: 10px;
+        }
+        .hero-image img {
+            transform: scale(1.08);
+        }
+        .hero-image img,
+        .gallery-card img {
+            object-fit: contain;
+            width: 100%;
+        }
+        .content-section {
+            padding: 66px 0;
+        }
+        .content-section.alt {
+            background: #fff;
+        }
+        .section-head {
+            color: #5C2D1A;
+            font-size: 1.5rem;
+            line-height: 1.25;
+            margin-bottom: 24px;
+        }
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(3, minmax(0, 1fr));
+            gap: 18px;
+        }
+        .gallery-card {
+            background: #fff;
+            border: 1px solid rgba(92,45,26,0.1);
+            border-radius: 8px;
+            padding: 18px;
+        }
+        .info-grid {
+            display: grid;
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+            gap: 28px 48px;
+        }
+        .info-block {
+            border-top: 1px solid rgba(92,45,26,0.12);
+            padding-top: 18px;
+        }
+        .info-block h3 {
+            color: #5C2D1A;
+            font-size: 1rem;
+            margin-bottom: 8px;
+        }
+        .info-block p,
+        .info-list li {
+            color: #666;
+            font-size: 0.92rem;
+            line-height: 1.72;
+        }
+        .info-list {
+            display: grid;
+            gap: 10px;
+        }
+        .cta-panel {
+            align-items: center;
+            background: #5C2D1A;
+            border-radius: 8px;
+            color: #FDFBF7;
+            display: flex;
+            gap: 28px;
+            justify-content: space-between;
+            padding: 30px 34px;
+        }
+        .cta-panel h2 {
+            color: #fff;
+            font-size: 1.35rem;
+            margin-bottom: 4px;
+        }
+        .cta-panel p {
+            color: rgba(255,255,255,0.72);
+            font-size: 0.9rem;
+        }
+        .cta-panel .btn {
+            flex: 0 0 auto;
+            max-width: none;
+        }
+        .page-footer {
+            background: #5C2D1A;
+            color: rgba(255,255,255,0.72);
+            padding: 28px 0;
+        }
+        .page-footer p {
+            font-size: 0.84rem;
+        }
+        @media (max-width: 820px) {
+            .detail-hero-grid,
+            .info-grid,
+            .gallery-grid {
+                grid-template-columns: 1fr;
+            }
+            .cta-panel {
+                align-items: flex-start;
+                flex-direction: column;
+            }
+            .hero-specs {
+                grid-template-columns: 1fr;
+            }
+            .hero-image img {
+                transform: none;
+            }
+        }
+        @media (max-width: 560px) {
+            .page-nav-inner {
+                align-items: flex-start;
+                flex-direction: column;
+            }
+            .detail-hero,
+            .content-section {
+                padding: 48px 0;
+            }
+            .hero-specs {
+                margin-top: 24px;
+                padding-top: 18px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header class="page-nav">
+        <div class="container page-nav-inner">
+            <a class="page-logo" href="../index.html">HASSION</a>
+            <a href="../index.html#products">Back to Products</a>
+        </div>
+    </header>
+
+    <main>
+        <section class="detail-hero">
+            <div class="container detail-hero-grid">
+                <div class="hero-copy">
+                    <span class="page-kicker">Passport Holder</span>
+                    <h1>RFID Leather Passport Holder</h1>
+                    <p class="lead">A compact travel wallet designed for passports, cards, tickets, and small travel essentials, available for OEM and private-label projects.</p>
+                    <div class="hero-specs" aria-label="Product highlights">
+                        <span>OEM / ODM Available</span>
+                        <span>RFID Blocking Option</span>
+                        <span>Passport + Cards + Zipper Pocket</span>
+                    </div>
+                </div>
+                <figure class="hero-image">
+                    <img src="../images/products/rfid-leather-passport-holder/hero.jpg" alt="RFID leather passport holder hero view" width="1448" height="1086">
+                </figure>
+            </div>
+        </section>
+
+        <section class="content-section" aria-labelledby="gallery-title">
+            <div class="container">
+                <h2 class="section-head" id="gallery-title">Image Gallery</h2>
+                <div class="gallery-grid">
+                    <figure class="gallery-card">
+                        <img src="../images/products/rfid-leather-passport-holder/open-black.jpg" alt="Black RFID leather passport holder open view" width="1448" height="1086" loading="lazy">
+                    </figure>
+                    <figure class="gallery-card">
+                        <img src="../images/products/rfid-leather-passport-holder/front-back.jpg" alt="RFID leather passport holder front and back view" width="1448" height="1086" loading="lazy">
+                    </figure>
+                    <figure class="gallery-card">
+                        <img src="../images/products/rfid-leather-passport-holder/angle.jpg" alt="RFID leather passport holder angled detail view" width="1448" height="1086" loading="lazy">
+                    </figure>
+                    <figure class="gallery-card">
+                        <img src="../images/products/rfid-leather-passport-holder/open-brown.jpg" alt="Brown RFID leather passport holder open view" width="1448" height="1086" loading="lazy">
+                    </figure>
+                    <figure class="gallery-card">
+                        <img src="../images/products/rfid-leather-passport-holder/open-gray.jpg" alt="Gray RFID leather passport holder open view" width="1448" height="1086" loading="lazy">
+                    </figure>
+                </div>
+            </div>
+        </section>
+
+        <section class="content-section alt" aria-labelledby="features-title">
+            <div class="container">
+                <h2 class="section-head" id="features-title">Key Features</h2>
+                <div class="info-grid">
+                    <div class="info-block">
+                        <h3>Travel-Ready Layout</h3>
+                        <p>Passport sleeve, card slots and document space can be arranged for business travel, tourism retail and corporate gift channels.</p>
+                    </div>
+                    <div class="info-block">
+                        <h3>RFID Option</h3>
+                        <p>RFID shielding material can be added according to the buyer's target market, compliance needs and price positioning.</p>
+                    </div>
+                    <div class="info-block">
+                        <h3>Private-Label Fit</h3>
+                        <p>Suitable for travel brands, airline gift programs, lifestyle labels, distributors and promotional merchandise projects.</p>
+                    </div>
+                    <div class="info-block">
+                        <h3>Sample Development</h3>
+                        <p>Samples can be developed from your reference product, drawing, material swatch, logo file or packaging brief.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="content-section" aria-labelledby="custom-title">
+            <div class="container">
+                <h2 class="section-head" id="custom-title">OEM Customization Options</h2>
+                <ul class="info-list">
+                    <li>Material options can include genuine leather, PU leather, recycled material or project-specific alternatives.</li>
+                    <li>Color, surface texture, lining, RFID layer, card slot layout and passport sleeve structure can be adjusted.</li>
+                    <li>Logo methods can include embossing, debossing, hot stamping, silk printing, metal logo or custom label application.</li>
+                    <li>Packaging can be developed for retail display, gift-box programs, travel sets or private-label wholesale orders.</li>
+                </ul>
+            </div>
+        </section>
+
+        <section class="content-section alt" aria-labelledby="craft-title">
+            <div class="container">
+                <h2 class="section-head" id="craft-title">Craft Details</h2>
+                <div class="info-grid">
+                    <div class="info-block">
+                        <h3>Stitching Control</h3>
+                        <p>Stitch spacing, thread color and sewing alignment are reviewed during sample approval and bulk production QC.</p>
+                    </div>
+                    <div class="info-block">
+                        <h3>Edge Finishing</h3>
+                        <p>Edges and corners can be finished to match your brand standard, from clean painted edges to softer folded construction.</p>
+                    </div>
+                    <div class="info-block">
+                        <h3>Logo Placement</h3>
+                        <p>Logo position, size and method are confirmed on sample before mass production to protect brand presentation.</p>
+                    </div>
+                    <div class="info-block">
+                        <h3>Packing Inspection</h3>
+                        <p>Finished goods can be checked for surface marks, stitching, RFID layer placement, logo quality and packaging details.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="content-section">
+            <div class="container">
+                <div class="cta-panel">
+                    <div>
+                        <h2>Discuss Your Passport Holder Project</h2>
+                        <p>Send quantity, material preference, RFID requirement, logo method and target market for OEM quotation.</p>
+                    </div>
+                    <a class="btn btn-primary" href="../index.html#contact">Send Inquiry</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="page-footer">
+        <div class="container">
+            <p>Guangzhou Hassion Leather Ltd. | OEM / ODM Leather Goods Manufacturer</p>
+        </div>
+    </footer>
+</body>
+</html>
