@@ -46,8 +46,11 @@
         .detail-hero-grid {
             align-items: center;
             display: grid;
-            gap: 56px;
-            grid-template-columns: minmax(0, 1fr) minmax(360px, 0.9fr);
+            gap: clamp(42px, 6vw, 72px);
+            grid-template-columns: minmax(0, 0.92fr) minmax(420px, 1.08fr);
+        }
+        .hero-copy {
+            max-width: 640px;
         }
         .page-kicker {
             color: rgba(92,45,26,0.62);
@@ -82,11 +85,28 @@
             line-height: 1.82;
             max-width: 620px;
         }
+        .hero-specs {
+            border-top: 1px solid rgba(92,45,26,0.12);
+            display: grid;
+            gap: 14px 22px;
+            grid-template-columns: repeat(3, minmax(0, 1fr));
+            margin-top: 30px;
+            padding-top: 22px;
+        }
+        .hero-specs span {
+            color: #5C2D1A;
+            font-size: 0.78rem;
+            font-weight: 600;
+            letter-spacing: 0.08em;
+            line-height: 1.45;
+            text-transform: uppercase;
+        }
         .hero-image {
             background: #FDFBF7;
             border: 1px solid rgba(92,45,26,0.1);
             border-radius: 8px;
-            padding: 24px;
+            overflow: hidden;
+            padding: 10px;
         }
         .hero-image img,
         .gallery-card img {
@@ -181,6 +201,9 @@
                 align-items: flex-start;
                 flex-direction: column;
             }
+            .hero-specs {
+                grid-template-columns: 1fr;
+            }
         }
         @media (max-width: 560px) {
             .page-nav-inner {
@@ -190,6 +213,10 @@
             .detail-hero,
             .content-section {
                 padding: 48px 0;
+            }
+            .hero-specs {
+                margin-top: 24px;
+                padding-top: 18px;
             }
         }
     </style>
@@ -205,11 +232,16 @@
     <main>
         <section class="detail-hero">
             <div class="container detail-hero-grid">
-                <div>
+                <div class="hero-copy">
                     <a class="product-back-link" href="../products/mens-wallets.html">← Back to Men's Wallets</a>
                     <span class="page-kicker">Men's Wallet</span>
                     <h1>Classic Bifold Wallet</h1>
                     <p class="lead">A practical bifold wallet format for OEM and private-label projects, suitable for everyday retail, corporate gift and wholesale programs.</p>
+                    <div class="hero-specs" aria-label="Product highlights">
+                        <span>OEM / ODM Available</span>
+                        <span>Classic Bifold Structure</span>
+                        <span>Custom Logo &amp; Packaging</span>
+                    </div>
                 </div>
                 <figure class="hero-image">
                     <img src="../images/product_mens_wallet.webp" alt="Classic bifold men's leather wallet" width="1448" height="1086">
@@ -234,9 +266,9 @@
             </div>
         </section>
 
-        <section class="content-section alt" aria-labelledby="details-title">
+        <section class="content-section alt" aria-labelledby="features-title">
             <div class="container">
-                <h2 class="section-head" id="details-title">Product Details</h2>
+                <h2 class="section-head" id="features-title">Key Features</h2>
                 <div class="info-grid">
                     <div class="info-block">
                         <h3>Format</h3>
@@ -271,7 +303,7 @@
 
         <section class="content-section alt" aria-labelledby="craft-title">
             <div class="container">
-                <h2 class="section-head" id="craft-title">Craftsmanship Details</h2>
+                <h2 class="section-head" id="craft-title">Craft Details</h2>
                 <div class="info-grid">
                     <div class="info-block">
                         <h3>Stitching</h3>
@@ -297,7 +329,7 @@
             <div class="container">
                 <div class="cta-panel">
                     <div>
-                        <h2>Discuss this wallet project</h2>
+                        <h2>Discuss Your Classic Bifold Wallet Project</h2>
                         <p>Send quantity, material preference, logo method and target market for OEM quotation.</p>
                     </div>
                     <a class="btn btn-primary" href="../index.html#contact">Send Inquiry</a>
