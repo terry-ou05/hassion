@@ -1,0 +1,502 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Leather Key Holders &amp; Key Pouches for OEM Collections | HASSION Leather</title>
+    <meta name="description" content="Leather key holders, zipper key pouches and car key cases for OEM and private-label small leather goods collections by Guangzhou Hassion Leather Ltd.">
+    <link rel="icon" type="image/gif" href="../images/logo.gif">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../style.css">
+    <style>
+        body {
+            background: #FDFBF7;
+            color: #2f2924;
+            overflow-x: hidden;
+        }
+        .container {
+            max-width: 1200px;
+            min-width: 0;
+            padding-left: 0;
+            padding-right: 0;
+            width: calc(100vw - 40px);
+        }
+        .page-nav {
+            background: #5C2D1A;
+            color: #FDFBF7;
+            padding: 22px 0;
+        }
+        .page-nav-inner {
+            align-items: center;
+            display: flex;
+            gap: 24px;
+            justify-content: space-between;
+        }
+        .page-logo {
+            color: #E0D7CB;
+            font-family: "Cormorant Garamond", Georgia, serif;
+            font-size: 22px;
+            letter-spacing: 0.24em;
+            line-height: 1;
+            text-transform: uppercase;
+        }
+        .page-nav a {
+            color: rgba(253,251,247,0.82);
+            font-size: 0.78rem;
+            letter-spacing: 0.12em;
+            text-transform: uppercase;
+        }
+        .key-hero {
+            background: #fff;
+            padding: 74px 0 58px;
+        }
+        .key-hero-grid {
+            align-items: center;
+            display: grid;
+            gap: 56px;
+            grid-template-columns: minmax(0, 0.95fr) minmax(330px, 0.72fr);
+            min-width: 0;
+        }
+        .page-kicker {
+            color: rgba(92,45,26,0.62);
+            display: block;
+            font-size: 0.72rem;
+            letter-spacing: 0.18em;
+            margin-bottom: 16px;
+            text-transform: uppercase;
+        }
+        h1 {
+            color: #5C2D1A;
+            font-family: "Cormorant Garamond", Georgia, serif;
+            font-size: clamp(2.45rem, 5vw, 4.45rem);
+            font-weight: 500;
+            letter-spacing: 0;
+            line-height: 1.03;
+            margin-bottom: 20px;
+        }
+        .key-hero p,
+        .section-head p {
+            color: #5a5652;
+            font-size: 1rem;
+            line-height: 1.78;
+            max-width: 690px;
+            overflow-wrap: anywhere;
+        }
+        .hero-actions {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 12px;
+            margin-top: 28px;
+        }
+        .primary-link,
+        .quote-button {
+            border: 1px solid rgba(92,45,26,0.24);
+            color: #5C2D1A;
+            display: inline-flex;
+            font-size: 0.78rem;
+            font-weight: 600;
+            letter-spacing: 0.12em;
+            padding: 14px 18px;
+            text-transform: uppercase;
+        }
+        .primary-link:hover,
+        .quote-button:hover {
+            background: rgba(92,45,26,0.06);
+            color: #5C2D1A;
+        }
+        .key-hero-media {
+            background: #F7F2EA;
+            border: 1px solid rgba(92,45,26,0.1);
+            overflow: hidden;
+            padding: 18px;
+        }
+        .key-hero-media img {
+            aspect-ratio: 4 / 5;
+            display: block;
+            object-fit: cover;
+            width: 100%;
+        }
+        .key-section {
+            padding: 72px 0 82px;
+        }
+        .section-head {
+            margin-bottom: 34px;
+            max-width: 760px;
+        }
+        .section-head h2 {
+            color: #5C2D1A;
+            font-family: "Cormorant Garamond", Georgia, serif;
+            font-size: clamp(2rem, 3.6vw, 3rem);
+            font-weight: 500;
+            letter-spacing: 0;
+            line-height: 1.08;
+            margin-bottom: 12px;
+        }
+        .key-grid {
+            display: grid;
+            gap: 22px;
+            grid-template-columns: repeat(3, minmax(0, 1fr));
+        }
+        .key-card {
+            background: #fff;
+            border: 1px solid rgba(92,45,26,0.1);
+            border-radius: 8px;
+            overflow: hidden;
+        }
+        .key-card-media {
+            aspect-ratio: 4 / 5;
+            background: #F7F2EA;
+            overflow: hidden;
+        }
+        .key-card-media img {
+            aspect-ratio: 4 / 5;
+            background: #F7F2EA;
+            display: block;
+            object-fit: contain;
+            padding: 8px;
+            transform: scale(1.08);
+            width: 100%;
+        }
+        .key-card-media.is-scene img {
+            object-fit: cover;
+            transform: scale(1);
+        }
+        .key-card-media.is-fob img {
+            transform: scale(1.03);
+        }
+        .key-card-body {
+            padding: 18px 18px 20px;
+        }
+        .key-card h3 {
+            color: #5C2D1A;
+            font-size: 1rem;
+            line-height: 1.35;
+            margin-bottom: 8px;
+        }
+        .key-card p {
+            color: #666;
+            font-size: 0.86rem;
+            line-height: 1.62;
+            margin-bottom: 18px;
+        }
+        .text-link {
+            color: #8A5A36;
+            display: inline-flex;
+            font-size: 0.78rem;
+            font-weight: 600;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+        }
+        .oem-band {
+            background: #fff;
+            border-bottom: 1px solid rgba(92,45,26,0.08);
+            border-top: 1px solid rgba(92,45,26,0.08);
+            padding: 58px 0;
+        }
+        .oem-grid {
+            display: grid;
+            gap: 18px;
+            grid-template-columns: repeat(4, minmax(0, 1fr));
+            margin-top: 30px;
+        }
+        .oem-item {
+            background: #FDFBF7;
+            border: 1px solid rgba(92,45,26,0.08);
+            padding: 20px;
+        }
+        .oem-item strong {
+            color: #5C2D1A;
+            display: block;
+            font-size: 0.92rem;
+            line-height: 1.35;
+            margin-bottom: 8px;
+        }
+        .oem-item span {
+            color: #6d625a;
+            display: block;
+            font-size: 0.82rem;
+            line-height: 1.58;
+        }
+        .detail-note {
+            align-items: center;
+            display: grid;
+            gap: 30px;
+            grid-template-columns: minmax(0, 0.85fr) minmax(300px, 1fr);
+            margin-top: 44px;
+        }
+        .detail-note h3 {
+            color: #5C2D1A;
+            font-family: "Cormorant Garamond", Georgia, serif;
+            font-size: clamp(1.85rem, 3.2vw, 2.55rem);
+            font-weight: 500;
+            letter-spacing: 0;
+            line-height: 1.12;
+            margin-bottom: 12px;
+        }
+        .detail-note p {
+            color: #666;
+            font-size: 0.94rem;
+            line-height: 1.72;
+            margin-bottom: 18px;
+        }
+        .detail-note img {
+            aspect-ratio: 3 / 2;
+            background: #F7F2EA;
+            border: 1px solid rgba(92,45,26,0.08);
+            display: block;
+            object-fit: cover;
+            width: 100%;
+        }
+        .bottom-cta {
+            background: #5C2D1A;
+            color: #FDFBF7;
+            padding: 52px 0;
+        }
+        .bottom-cta-inner {
+            align-items: center;
+            display: flex;
+            gap: 24px;
+            justify-content: space-between;
+        }
+        .bottom-cta h2 {
+            color: #FDFBF7;
+            font-family: "Cormorant Garamond", Georgia, serif;
+            font-size: clamp(2rem, 4vw, 3rem);
+            font-weight: 500;
+            letter-spacing: 0;
+            line-height: 1.08;
+            margin-bottom: 10px;
+        }
+        .bottom-cta p {
+            color: rgba(253,251,247,0.74);
+            line-height: 1.7;
+            max-width: 620px;
+        }
+        .bottom-cta .quote-button {
+            border-color: rgba(253,251,247,0.46);
+            color: #FDFBF7;
+            flex: 0 0 auto;
+        }
+        .bottom-cta .quote-button:hover {
+            background: rgba(255,255,255,0.08);
+            color: #FDFBF7;
+        }
+        .page-footer {
+            background: #3B2116;
+            color: rgba(255,255,255,0.72);
+            padding: 28px 0;
+        }
+        .page-footer p {
+            font-size: 0.84rem;
+        }
+        @media (max-width: 980px) {
+            .key-hero-grid,
+            .detail-note {
+                grid-template-columns: 1fr;
+            }
+            .key-grid,
+            .oem-grid {
+                grid-template-columns: repeat(2, minmax(0, 1fr));
+            }
+            .bottom-cta-inner {
+                align-items: flex-start;
+                flex-direction: column;
+            }
+        }
+        @media (max-width: 560px) {
+            .page-nav-inner {
+                align-items: flex-start;
+                flex-direction: column;
+            }
+            .key-hero {
+                padding: 58px 0 44px;
+            }
+            h1 {
+                font-size: clamp(2.25rem, 12vw, 3rem);
+            }
+            .key-hero-media {
+                padding: 12px;
+            }
+            .key-section {
+                padding: 52px 0 62px;
+            }
+            .key-grid,
+            .oem-grid {
+                grid-template-columns: 1fr;
+            }
+            .key-card-body,
+            .oem-item {
+                padding: 17px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header class="page-nav">
+        <div class="container page-nav-inner">
+            <a class="page-logo" href="../index.html">HASSION</a>
+            <a href="../index.html#products">Back to Products</a>
+        </div>
+    </header>
+
+    <main>
+        <section class="key-hero">
+            <div class="container key-hero-grid">
+                <div>
+                    <span class="page-kicker">OEM Key Accessories</span>
+                    <h1>Leather Key Holders &amp; Key Pouches for OEM Collections</h1>
+                    <p>HASSION develops zipper key pouches, car key holders, leather key fobs and compact key accessories for private-label small leather goods programs, with leather color, hardware, logo and packaging customization.</p>
+                    <div class="hero-actions">
+                        <a class="primary-link" href="../index.html#contact">Ask for OEM Quote</a>
+                    </div>
+                </div>
+                <div class="key-hero-media">
+                    <img src="../images/products/processed/key-holders/key-holder-02-black-window.webp" alt="Black leather car key pouch for OEM key accessory development" width="1200" height="1200">
+                </div>
+            </div>
+        </section>
+
+        <section class="key-section">
+            <div class="container">
+                <div class="section-head">
+                    <h2>Key Holder Formats for Private-Label Projects</h2>
+                    <p>Focused key accessory formats for OEM development. Each style can be adjusted by leather texture, zipper or clasp hardware, logo position and packaging requirement.</p>
+                </div>
+                <div class="key-grid">
+                    <article class="key-card">
+                        <div class="key-card-media is-scene">
+                            <img src="../images/products/processed/key-holders/key-holder-02-black-window.webp" alt="Black leather car key pouch with zipper structure" width="1200" height="1200">
+                        </div>
+                        <div class="key-card-body">
+                            <h3>Leather Zip Key Pouch</h3>
+                            <p>Structured car key pouch format for OEM hardware and logo development.</p>
+                            <a class="text-link" href="../product/leather-zip-key-holder.html">View Details</a>
+                        </div>
+                    </article>
+                    <article class="key-card">
+                        <div class="key-card-media">
+                            <img src="../images/products/processed/key-holders/key-holder-01-zip-pouch.webp" alt="Compact brown zipper leather key holder" width="1200" height="794">
+                        </div>
+                        <div class="key-card-body">
+                            <h3>Compact Zipper Key Holder</h3>
+                            <p>Slim zip pouch for keys, small items and coordinated wallet programs.</p>
+                            <a class="text-link" href="../index.html#contact">Inquire</a>
+                        </div>
+                    </article>
+                    <article class="key-card">
+                        <div class="key-card-media is-scene">
+                            <img src="../images/products/processed/key-holders/key-holder-03-brown-window.webp" alt="Brown leather car key case with metal clip" width="817" height="724">
+                        </div>
+                        <div class="key-card-body">
+                            <h3>Brown Car Key Case</h3>
+                            <p>Warm leather direction for vehicle key protection and branded gifts.</p>
+                            <a class="text-link" href="../index.html#contact">Inquire</a>
+                        </div>
+                    </article>
+                    <article class="key-card">
+                        <div class="key-card-media is-scene">
+                            <img src="../images/products/processed/key-holders/key-holder-04-classic-black-window.webp" alt="Classic black leather car key pouch" width="785" height="765">
+                        </div>
+                        <div class="key-card-body">
+                            <h3>Classic Black Key Pouch</h3>
+                            <p>Low-key black leather option with zipper and clip hardware.</p>
+                            <a class="text-link" href="../index.html#contact">Inquire</a>
+                        </div>
+                    </article>
+                    <article class="key-card">
+                        <div class="key-card-media is-scene">
+                            <img src="../images/products/processed/key-holders/key-holder-05-navy-window.webp" alt="Navy leather car key pouch with zipper" width="794" height="732">
+                        </div>
+                        <div class="key-card-body">
+                            <h3>Navy Key Holder</h3>
+                            <p>Color option for private-label accessory sets and corporate programs.</p>
+                            <a class="text-link" href="../index.html#contact">Inquire</a>
+                        </div>
+                    </article>
+                    <article class="key-card">
+                        <div class="key-card-media is-fob">
+                            <img src="../images/products/processed/key-holders/key-holder-06-brown-key-fob.webp" alt="Brown leather key fob with metal hook" width="800" height="751">
+                        </div>
+                        <div class="key-card-body">
+                            <h3>Leather Key Fob</h3>
+                            <p>Simple leather fob for logo embossing, color matching and gift sets.</p>
+                            <a class="text-link" href="../index.html#contact">Inquire</a>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section class="oem-band">
+            <div class="container">
+                <div class="section-head">
+                    <span class="page-kicker">OEM Customization</span>
+                    <h2>Hardware, Leather and Logo Details Controlled for Production</h2>
+                    <p>Key holders are handled as compact leather goods: small format, precise hardware, durable stitching and clear logo placement matter for repeatable production.</p>
+                </div>
+                <div class="oem-grid">
+                    <div class="oem-item">
+                        <strong>Leather Color Selection</strong>
+                        <span>Black, brown, navy, vintage tones or custom color matching.</span>
+                    </div>
+                    <div class="oem-item">
+                        <strong>Logo Embossing</strong>
+                        <span>Embossed, hot-stamped or small metal logo placement.</span>
+                    </div>
+                    <div class="oem-item">
+                        <strong>Hardware Options</strong>
+                        <span>Clips, key rings, zipper pullers, rivets and metal finishes.</span>
+                    </div>
+                    <div class="oem-item">
+                        <strong>Zipper &amp; Closure</strong>
+                        <span>Zip pouch, snap closure, clip-on fob or custom structure.</span>
+                    </div>
+                    <div class="oem-item">
+                        <strong>Interior Layout</strong>
+                        <span>Window, lining, key chain attachment and compact storage layout.</span>
+                    </div>
+                    <div class="oem-item">
+                        <strong>Packaging Customization</strong>
+                        <span>Gift box, insert card, hang tag and export carton support.</span>
+                    </div>
+                    <div class="oem-item">
+                        <strong>Sample Development</strong>
+                        <span>Prototype adjustment for key size, leather thickness and hardware.</span>
+                    </div>
+                    <div class="oem-item">
+                        <strong>Collection Matching</strong>
+                        <span>Coordinate with wallets, card holders, coin cases or travel sets.</span>
+                    </div>
+                </div>
+
+                <div class="detail-note">
+                    <div>
+                        <h3>Detail Page for a Leather Zip Key Holder</h3>
+                        <p>The zipper car key holder is prepared as a detail page for reviewing leather surface, window structure, clip hardware, stitching and private-label customization details.</p>
+                        <a class="text-link" href="../product/leather-zip-key-holder.html">View Detail</a>
+                    </div>
+                    <img src="../images/products/processed/key-holders/key-holder-07-leather-fob-lifestyle.webp" alt="Leather key holder hardware and stitching detail for OEM review" width="746" height="606">
+                </div>
+            </div>
+        </section>
+
+        <section class="bottom-cta">
+            <div class="container bottom-cta-inner">
+                <div>
+                    <h2>Develop Key Accessories for Your Brand</h2>
+                    <p>Share your target key type, leather direction, hardware requirement, logo method and quantity. We can advise sampling details and OEM production planning.</p>
+                </div>
+                <a class="quote-button" href="../index.html#contact">Ask for OEM Quote</a>
+            </div>
+        </section>
+    </main>
+
+    <footer class="page-footer">
+        <div class="container">
+            <p>Guangzhou Hassion Leather Ltd. | OEM / ODM Leather Goods Manufacturer</p>
+        </div>
+    </footer>
+</body>
+</html>
