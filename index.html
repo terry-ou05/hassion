@@ -741,6 +741,8 @@
         .product-card .card-body {
             display: flex;
             flex-direction: column;
+            align-items: center;
+            text-align: center;
         }
         .card-desc {
             font-size: 0.85rem;
@@ -752,6 +754,10 @@
             margin-top: auto;
         }
         @media (max-width: 768px) {
+            .product-card .card-body {
+                min-height: 120px;
+                padding: 12px 12px 13px;
+            }
             .card-name {
                 font-size: 0.88rem;
                 font-weight: 500;
@@ -761,26 +767,45 @@
                 font-size: 0.74rem;
                 line-height: 1.42;
                 margin: 3px 0 9px;
+                min-height: 2.1rem;
+                display: flex;
+                align-items: center;
+                justify-content: center;
             }
             .card-inquire {
+                display: inline-flex;
+                align-items: center;
+                justify-content: center;
                 font-size: 0.74rem;
                 font-weight: 500;
                 padding: 5px 10px;
+                min-height: 32px;
                 border-color: rgba(200, 148, 90, 0.62);
             }
         }
         @media (max-width: 480px) {
-            .product-card .card-body { padding: 10px; }
-            .card-name { font-size: 0.82rem; }
+            .product-card .card-body {
+                min-height: 116px;
+                padding: 11px 8px 12px;
+            }
+            .card-name {
+                font-size: 0.82rem;
+                line-height: 1.25;
+            }
             .card-desc {
-                font-size: 0.7rem;
-                line-height: 1.38;
-                margin: 3px 0 8px;
-                display: -webkit-box;
-                -webkit-line-clamp: 2;
-                line-clamp: 2;
-                -webkit-box-orient: vertical;
-                overflow: hidden;
+                font-size: 0.72rem;
+                line-height: 1.42;
+                margin: 4px 0 10px;
+                min-height: 2.05rem;
+                overflow: visible;
+                -webkit-line-clamp: unset;
+                line-clamp: unset;
+                -webkit-box-orient: initial;
+            }
+            .card-inquire {
+                padding: 5px 9px;
+                min-height: 31px;
+                line-height: 1.1;
             }
         }
 
@@ -1198,7 +1223,7 @@
                 <img src="images/product_mens_wallet.webp" alt="Men's Leather Wallet" width="1448" height="1086" loading="lazy">
                 <div class="card-body">
                     <h3 class="card-name">Men's Wallet</h3>
-                    <p class="card-desc">Bifold, slim and RFID styles for private-label development.</p>
+                    <p class="card-desc">Bifold, slim and RFID wallet styles.</p>
                     <a href="products/mens-wallets.html" class="card-inquire">View Styles</a>
                 </div>
             </div>
@@ -1206,7 +1231,7 @@
                 <img src="images/product_womens_wallet.webp" alt="Women's Leather Wallet" width="1448" height="1086" loading="lazy">
                 <div class="card-body">
                     <h3 class="card-name">Women's Wallet</h3>
-                    <p class="card-desc">Long, compact and wristlet formats with logo and color options.</p>
+                    <p class="card-desc">Long and compact wallets with logo options.</p>
                     <a href="products/womens-wallets.html" class="card-inquire">View Styles</a>
                 </div>
             </div>
@@ -1214,31 +1239,31 @@
                 <img src="images/product_passport_holder.webp" alt="Leather Passport Holder" width="1448" height="1086" loading="lazy">
                 <div class="card-body">
                     <h3 class="card-name">Passport Holder</h3>
-                    <p class="card-desc">Travel holders with logo embossing, lining and color options.</p>
+                    <p class="card-desc">Travel holders with logo and lining options.</p>
                     <a href="products/passport-holders.html" class="card-inquire">View Styles</a>
                 </div>
             </div>
             <div class="product-card">
-                <img src="images/product_card_holder.webp" alt="Leather Card Holder" width="1448" height="1086" loading="lazy">
+                <img src="images/product_card_holder_clean.webp" alt="Leather Card Holder" width="1448" height="1086" loading="lazy">
                 <div class="card-body">
                     <h3 class="card-name">Card Holder</h3>
-                    <p class="card-desc">Slim card cases for leather, logo and slot-layout sampling.</p>
+                    <p class="card-desc">Slim card cases with custom slot layouts.</p>
                     <a href="products/card-holders.html" class="card-inquire">View Styles</a>
                 </div>
             </div>
             <div class="product-card">
-                <img src="images/products/processed/key-holders/key-holder-02-black-window.webp" alt="Black leather key holder for OEM accessory development" width="1200" height="1200" loading="lazy">
+                <img src="images/product_key_holder.webp" alt="Black leather key holder for OEM accessory development" width="1448" height="1086" loading="lazy">
                 <div class="card-body">
                     <h3 class="card-name">Key Holder</h3>
-                    <p class="card-desc">Key pouches and fobs with custom hardware and leather colors.</p>
+                    <p class="card-desc">Key pouches with custom hardware options.</p>
                     <a href="products/key-holders.html" class="card-inquire">View Styles</a>
                 </div>
             </div>
             <div class="product-card">
-                <img src="images/products/processed/coin-cases/coin-case-01-vintage-leather.webp" alt="Vintage leather coin case for OEM small leather goods" width="976" height="976" loading="lazy">
+                <img src="images/product_coin_case_clean.webp" alt="Vintage leather coin case for OEM small leather goods" width="1456" height="1080" loading="lazy">
                 <div class="card-body">
                     <h3 class="card-name">Coin Case</h3>
-                    <p class="card-desc">Compact coin purses and small pouches for OEM collections.</p>
+                    <p class="card-desc">Coin purses and small pouches for OEM lines.</p>
                     <a href="products/coin-cases.html" class="card-inquire">View Styles</a>
                 </div>
             </div>
