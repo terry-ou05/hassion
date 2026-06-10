@@ -1,2 +1,6 @@
 docs/asset-audits/
+docs/release-qa/
 images/products/raw/
+images/products/retouched-preview/
+images/product_*_clean.png
+scripts/*retouch*.py
