@@ -3,518 +3,161 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>RFID Passport Holder for Private-Label Travel Collections | HASSION Leather</title>
-    <meta name="description" content="RFID passport holder for private-label travel accessory collections by Guangzhou Hassion Leather Ltd.">
+    <title>RFID Zip Travel Wallet - OEM Travel Organizer Development | HASSION Leather</title>
+    <meta name="description" content="RFID zip travel wallet reference for OEM and private-label travel organizer development by HASSION Leather. Review zipper closure, passport pocket, card slots, lining, hardware, logo and packaging options.">
     <link rel="icon" type="image/gif" href="../images/logo.gif">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="../style.css">
-    <style>
-        body {
-            background: #FDFBF7;
-            color: #2f2924;
-            overflow-x: hidden;
-        }
-        .container {
-            max-width: 1200px;
-            min-width: 0;
-            padding-left: 0;
-            padding-right: 0;
-            width: calc(100vw - 40px);
-        }
-        .page-nav {
-            background: #5C2D1A;
-            color: #FDFBF7;
-            padding: 22px 0;
-        }
-        .page-nav-inner {
-            align-items: center;
-            display: flex;
-            gap: 24px;
-            justify-content: space-between;
-        }
-        .page-logo {
-            color: #E0D7CB;
-            font-family: "Cormorant Garamond", Georgia, serif;
-            font-size: 22px;
-            letter-spacing: 0.24em;
-            line-height: 1;
-            text-transform: uppercase;
-        }
-        .page-nav a {
-            color: rgba(253,251,247,0.82);
-            font-size: 0.78rem;
-            letter-spacing: 0.12em;
-            text-transform: uppercase;
-        }
-        .passport-hero {
-            background: #fff;
-            padding: 76px 0 64px;
-        }
-        .passport-hero-grid {
-            align-items: center;
-            display: grid;
-            gap: 54px;
-            grid-template-columns: minmax(0, 0.95fr) minmax(340px, 0.72fr);
-            min-width: 0;
-        }
-        .page-kicker {
-            color: rgba(92,45,26,0.62);
-            display: block;
-            font-size: 0.72rem;
-            letter-spacing: 0.18em;
-            margin-bottom: 16px;
-            text-transform: uppercase;
-        }
-        .passport-hero h1 {
-            color: #5C2D1A;
-            font-family: "Cormorant Garamond", Georgia, serif;
-            font-size: clamp(2.45rem, 5vw, 4.7rem);
-            font-weight: 500;
-            letter-spacing: 0;
-            line-height: 1.02;
-            margin-bottom: 20px;
-        }
-        .passport-hero p {
-            color: #555;
-            font-size: 1.02rem;
-            line-height: 1.82;
-            max-width: 690px;
-            overflow-wrap: anywhere;
-        }
-        .hero-notes {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 10px;
-            margin-top: 28px;
-        }
-        .hero-notes span {
-            border: 1px solid rgba(92,45,26,0.14);
-            color: #6d4a36;
-            font-size: 0.78rem;
-            letter-spacing: 0.08em;
-            padding: 10px 13px;
-            text-transform: uppercase;
-        }
-        .passport-hero-media {
-            background: #F7F2EA;
-            border: 1px solid rgba(92,45,26,0.1);
-            padding: 18px;
-        }
-        .passport-hero-media img {
-            aspect-ratio: 4 / 5;
-            display: block;
-            object-fit: cover;
-            width: 100%;
-        }
-        .passport-section {
-            padding: 76px 0;
-        }
-        .section-head {
-            margin-bottom: 34px;
-            max-width: 720px;
-        }
-        .section-head h2 {
-            color: #5C2D1A;
-            font-family: "Cormorant Garamond", Georgia, serif;
-            font-size: clamp(2rem, 3.6vw, 3.1rem);
-            font-weight: 500;
-            letter-spacing: 0;
-            line-height: 1.08;
-            margin-bottom: 12px;
-        }
-        .section-head p {
-            color: #666;
-            font-size: 0.98rem;
-            line-height: 1.75;
-            overflow-wrap: anywhere;
-        }
-        .passport-product-grid {
-            display: grid;
-            gap: 22px;
-            grid-template-columns: repeat(3, minmax(0, 1fr));
-        }
-        .passport-card {
-            background: #fff;
-            border: 1px solid rgba(92,45,26,0.1);
-            border-radius: 8px;
-            overflow: hidden;
-        }
-        .passport-card-media {
-            aspect-ratio: 4 / 5;
-            background: #F7F2EA;
-            overflow: hidden;
-        }
-        .passport-card-media img {
-            aspect-ratio: 4 / 5;
-            background: #F7F2EA;
-            display: block;
-            object-fit: contain;
-            padding: 6px;
-            transform: scale(1.12);
-            width: 100%;
-        }
-        .passport-card-media.is-compact img {
-            transform: scale(1.22);
-        }
-        .passport-card-media.is-wide img {
-            transform: scale(1.16);
-        }
-        .passport-card-body {
-            padding: 18px 18px 20px;
-        }
-        .passport-card h3 {
-            color: #5C2D1A;
-            font-size: 1rem;
-            line-height: 1.35;
-            margin-bottom: 8px;
-        }
-        .passport-card p {
-            color: #666;
-            font-size: 0.86rem;
-            line-height: 1.62;
-            margin-bottom: 18px;
-        }
-        .text-link {
-            color: #8A5A36;
-            display: inline-flex;
-            font-size: 0.78rem;
-            font-weight: 600;
-            letter-spacing: 0.1em;
-            text-transform: uppercase;
-        }
-        .customization-band {
-            background: #fff;
-            border-bottom: 1px solid rgba(92,45,26,0.08);
-            border-top: 1px solid rgba(92,45,26,0.08);
-        }
-        .customization-grid {
-            display: grid;
-            gap: 18px;
-            grid-template-columns: repeat(5, minmax(0, 1fr));
-            margin-top: 34px;
-        }
-        .customization-item {
-            background: #FDFBF7;
-            border: 1px solid rgba(92,45,26,0.08);
-            padding: 20px;
-        }
-        .customization-item strong {
-            color: #5C2D1A;
-            display: block;
-            font-size: 0.92rem;
-            line-height: 1.35;
-            margin-bottom: 8px;
-        }
-        .customization-item span {
-            color: #6d625a;
-            display: block;
-            font-size: 0.82rem;
-            line-height: 1.58;
-        }
-        .structure-preview {
-            align-items: center;
-            display: grid;
-            gap: 28px;
-            grid-template-columns: minmax(0, 0.9fr) minmax(300px, 1.1fr);
-            margin-top: 42px;
-        }
-        .structure-copy {
-            max-width: 520px;
-        }
-        .structure-copy h3 {
-            color: #5C2D1A;
-            font-family: "Cormorant Garamond", Georgia, serif;
-            font-size: clamp(1.8rem, 3vw, 2.5rem);
-            font-weight: 500;
-            letter-spacing: 0;
-            line-height: 1.12;
-            margin-bottom: 12px;
-        }
-        .structure-copy p {
-            color: #666;
-            font-size: 0.94rem;
-            line-height: 1.72;
-        }
-        .structure-images {
-            display: grid;
-            gap: 14px;
-            grid-template-columns: repeat(2, minmax(0, 1fr));
-        }
-        .structure-images img {
-            aspect-ratio: 1 / 1;
-            background: #F7F2EA;
-            border: 1px solid rgba(92,45,26,0.08);
-            display: block;
-            object-fit: contain;
-            padding: 8px;
-            width: 100%;
-        }
-        .travel-note {
-            background: #F7F2EA;
-            border: 1px solid rgba(92,45,26,0.09);
-            color: #5a5048;
-            font-size: 0.95rem;
-            line-height: 1.72;
-            margin-top: 34px;
-            padding: 24px;
-        }
-        .bottom-cta {
-            background: #5C2D1A;
-            color: #FDFBF7;
-            padding: 56px 0;
-        }
-        .bottom-cta-inner {
-            align-items: center;
-            display: flex;
-            gap: 24px;
-            justify-content: space-between;
-        }
-        .bottom-cta h2 {
-            color: #FDFBF7;
-            font-family: "Cormorant Garamond", Georgia, serif;
-            font-size: clamp(2rem, 4vw, 3.2rem);
-            font-weight: 500;
-            letter-spacing: 0;
-            line-height: 1.08;
-            margin-bottom: 10px;
-        }
-        .bottom-cta p {
-            color: rgba(253,251,247,0.74);
-            line-height: 1.7;
-            max-width: 620px;
-        }
-        .quote-button {
-            border: 1px solid rgba(253,251,247,0.46);
-            color: #FDFBF7;
-            flex: 0 0 auto;
-            font-size: 0.78rem;
-            font-weight: 600;
-            letter-spacing: 0.12em;
-            padding: 14px 18px;
-            text-transform: uppercase;
-        }
-        .page-footer {
-            background: #3B2116;
-            color: rgba(255,255,255,0.72);
-            padding: 28px 0;
-        }
-        .page-footer p {
-            font-size: 0.84rem;
-        }
-        @media (max-width: 980px) {
-            .passport-hero-grid,
-            .bottom-cta-inner {
-                grid-template-columns: 1fr;
-            }
-            .passport-hero-grid {
-                gap: 36px;
-            }
-            .passport-product-grid {
-                grid-template-columns: repeat(2, minmax(0, 1fr));
-            }
-            .customization-grid {
-                grid-template-columns: repeat(2, minmax(0, 1fr));
-            }
-            .structure-preview {
-                grid-template-columns: 1fr;
-            }
-            .bottom-cta-inner {
-                align-items: flex-start;
-                flex-direction: column;
-            }
-        }
-        @media (max-width: 560px) {
-            .page-nav-inner {
-                align-items: flex-start;
-                flex-direction: column;
-            }
-            .passport-hero {
-                padding: 58px 0 44px;
-            }
-            .passport-hero h1 {
-                font-size: clamp(2.25rem, 12vw, 3rem);
-            }
-            .passport-hero-grid {
-                grid-template-columns: minmax(0, 1fr);
-            }
-            .passport-hero-media {
-                padding: 12px;
-            }
-            .passport-section {
-                padding: 54px 0;
-            }
-            .passport-product-grid,
-            .customization-grid,
-            .structure-images {
-                grid-template-columns: 1fr;
-            }
-            .passport-card-body,
-            .customization-item {
-                padding: 17px;
-            }
-            .hero-notes span {
-                width: 100%;
-            }
-        }
-    </style>
 </head>
-<body>
-    <header class="page-nav">
-        <div class="container page-nav-inner">
-            <a class="page-logo" href="../index.html">HASSION</a>
-            <a href="../products/passport-holders.html">Back to Passport Holders</a>
+<body class="product-detail-page">
+    <nav class="product-detail-nav">
+        <div class="container product-detail-nav-inner">
+            <a class="product-detail-logo" href="../index.html">HASSION Leather</a>
+            <a class="product-detail-nav-link" href="../products/passport-holders.html">Back to Passport Holders</a>
         </div>
-    </header>
+    </nav>
 
     <main>
-        <section class="passport-hero">
-            <div class="container passport-hero-grid">
-                <div>
-                    <span class="page-kicker">RFID Travel Accessory Development</span>
-                    <h1>RFID Passport Holder for Private-Label Travel Collections</h1>
-                    <p>A refined RFID passport holder direction for overseas brands, wholesalers and corporate travel programs. HASSION supports OEM/ODM development with logo embossing, leather color options, lining choices and sampling before bulk production.</p>
-                    <div class="hero-notes" aria-label="OEM options">
-                        <span>Logo Embossing</span>
-                        <span>Color Options</span>
-                        <span>Sample Development</span>
+        <section class="product-detail-hero">
+            <div class="container product-detail-hero-grid">
+                <div class="product-detail-copy">
+                    <span class="product-detail-kicker">OEM Travel Organizer Development</span>
+                    <h1>RFID Zip<br>Travel Wallet</h1>
+                    <p class="product-detail-lead">A zip-around travel organizer reference for private-label sampling, passport pocket planning, card slot review and logo customization.</p>
+                    <p>This page is a development reference for OEM and private-label projects, not a ready-stock retail listing.</p>
+                    <div class="product-detail-tags" aria-label="Product highlights">
+                        <span>Zip-around structure</span>
+                        <span>Passport &amp; card layout</span>
+                        <span>Travel set customization</span>
+                    </div>
+                    <div class="product-detail-actions">
+                        <a class="product-detail-button" href="../index.html#contact">Ask for OEM Quote</a>
+                        <a class="product-detail-text-link" href="../products/passport-holders.html">Back to Passport Holders</a>
                     </div>
                 </div>
-                <div class="passport-hero-media">
-                    <img src="../images/products/processed/passport-holders/passport-holder-09-scene.webp" alt="Leather passport holder styled for travel OEM projects" width="1200" height="1500">
-                </div>
+                <figure class="product-detail-media">
+                    <img src="../images/products/processed/passport-holders/passport-holder-02-zip.webp" alt="RFID zip travel wallet reference for OEM travel organizer development" width="1200" height="1500">
+                </figure>
             </div>
         </section>
 
-        <section class="passport-section">
+        <section class="product-detail-section">
             <div class="container">
-                <div class="section-head">
-                    <h2>Passport Holder Formats for OEM Development</h2>
-                    <p>Representative travel formats for brand merchandise, corporate programs and private-label collections. Each style can be adjusted by leather, color, logo position, inner layout and packaging requirement.</p>
+                <div class="product-detail-section-head">
+                    <span class="product-detail-kicker">Quick Specs</span>
+                    <h2>Reference Details for Buyer Review</h2>
+                    <p>These references help start a sampling discussion for a travel wallet format with zipper closure, passport storage, card slots and branded packaging options.</p>
                 </div>
-                <div class="passport-product-grid">
-                    <article class="passport-card">
-                        <div class="passport-card-media">
-                            <img src="../images/products/processed/passport-holders/passport-holder-02-zip.webp" alt="Zip passport wallet with wrist strap" width="1200" height="1500">
-                        </div>
-                        <div class="passport-card-body">
-                            <h3>Zip Travel Wallet</h3>
-                            <p>Roomy travel format with zipper closure and space for passport, cards and tickets.</p>
-                            <a class="text-link" href="../index.html#contact">Ask for OEM Quote</a>
-                        </div>
-                    </article>
-                    <article class="passport-card">
-                        <div class="passport-card-media is-compact">
-                            <img src="../images/products/processed/passport-holders/passport-holder-08-black-open.webp" alt="Black leather passport holder with card slots" width="1200" height="1200">
-                        </div>
-                        <div class="passport-card-body">
-                            <h3>Black Card Slot Holder</h3>
-                            <p>Compact cover with card storage for corporate travel and retail collections.</p>
-                            <a class="text-link" href="../index.html#contact">Ask for OEM Quote</a>
-                        </div>
-                    </article>
-                    <article class="passport-card">
-                        <div class="passport-card-media is-compact">
-                            <img src="../images/products/processed/passport-holders/passport-holder-10-black-cover.webp" alt="Black passport cover with embossed travel graphic" width="1200" height="1500">
-                        </div>
-                        <div class="passport-card-body">
-                            <h3>Embossed Passport Cover</h3>
-                            <p>Minimal cover style with debossing or hot stamping options for brand identity.</p>
-                            <a class="text-link" href="../index.html#contact">Inquire</a>
-                        </div>
-                    </article>
-                    <article class="passport-card">
-                        <div class="passport-card-media is-wide">
-                            <img src="../images/products/processed/passport-holders/passport-holder-12-brown-interior.webp" alt="Brown leather passport holder interior with pen loop" width="1200" height="1200">
-                        </div>
-                        <div class="passport-card-body">
-                            <h3>Brown Interior Organizer</h3>
-                            <p>Travel wallet structure with pen loop, transparent window and layered pockets.</p>
-                            <a class="text-link" href="../index.html#contact">Ask for OEM Quote</a>
-                        </div>
-                    </article>
-                    <article class="passport-card">
-                        <div class="passport-card-media">
-                            <img src="../images/products/processed/passport-holders/passport-holder-03-wristlet.webp" alt="Tan leather passport wallet with wrist strap" width="1200" height="1500">
-                        </div>
-                        <div class="passport-card-body">
-                            <h3>Wristlet Passport Wallet</h3>
-                            <p>Soft leather zip style for matching travel sets and private-label accessories.</p>
-                            <a class="text-link" href="../index.html#contact">Inquire</a>
-                        </div>
-                    </article>
-                    <article class="passport-card">
-                        <div class="passport-card-media">
-                            <img src="../images/products/processed/passport-holders/passport-holder-01-main.webp" alt="Tan passport holder cover with wrist strap" width="1200" height="1500">
-                        </div>
-                        <div class="passport-card-body">
-                            <h3>Classic Travel Cover</h3>
-                            <p>Simple passport holder format for logo embossing, color updates and gift packaging.</p>
-                            <a class="text-link" href="../index.html#contact">Ask for OEM Quote</a>
-                        </div>
-                    </article>
+                <div class="spec-grid">
+                    <div class="product-detail-card"><strong>Product type</strong><span>RFID zip travel wallet / passport organizer</span></div>
+                    <div class="product-detail-card"><strong>Structure</strong><span>Zip-around closure with passport, card and travel paper compartments</span></div>
+                    <div class="product-detail-card"><strong>Travel use</strong><span>Passport, cards, receipts, boarding pass, pen and small travel documents</span></div>
+                    <div class="product-detail-card"><strong>Custom options</strong><span>Leather, lining, zipper, hardware, logo, slot layout and packaging</span></div>
+                    <div class="product-detail-card"><strong>MOQ reference</strong><span>200 pcs, depending on material, structure and order details</span></div>
+                    <div class="product-detail-card"><strong>Sample reference</strong><span>Around 7 days after confirming layout, material and logo direction</span></div>
+                    <div class="product-detail-card"><strong>Production reference</strong><span>Around 30 days after sample approval and order confirmation</span></div>
                 </div>
             </div>
         </section>
 
-        <section class="passport-section customization-band">
+        <section class="product-detail-section product-detail-section-alt">
             <div class="container">
-                <div class="section-head">
-                    <span class="page-kicker">OEM Customization</span>
-                    <h2>Develop a Coordinated Travel Collection</h2>
-                    <p>HASSION helps buyers confirm materials, logo placement, inner structure and packaging before sampling, so each passport holder project can move into bulk production with clear details.</p>
+                <div class="product-detail-section-head">
+                    <span class="product-detail-kicker">Sampling Review</span>
+                    <h2>Reference Views for Structure Review</h2>
+                    <p>Use these views to review zipper smoothness, pocket layout, passport fit, card slot count, logo position, leather feel, lining and hardware color before sample development.</p>
                 </div>
-                <div class="customization-grid">
-                    <div class="customization-item">
-                        <strong>Logo Embossing</strong>
-                        <span>Debossed, hot stamped or metal logo details for private-label identity.</span>
-                    </div>
-                    <div class="customization-item">
-                        <strong>Leather Colors</strong>
-                        <span>Classic neutrals or seasonal colors selected for your target market.</span>
-                    </div>
-                    <div class="customization-item">
-                        <strong>Lining &amp; Zippers</strong>
-                        <span>Inner fabric, card slot layout, zipper puller and hardware options.</span>
-                    </div>
-                    <div class="customization-item">
-                        <strong>Packaging</strong>
-                        <span>Dust bags, boxes, hang tags and export-ready packing support.</span>
-                    </div>
-                    <div class="customization-item">
-                        <strong>Sample Development</strong>
-                        <span>Samples prepared from reference products, drawings or buyer briefs.</span>
-                    </div>
+                <div class="sampling-gallery">
+                    <figure class="sampling-gallery-item">
+                        <img src="../images/products/processed/passport-holders/passport-holder-02-zip.webp" alt="Zip-around travel wallet exterior reference" width="1200" height="1500" loading="lazy">
+                        <figcaption>Exterior zip wallet reference for zipper direction, leather surface, wrist strap and logo placement review.</figcaption>
+                    </figure>
+                    <figure class="sampling-gallery-item">
+                        <img src="../images/products/processed/passport-holders/passport-holder-05-travel-wallet.webp" alt="Open travel organizer pocket layout reference" width="1200" height="1200" loading="lazy">
+                        <figcaption>Open organizer reference for checking passport pocket, receipt space, card slots, pen loop and travel document layout.</figcaption>
+                    </figure>
+                    <figure class="sampling-gallery-item">
+                        <img src="../images/products/processed/passport-holders/passport-holder-12-brown-interior.webp" alt="Brown travel wallet interior compartment reference" width="1200" height="1200" loading="lazy">
+                        <figcaption>Interior reference for reviewing lining, zipper pocket, stitching, hardware tone and compartment depth.</figcaption>
+                    </figure>
                 </div>
-                <div class="structure-preview">
-                    <div class="structure-copy">
-                        <h3>Interior Layouts Built Around Travel Use</h3>
-                        <p>Open-layout samples help confirm card slots, passport sleeves, pen loops and transparent windows before production. These details are reviewed during sampling instead of presented as retail product claims.</p>
-                    </div>
-                    <div class="structure-images">
-                        <img src="../images/products/processed/passport-holders/passport-holder-04-open.webp" alt="Open passport holder layout with card slots" width="1200" height="1200">
-                        <img src="../images/products/processed/passport-holders/passport-holder-05-travel-wallet.webp" alt="Fold-out passport holder compartment structure" width="1200" height="1200">
-                    </div>
-                </div>
-                <p class="travel-note">Matching luggage tags and travel small leather goods can be developed as part of the same OEM collection.</p>
+                <p class="product-detail-note">Final pocket count, passport fit and logo position can be adjusted during sample review based on the buyer's brief.</p>
             </div>
         </section>
 
-        <section class="bottom-cta">
-            <div class="container bottom-cta-inner">
-                <div>
-                    <h2>Share Your Passport Holder Brief</h2>
-                    <p>Send product references, quantity, logo requirement and target market. Our team can advise sample details, MOQ and production planning for your OEM travel leather goods project.</p>
+        <section class="product-detail-section">
+            <div class="container">
+                <div class="product-detail-section-head">
+                    <span class="product-detail-kicker">Structure Details</span>
+                    <h2>Travel Wallet Details Buyers Usually Confirm</h2>
+                    <p>This format is different from a slim passport cover. It is better suited to travel retail sets, brand gifts and programs that need more organization.</p>
                 </div>
-                <a class="quote-button" href="../index.html#contact">Ask for OEM Quote</a>
+                <div class="product-detail-grid">
+                    <div class="product-detail-card"><strong>Passport compartment</strong><span>Pocket depth and opening direction can be adjusted for target passport size and regional market needs.</span></div>
+                    <div class="product-detail-card"><strong>Card slot layout</strong><span>Slot quantity, access angle and pocket layering can be reviewed before sample approval.</span></div>
+                    <div class="product-detail-card"><strong>Zip-around closure</strong><span>Zipper tape color, puller style and hardware finish can be aligned with the buyer's collection.</span></div>
+                    <div class="product-detail-card"><strong>Receipt space</strong><span>Long pockets can be planned for boarding passes, receipts, travel papers or small documents.</span></div>
+                    <div class="product-detail-card"><strong>Compact carry</strong><span>Overall thickness can be balanced around compartment count, lining choice and zipper structure.</span></div>
+                    <div class="product-detail-card"><strong>Logo position</strong><span>Embossing, hot stamping, metal logo or label placement can be reviewed on exterior or inner panels.</span></div>
+                </div>
+            </div>
+        </section>
+
+        <section class="product-detail-section product-detail-section-alt">
+            <div class="container">
+                <div class="product-detail-section-head">
+                    <span class="product-detail-kicker">OEM Options</span>
+                    <h2>Customization Options for Private-Label Orders</h2>
+                    <p>HASSION supports travel organizer development from reference review through sample revision and bulk production planning.</p>
+                </div>
+                <div class="product-detail-grid">
+                    <div class="product-detail-card"><strong>Leather choice</strong><span>Smooth, pebbled, vintage or saffiano-style leather can be reviewed against the target brand direction.</span></div>
+                    <div class="product-detail-card"><strong>Lining direction</strong><span>Fabric, microfiber or leather lining can be selected depending on price point and usage requirements.</span></div>
+                    <div class="product-detail-card"><strong>Zipper &amp; hardware</strong><span>Zipper quality, puller style, wrist strap hardware and metal color can be confirmed during sampling.</span></div>
+                    <div class="product-detail-card"><strong>Logo method</strong><span>Debossing, hot stamping, metal plate, woven label or printed branding can be tested on sample.</span></div>
+                    <div class="product-detail-card"><strong>Stitching &amp; edge</strong><span>Thread color, stitch density and edge finishing can be aligned with the final collection standard.</span></div>
+                    <div class="product-detail-card"><strong>Packaging</strong><span>Gift box, paper sleeve, barcode label, hangtag or travel set packaging can be developed for OEM programs.</span></div>
+                </div>
+            </div>
+        </section>
+
+        <section class="product-detail-section">
+            <div class="container">
+                <div class="product-detail-section-head">
+                    <span class="product-detail-kicker">Buyer Brief</span>
+                    <h2>What to Send Us for a Faster Quote</h2>
+                    <p>A clear brief helps the team review structure feasibility, sampling details and production planning more quickly.</p>
+                </div>
+                <ul class="buyer-brief-list">
+                    <li>Reference photo or physical sample</li>
+                    <li>Target dimensions and passport size requirement</li>
+                    <li>Card slot layout and pocket count</li>
+                    <li>Logo file and preferred branding method</li>
+                    <li>Leather, lining and color direction</li>
+                    <li>Zipper, puller and hardware preference</li>
+                    <li>Estimated order quantity</li>
+                    <li>Packaging requirement and target market</li>
+                </ul>
+            </div>
+        </section>
+
+        <section class="product-detail-cta">
+            <div class="container product-detail-cta-inner">
+                <div>
+                    <span class="product-detail-kicker">Travel Organizer OEM</span>
+                    <h2>Start an RFID Zip Travel Wallet Project</h2>
+                    <p>Share your reference, logo file, target quantity and organizer layout requirement. Our team can help review zipper structure, passport fit, sample details and production feasibility.</p>
+                </div>
+                <a class="product-detail-button product-detail-button-light" href="../index.html#contact">Discuss This Travel Wallet Project</a>
             </div>
         </section>
     </main>
 
-    <footer class="page-footer">
+    <footer class="product-detail-footer">
         <div class="container">
-            <p>Guangzhou Hassion Leather Ltd. | OEM / ODM Leather Goods Manufacturer</p>
+            <p>HASSION Leather | OEM / ODM leather goods manufacturer since 1998</p>
         </div>
     </footer>
 </body>
