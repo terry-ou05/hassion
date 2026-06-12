@@ -1224,7 +1224,7 @@
                 <div class="card-body">
                     <h3 class="card-name">Men's Wallet</h3>
                     <p class="card-desc">Bifold, slim and RFID wallet styles.</p>
-                    <a href="products/mens-wallets.html" class="card-inquire">View Styles</a>
+                    <a href="products/mens-wallets.html" class="card-inquire">View Details</a>
                 </div>
             </div>
             <div class="product-card">
@@ -1232,7 +1232,7 @@
                 <div class="card-body">
                     <h3 class="card-name">Women's Wallet</h3>
                     <p class="card-desc">Long and compact wallets with logo options.</p>
-                    <a href="products/womens-wallets.html" class="card-inquire">View Styles</a>
+                    <a href="products/womens-wallets.html" class="card-inquire">View Details</a>
                 </div>
             </div>
             <div class="product-card">
@@ -1240,7 +1240,7 @@
                 <div class="card-body">
                     <h3 class="card-name">Passport Holder</h3>
                     <p class="card-desc">Travel holders with logo and lining options.</p>
-                    <a href="products/passport-holders.html" class="card-inquire">View Styles</a>
+                    <a href="products/passport-holders.html" class="card-inquire">View Details</a>
                 </div>
             </div>
             <div class="product-card">
@@ -1248,7 +1248,7 @@
                 <div class="card-body">
                     <h3 class="card-name">Card Holder</h3>
                     <p class="card-desc">Slim card cases with custom slot layouts.</p>
-                    <a href="products/card-holders.html" class="card-inquire">View Styles</a>
+                    <a href="products/card-holders.html" class="card-inquire">View Details</a>
                 </div>
             </div>
             <div class="product-card">
@@ -1256,7 +1256,7 @@
                 <div class="card-body">
                     <h3 class="card-name">Key Holder</h3>
                     <p class="card-desc">Key pouches with custom hardware options.</p>
-                    <a href="products/key-holders.html" class="card-inquire">View Styles</a>
+                    <a href="products/key-holders.html" class="card-inquire">View Details</a>
                 </div>
             </div>
             <div class="product-card">
@@ -1264,7 +1264,7 @@
                 <div class="card-body">
                     <h3 class="card-name">Coin Case</h3>
                     <p class="card-desc">Coin purses and small pouches for OEM lines.</p>
-                    <a href="products/coin-cases.html" class="card-inquire">View Styles</a>
+                    <a href="products/coin-cases.html" class="card-inquire">View Details</a>
                 </div>
             </div>
         </div>
@@ -1523,11 +1523,23 @@
 
     window.addEventListener('load', function() {
         var hash = window.location.hash;
-        if (hash && hash !== '#contact') return;
-
         if (hash === '#contact') {
-            history.replaceState(null, '', window.location.pathname + window.location.search);
+            applyInquiryContextFromUrl();
+            var scrollToContact = function() {
+                var contact = document.getElementById('contact');
+                if (contact) contact.scrollIntoView({ behavior: 'auto', block: 'start' });
+            };
+            window.requestAnimationFrame(function() {
+                scrollToContact();
+                window.setTimeout(scrollToContact, 180);
+                window.setTimeout(function() {
+                    scrollToContact();
+                    history.replaceState(null, '', window.location.pathname);
+                }, 620);
+            });
+            return;
         }
+        if (hash) return;
 
         window.requestAnimationFrame(function() {
             window.scrollTo(0, 0);
@@ -1605,8 +1617,9 @@
     });
 
     // Prefill inquiry form when product Inquire button is clicked
-    function prefillInquiry(el) {
-        var product = el.getAttribute('data-product');
+    function prefillInquiryProduct(product) {
+        if (!product) return;
+        product = product.replace(/\+/g, ' ');
         var sel = document.getElementById('product');
         var msg = document.getElementById('message');
         if (sel) {
@@ -1617,6 +1630,16 @@
         if (msg && !msg.value) {
             msg.value = "I'm interested in HASSION's " + product + ". Please send me OEM quotation including MOQ, sample lead time, and unit price.";
         }
+    }
+
+    function prefillInquiry(el) {
+        var product = el.getAttribute('data-product');
+        prefillInquiryProduct(product);
+    }
+
+    function applyInquiryContextFromUrl() {
+        var params = new URLSearchParams(window.location.search);
+        prefillInquiryProduct(params.get('product'));
     }
 
     document.querySelectorAll('a[href="#contact"]').forEach(function(link) {

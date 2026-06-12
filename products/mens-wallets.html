@@ -19,8 +19,9 @@
         .page-nav a { color: rgba(253,251,247,0.82); font-size: 0.78rem; letter-spacing: 0.12em; text-transform: uppercase; }
         .wallet-hero { background: #fff; padding: 76px 0 60px; }
         .wallet-hero-grid { align-items: center; display: grid; gap: 56px; grid-template-columns: minmax(0, 0.95fr) minmax(330px, 0.72fr); min-width: 0; }
+        .wallet-hero-grid > * { min-width: 0; }
         .page-kicker { color: rgba(92,45,26,0.62); display: block; font-size: 0.72rem; letter-spacing: 0.18em; margin-bottom: 16px; text-transform: uppercase; }
-        h1 { color: #5C2D1A; font-family: "Cormorant Garamond", Georgia, serif; font-size: clamp(2.45rem, 5vw, 4.55rem); font-weight: 500; letter-spacing: 0; line-height: 1.03; margin-bottom: 20px; }
+        h1 { color: #5C2D1A; font-family: "Cormorant Garamond", Georgia, serif; font-size: clamp(2.45rem, 5vw, 4.55rem); font-weight: 500; letter-spacing: 0; line-height: 1.03; margin-bottom: 20px; max-width: 100%; overflow-wrap: anywhere; }
         .wallet-hero p, .section-head p { color: #5a5652; font-size: 1rem; line-height: 1.78; max-width: 700px; overflow-wrap: anywhere; }
         .hero-actions { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 28px; }
         .primary-link, .quote-button { border: 1px solid rgba(92,45,26,0.24); color: #5C2D1A; display: inline-flex; font-size: 0.78rem; font-weight: 600; letter-spacing: 0.12em; padding: 14px 18px; text-transform: uppercase; }
@@ -66,6 +67,8 @@
             .page-nav-inner { align-items: flex-start; flex-direction: column; }
             .wallet-hero { padding: 54px 0 42px; }
             .wallet-hero-grid { gap: 34px; }
+            h1 { font-size: 1.55rem; line-height: 1.16; }
+            h1, .wallet-hero p { max-width: 320px; }
             .format-grid, .oem-grid { grid-template-columns: 1fr; }
             .wallet-section { padding: 54px 0 62px; }
             .oem-band { padding: 48px 0; }
@@ -88,7 +91,7 @@
                     <h1>Men's Wallets for OEM &amp; Private-Label Collections</h1>
                     <p>HASSION develops bifold wallets, slim RFID-ready wallets, long wallets and compact leather wallet formats with logo, leather color, lining, card-slot layout and packaging customization for brand programs.</p>
                     <div class="hero-actions">
-                        <a class="primary-link" href="../index.html#contact">Ask for OEM Quote</a>
+                        <a class="primary-link" href="../index.html?product=Men%27s%20Wallet#contact">Ask for OEM Quote</a>
                     </div>
                 </div>
                 <div class="wallet-hero-media">
@@ -111,7 +114,7 @@
                         <div class="format-body">
                             <h3>Classic Bifold Wallet</h3>
                             <p>Compact bifold structure for private-label men's accessories and corporate programs.</p>
-                <a class="text-link" href="../product/mens-wallet-classic-bifold.html">View OEM Details</a>
+                <a class="text-link" href="../product/mens-wallet-classic-bifold.html">View Details</a>
                         </div>
                     </article>
                     <article class="format-card">
@@ -121,7 +124,7 @@
                         <div class="format-body">
                             <h3>Slim RFID Wallet</h3>
                             <p>Daily-carry format with optional RFID lining, custom logo and packaging support.</p>
-                <a class="text-link" href="../product/slim-rfid-wallet.html">View OEM Details</a>
+                <a class="text-link" href="../product/slim-rfid-wallet.html">View Details</a>
                         </div>
                     </article>
                     <article class="format-card">
@@ -131,7 +134,7 @@
                         <div class="format-body">
                             <h3>Long Wallet Format</h3>
                             <p>Extended structure for markets that prefer more note storage and card capacity.</p>
-                <a class="text-link" href="../product/classic-black-long-wallet.html">View OEM Details</a>
+                <a class="text-link" href="../product/classic-black-long-wallet.html">View Details</a>
                         </div>
                     </article>
                     <article class="format-card">
@@ -141,7 +144,7 @@
                         <div class="format-body">
                             <h3>Structured Organizer Wallet</h3>
                             <p>Interior layout direction for card slots, zipper sections and sample review.</p>
-                <a class="text-link" href="../index.html#contact">Discuss This Style</a>
+                <a class="text-link" href="../product/classic-black-long-wallet.html">View Details</a>
                         </div>
                     </article>
                 </div>
@@ -169,7 +172,7 @@
                     <h2>Develop Men's Wallet Styles for Your Brand</h2>
                     <p>Share your reference style, logo method, material direction and quantity range for OEM sampling support.</p>
                 </div>
-                <a class="quote-button" href="../index.html#contact">Ask for OEM Quote</a>
+                <a class="quote-button" href="../index.html?product=Men%27s%20Wallet#contact">Ask for OEM Quote</a>
             </div>
         </section>
     </main>

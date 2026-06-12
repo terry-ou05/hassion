@@ -1388,4 +1388,32 @@ img {
     .product-detail-text-link {
         letter-spacing: 0.06em;
     }
+
+    .product-detail-page h1 {
+        font-size: 1.88rem;
+        line-height: 1.12;
+        max-width: 100%;
+        overflow-wrap: anywhere;
+    }
+
+    .product-detail-copy,
+    .product-detail-lead {
+        max-width: 320px;
+    }
+
+    .product-detail-tags {
+        align-items: flex-start;
+        flex-direction: column;
+    }
+
+    .product-detail-actions {
+        align-items: flex-start;
+        flex-direction: column;
+    }
+
+    .product-detail-button,
+    .product-detail-text-link {
+        max-width: 100%;
+        white-space: normal;
+    }
 }

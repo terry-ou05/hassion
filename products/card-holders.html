@@ -19,8 +19,9 @@
         .page-nav a { color: rgba(253,251,247,0.82); font-size: 0.78rem; letter-spacing: 0.12em; text-transform: uppercase; }
         .card-hero { background: #fff; padding: 74px 0 58px; }
         .card-hero-grid { align-items: center; display: grid; gap: 56px; grid-template-columns: minmax(0, 0.95fr) minmax(330px, 0.72fr); min-width: 0; }
+        .card-hero-grid > * { min-width: 0; }
         .page-kicker { color: rgba(92,45,26,0.62); display: block; font-size: 0.72rem; letter-spacing: 0.18em; margin-bottom: 16px; text-transform: uppercase; }
-        h1 { color: #5C2D1A; font-family: "Cormorant Garamond", Georgia, serif; font-size: clamp(2.45rem, 5vw, 4.45rem); font-weight: 500; letter-spacing: 0; line-height: 1.03; margin-bottom: 20px; }
+        h1 { color: #5C2D1A; font-family: "Cormorant Garamond", Georgia, serif; font-size: clamp(2.45rem, 5vw, 4.45rem); font-weight: 500; letter-spacing: 0; line-height: 1.03; margin-bottom: 20px; max-width: 100%; overflow-wrap: anywhere; }
         .card-hero p, .section-head p { color: #5a5652; font-size: 1rem; line-height: 1.78; max-width: 690px; overflow-wrap: anywhere; }
         .hero-actions { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 28px; }
         .primary-link, .quote-button { border: 1px solid rgba(92,45,26,0.24); color: #5C2D1A; display: inline-flex; font-size: 0.78rem; font-weight: 600; letter-spacing: 0.12em; padding: 14px 18px; text-transform: uppercase; }
@@ -63,6 +64,8 @@
             .page-nav-inner { align-items: flex-start; flex-direction: column; }
             .card-hero { padding: 52px 0 42px; }
             .card-hero-grid { gap: 34px; }
+            h1 { font-size: 1.55rem; line-height: 1.16; }
+            h1, .card-hero p { max-width: 320px; }
             .format-grid, .oem-grid { grid-template-columns: 1fr; }
             .card-section { padding: 54px 0 62px; }
             .oem-band { padding: 48px 0; }
@@ -85,7 +88,7 @@
                     <h1>Leather Card Holders for OEM &amp; Private-Label Collections</h1>
                     <p>HASSION develops woven card holders, slim card cases, RFID-style layouts and compact leather card-slot formats with logo, color, stitching and packaging customization for brand programs.</p>
                     <div class="hero-actions">
-                        <a class="primary-link" href="../index.html#contact">Ask for OEM Quote</a>
+                        <a class="primary-link" href="../index.html?product=Card%20Holder#contact">Ask for OEM Quote</a>
                     </div>
                 </div>
                 <div class="card-hero-media">
@@ -108,7 +111,7 @@
                         <div class="format-body">
                             <h3>Classic Leather Card Holder</h3>
                             <p>Slim multi-slot card holder reference for OEM leather, logo and packaging customization.</p>
-                            <a class="text-link" href="../product/card-holder-classic.html">View OEM Details</a>
+                            <a class="text-link" href="../product/card-holder-classic.html">View Details</a>
                         </div>
                     </article>
                     <article class="format-card">
@@ -118,7 +121,7 @@
                         <div class="format-body">
                             <h3>Woven Leather Card Holder</h3>
                             <p>Textured woven surface with multiple color options for private-label collections.</p>
-                <a class="text-link" href="../product/woven-leather-card-holder.html">View OEM Details</a>
+                <a class="text-link" href="../product/woven-leather-card-holder.html">View Details</a>
                         </div>
                     </article>
                     <article class="format-card">
@@ -128,7 +131,7 @@
                         <div class="format-body">
                             <h3>Brown Open Card Case</h3>
                             <p>Open-format layout for reviewing card slots, cash pocket and compact structure.</p>
-                <a class="text-link" href="../index.html#contact">Discuss This Style</a>
+                <a class="text-link" href="../product/card-holder-classic.html">View Details</a>
                         </div>
                     </article>
                     <article class="format-card">
@@ -138,7 +141,7 @@
                         <div class="format-body">
                             <h3>Red Brown Card Set</h3>
                             <p>Colorway and matching small accessory direction for coordinated OEM programs.</p>
-                <a class="text-link" href="../index.html#contact">Discuss This Style</a>
+                <a class="text-link" href="../product/card-holder-classic.html">View Details</a>
                         </div>
                     </article>
                     <article class="format-card">
@@ -148,7 +151,7 @@
                         <div class="format-body">
                             <h3>Pocket Detail Card Holder</h3>
                             <p>Detail view for checking pocket opening, inner lining and slim storage capacity.</p>
-                <a class="text-link" href="../index.html#contact">Discuss This Style</a>
+                <a class="text-link" href="../product/card-holder-classic.html">View Details</a>
                         </div>
                     </article>
                     <article class="format-card">
@@ -158,7 +161,7 @@
                         <div class="format-body">
                             <h3>Quilted Texture Detail</h3>
                             <p>Texture reference for brands comparing woven, quilted and smooth leather surfaces.</p>
-                <a class="text-link" href="../index.html#contact">Discuss This Style</a>
+                <a class="text-link" href="../product/woven-leather-card-holder.html">View Details</a>
                         </div>
                     </article>
                 </div>
@@ -186,7 +189,7 @@
                     <h2>Develop Compact Card Holder Styles for Your Brand</h2>
                     <p>Share your reference style, card-slot requirement, leather texture and quantity range for OEM sampling support.</p>
                 </div>
-                <a class="quote-button" href="../index.html#contact">Ask for OEM Quote</a>
+                <a class="quote-button" href="../index.html?product=Card%20Holder#contact">Ask for OEM Quote</a>
             </div>
         </section>
     </main>
