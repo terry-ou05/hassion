@@ -10,6 +10,122 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="../style.css">
+    <!-- Local template styles — this page only (detail-page master template) -->
+    <style>
+        /* Hero: larger image side on desktop, image-first on mobile */
+        @media (min-width: 981px) {
+            .product-detail-hero-grid {
+                grid-template-columns: minmax(0, 0.45fr) minmax(0, 0.55fr);
+                gap: 44px;
+            }
+        }
+        @media (max-width: 980px) {
+            .product-detail-media {
+                order: -1;
+            }
+        }
+        .product-detail-media {
+            background: #F2E3CF;
+            border: none;
+            border-radius: 0;
+            padding: 0;
+        }
+        .product-detail-media img {
+            aspect-ratio: 4 / 5;
+            object-fit: cover;
+        }
+        .spec-rows {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            max-width: 880px;
+            border-top: 1px solid rgba(92, 45, 26, 0.14);
+        }
+        .spec-row {
+            display: grid;
+            grid-template-columns: 190px minmax(0, 1fr);
+            gap: 18px;
+            padding: 14px 0;
+            border-bottom: 1px solid rgba(92, 45, 26, 0.1);
+        }
+        .spec-row .spec-label {
+            color: rgba(92, 45, 26, 0.62);
+            font-size: 0.72rem;
+            letter-spacing: 0.14em;
+            line-height: 2;
+            text-transform: uppercase;
+        }
+        .spec-row .spec-value {
+            color: #463b33;
+            font-size: 0.95rem;
+            line-height: 1.6;
+        }
+        .sampling-gallery {
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+            gap: 22px;
+        }
+        .sampling-gallery-item {
+            background: transparent;
+            border: none;
+            border-radius: 0;
+        }
+        .sampling-gallery-item img {
+            aspect-ratio: 1 / 1;
+            object-fit: cover;
+            padding: 0;
+            background: #F2E3CF;
+        }
+        .sampling-gallery-item figcaption {
+            color: #6d625a;
+            font-size: 0.82rem;
+            letter-spacing: 0.02em;
+            padding: 12px 2px 0;
+        }
+        .custom-list {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            display: grid;
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+            gap: 0 56px;
+            max-width: 980px;
+            border-top: 1px solid rgba(92, 45, 26, 0.14);
+        }
+        .custom-list li {
+            border-bottom: 1px solid rgba(92, 45, 26, 0.1);
+            padding: 14px 0;
+            color: #463b33;
+            font-size: 0.95rem;
+            line-height: 1.6;
+        }
+        .custom-list li strong {
+            color: #5C2D1A;
+            font-weight: 600;
+        }
+        .buyer-brief-list {
+            gap: 0 56px;
+        }
+        .buyer-brief-list li {
+            background: transparent;
+            border: none;
+            border-radius: 0;
+            border-bottom: 1px solid rgba(92, 45, 26, 0.1);
+            padding: 12px 0;
+        }
+        @media (max-width: 640px) {
+            .spec-row {
+                grid-template-columns: 1fr;
+                gap: 2px;
+                padding: 12px 0;
+            }
+            .sampling-gallery {
+                grid-template-columns: 1fr;
+            }
+            .custom-list {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
 </head>
 <body class="product-detail-page">
     <nav class="product-detail-nav">
@@ -25,20 +141,14 @@
                 <div class="product-detail-copy">
                     <span class="product-detail-kicker">OEM Men's Wallet Development</span>
                     <h1>Classic Men's<br>Bifold Wallet</h1>
-                    <p class="product-detail-lead">A classic men's bifold wallet reference for private-label sampling, card-slot structure review and logo customization.</p>
-                    <p>This page is prepared for OEM and private-label development, with details intended for sampling discussion and customization review.</p>
-                    <div class="product-detail-tags" aria-label="Product highlights">
-                        <span>Bifold wallet structure</span>
-                        <span>Card slot customization</span>
-                        <span>Private-label sampling</span>
-                    </div>
+                    <p class="product-detail-lead">A classic bifold reference for private-label development — leather, structure and logo, made to your brand.</p>
                     <div class="product-detail-actions">
                         <a class="product-detail-button" href="../index.html?product=Men%27s%20Wallet#contact">Inquire About This Product</a>
                         <a class="product-detail-text-link" href="../products/mens-wallets.html">Back to Men's Wallets</a>
                     </div>
                 </div>
                 <figure class="product-detail-media">
-                    <img src="../images/products/minimal-black-bifold-wallet/angle.jpg" alt="Classic men's bifold wallet reference for OEM development" width="750" height="750">
+                    <img src="../images/products/processed/mens-wallets/mens-wallet-classic-hero.webp" alt="Closed brown leather bifold wallet with tonal stitching" width="1122" height="1402">
                 </figure>
             </div>
         </section>
@@ -47,98 +157,69 @@
             <div class="container">
                 <div class="product-detail-section-head">
                     <span class="product-detail-kicker">Quick Specs</span>
-                    <h2>Reference Details for Buyer Review</h2>
-                    <p>These references help start a sampling discussion. Final specifications can be adjusted depending on material, slot layout, logo method and order details.</p>
+                    <h2>Reference Details</h2>
                 </div>
-                <div class="spec-grid">
-                    <div class="product-detail-card"><strong>Product type</strong><span>Men's bifold wallet</span></div>
-                    <div class="product-detail-card"><strong>Structure</strong><span>Bifold structure with card slots and cash compartment</span></div>
-                    <div class="product-detail-card"><strong>Suitable for</strong><span>Retail collections, brand gifts, corporate customization and travel accessories</span></div>
-                    <div class="product-detail-card"><strong>Customizable parts</strong><span>Leather, color, logo, stitching, edge paint, card slot layout and packaging</span></div>
-                    <div class="product-detail-card"><strong>MOQ reference</strong><span>200 pcs, depending on material, structure and order details</span></div>
-                    <div class="product-detail-card"><strong>Sample reference</strong><span>Around 7 days after confirming material, structure and logo direction</span></div>
-                    <div class="product-detail-card"><strong>Production reference</strong><span>Around 30 days after sample approval and order confirmation</span></div>
-                </div>
+                <ul class="spec-rows">
+                    <li class="spec-row"><span class="spec-label">Product type</span><span class="spec-value">Men's bifold wallet</span></li>
+                    <li class="spec-row"><span class="spec-label">Structure</span><span class="spec-value">Bifold with card slots and cash compartment</span></li>
+                    <li class="spec-row"><span class="spec-label">MOQ</span><span class="spec-value">200 pcs per style per color</span></li>
+                    <li class="spec-row"><span class="spec-label">Sample</span><span class="spec-value">~7 days</span></li>
+                    <li class="spec-row"><span class="spec-label">Production</span><span class="spec-value">~30 days after sample approval</span></li>
+                </ul>
             </div>
         </section>
 
         <section class="product-detail-section product-detail-section-alt">
             <div class="container">
                 <div class="product-detail-section-head">
-                    <span class="product-detail-kicker">Sampling Review</span>
-                    <h2>Reference Views for Sampling Review</h2>
-                    <p>Use these views to review bifold structure, card slot layout, edge finishing, leather surface and possible logo placement before sample development.</p>
+                    <span class="product-detail-kicker">Reference Views</span>
+                    <h2>Structure &amp; Finish</h2>
                 </div>
                 <div class="sampling-gallery">
                     <figure class="sampling-gallery-item">
-                        <img src="../images/products/minimal-black-bifold-wallet/open.jpg" alt="Open bifold wallet structure reference" width="750" height="750" loading="lazy">
-                        <figcaption>Open structure reference for reviewing folding proportion, cash compartment and inner layout.</figcaption>
+                        <img src="../images/products/processed/mens-wallets/mens-wallet-classic-open-structure.webp" alt="Open brown bifold wallet showing six card slots" width="1254" height="1254" loading="lazy">
+                        <figcaption>Open structure with six card slots</figcaption>
                     </figure>
                     <figure class="sampling-gallery-item">
-                        <img src="../images/products/minimal-black-bifold-wallet/detail-card-slots.jpg" alt="Bifold wallet card slot layout reference" width="750" height="750" loading="lazy">
-                        <figcaption>Card-slot detail for checking slot depth, access angle and capacity before sampling.</figcaption>
-                    </figure>
-                    <figure class="sampling-gallery-item">
-                        <img src="../images/products/minimal-black-bifold-wallet/detail-edge.jpg" alt="Bifold wallet edge finishing reference" width="750" height="750" loading="lazy">
-                        <figcaption>Exterior and edge reference for reviewing stitching, edge paint and possible logo position.</figcaption>
+                        <img src="../images/products/processed/mens-wallets/mens-wallet-classic-closed-angle.webp" alt="Closed brown bifold wallet, crazy horse leather" width="1254" height="1254" loading="lazy">
+                        <figcaption>Closed profile in crazy horse leather</figcaption>
                     </figure>
                 </div>
-                <p class="product-detail-note">Additional interior, logo-position and packaging photos can be prepared during sample discussion.</p>
             </div>
         </section>
 
         <section class="product-detail-section">
             <div class="container">
                 <div class="product-detail-section-head">
-                    <span class="product-detail-kicker">Structure Details</span>
-                    <h2>Bifold Wallet Details Buyers Usually Confirm</h2>
-                    <p>The structure can be refined around the buyer's brief, target market and sample feedback.</p>
+                    <span class="product-detail-kicker">Customization</span>
+                    <h2>Made to Your Brand</h2>
                 </div>
-                <div class="product-detail-grid">
-                    <div class="product-detail-card"><strong>Bifold structure</strong><span>Folded thickness, corner shape and closed profile can be adjusted for daily carry or gift programs.</span></div>
-                    <div class="product-detail-card"><strong>Card slot layout</strong><span>Slot count, pocket depth and access angle can be reviewed before sample approval.</span></div>
-                    <div class="product-detail-card"><strong>Cash compartment</strong><span>Bill pocket width and inner lining direction can be adapted for the buyer's target market.</span></div>
-                    <div class="product-detail-card"><strong>Edge finishing</strong><span>Edge paint color can match the leather or use a controlled contrast color for the collection.</span></div>
-                    <div class="product-detail-card"><strong>Stitching review</strong><span>Stitching density, thread color and seam alignment can be checked during sampling.</span></div>
-                    <div class="product-detail-card"><strong>Logo position</strong><span>Embossing, debossing, hot stamping or metal logo placement can be tested on sample.</span></div>
-                </div>
+                <ul class="custom-list">
+                    <li><strong>Leather &amp; color</strong> — matched to your brand direction</li>
+                    <li><strong>Logo method</strong> — embossing, hot stamping or metal logo</li>
+                    <li><strong>Stitching &amp; edge paint</strong> — thread and edge color aligned to the collection</li>
+                    <li><strong>Slot layout</strong> — card slots, bill pockets, optional ID window</li>
+                    <li><strong>Packaging</strong> — retail box, sleeve, hangtag or gift packaging</li>
+                    <li><strong>Sample revision</strong> — structure and finish refined after prototype feedback</li>
+                </ul>
             </div>
         </section>
 
         <section class="product-detail-section product-detail-section-alt">
             <div class="container">
                 <div class="product-detail-section-head">
-                    <span class="product-detail-kicker">OEM Options</span>
-                    <h2>Customization Options for Private-Label Orders</h2>
-                    <p>HASSION supports men's wallet development from first reference through sample confirmation and production planning.</p>
-                </div>
-                <div class="product-detail-grid">
-                    <div class="product-detail-card"><strong>Leather &amp; color</strong><span>Leather surface and color direction can be selected according to the buyer's brand brief.</span></div>
-                    <div class="product-detail-card"><strong>Logo method</strong><span>Embossing, debossing, hot stamping, metal logo or label applications can be reviewed on sample.</span></div>
-                    <div class="product-detail-card"><strong>Stitching &amp; edge paint</strong><span>Thread color, stitch spacing and edge paint can be aligned with the collection standard.</span></div>
-                    <div class="product-detail-card"><strong>Slot layout</strong><span>Card slot quantity, cash compartment and optional ID window can be refined before production.</span></div>
-                    <div class="product-detail-card"><strong>Packaging</strong><span>Retail box, paper sleeve, barcode label, hangtag or gift packaging can be developed for OEM programs.</span></div>
-                    <div class="product-detail-card"><strong>Sample revision</strong><span>Prototype feedback can be used to adjust thickness, structure, logo position and material feel.</span></div>
-                </div>
-            </div>
-        </section>
-
-        <section class="product-detail-section">
-            <div class="container">
-                <div class="product-detail-section-head">
                     <span class="product-detail-kicker">Buyer Brief</span>
-                    <h2>What to Send Us for a Faster Quote</h2>
-                    <p>A clear brief helps the team review feasibility, sampling details and production planning more quickly.</p>
+                    <h2>What to Send for a Faster Quote</h2>
                 </div>
                 <ul class="buyer-brief-list">
-                    <li>Reference photo or physical sample</li>
-                    <li>Target wallet size and structure</li>
-                    <li>Card slot and cash compartment requirements</li>
+                    <li>Reference photo or sample</li>
+                    <li>Target size and structure</li>
+                    <li>Card slot requirement</li>
                     <li>Logo file or branding requirement</li>
-                    <li>Leather / color direction</li>
-                    <li>Estimated order quantity</li>
+                    <li>Leather and color direction</li>
+                    <li>Estimated quantity</li>
                     <li>Packaging requirement</li>
-                    <li>Target market or retail price range, if available</li>
+                    <li>Target market or price range</li>
                 </ul>
             </div>
         </section>
@@ -147,8 +228,8 @@
             <div class="container product-detail-cta-inner">
                 <div>
                     <span class="product-detail-kicker">Men's Bifold Wallet OEM</span>
-                    <h2>Start a Men's Bifold Wallet OEM Project</h2>
-                    <p>Share your reference, logo file, target quantity and structure requirement. Our team can help review sampling details, material options and production feasibility.</p>
+                    <h2>Start Your Project</h2>
+                    <p>Share your reference, target quantity and logo requirement for a sampling quote.</p>
                 </div>
                 <a class="product-detail-button product-detail-button-light" href="../index.html?product=Men%27s%20Wallet#contact">Inquire About This Product</a>
             </div>
