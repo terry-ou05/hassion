@@ -3,13 +3,141 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Classic Black Long Wallet - OEM Long Wallet Development | HASSION Leather</title>
-    <meta name="description" content="Classic black leather long wallet reference for OEM and private-label development by HASSION Leather. Customize leather, lining, logo, stitching, hardware, card slots, organizer structure and packaging details.">
+    <title>Classic Black Long Wallet - OEM Men's Leather Wallet | HASSION Leather</title>
+    <meta name="description" content="Classic black men's long wallet reference for OEM leather wallet development by HASSION Leather. Review organizer structure, card slots, cash storage, logo method, lining and packaging details.">
     <link rel="icon" type="image/gif" href="../images/logo.gif">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="../style.css">
+    <!-- Local template styles - this page only (detail-page transition template) -->
+    <style>
+        @media (min-width: 981px) {
+            .product-detail-hero-grid {
+                grid-template-columns: minmax(0, 0.45fr) minmax(0, 0.55fr);
+                gap: 44px;
+            }
+        }
+        @media (max-width: 980px) {
+            .product-detail-media {
+                order: -1;
+            }
+        }
+        @media (min-width: 641px) and (max-width: 980px) {
+            .product-detail-media {
+                max-width: 560px;
+                margin: 0 auto;
+            }
+        }
+        .product-detail-media {
+            background: #F2E3CF;
+            border: none;
+            border-radius: 0;
+            padding: 0;
+        }
+        .product-detail-media img {
+            aspect-ratio: 1 / 1;
+            object-fit: contain;
+            padding: 18px;
+        }
+        .spec-rows {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            max-width: 880px;
+            border-top: 1px solid rgba(92, 45, 26, 0.14);
+        }
+        .spec-row {
+            display: grid;
+            grid-template-columns: 190px minmax(0, 1fr);
+            gap: 18px;
+            padding: 14px 0;
+            border-bottom: 1px solid rgba(92, 45, 26, 0.1);
+        }
+        .spec-row .spec-label {
+            color: rgba(92, 45, 26, 0.62);
+            font-size: 0.72rem;
+            letter-spacing: 0.14em;
+            line-height: 2;
+            text-transform: uppercase;
+        }
+        .spec-row .spec-value {
+            color: #463b33;
+            font-size: 0.95rem;
+            line-height: 1.6;
+        }
+        .sampling-gallery {
+            grid-template-columns: repeat(3, minmax(0, 1fr));
+            gap: 22px;
+        }
+        .sampling-gallery-item {
+            background: transparent;
+            border: none;
+            border-radius: 0;
+        }
+        .sampling-gallery-item img {
+            aspect-ratio: 1 / 1;
+            object-fit: contain;
+            padding: 18px;
+            background: #F2E3CF;
+        }
+        .sampling-gallery-item figcaption {
+            color: #6d625a;
+            font-size: 0.82rem;
+            letter-spacing: 0.02em;
+            padding: 12px 2px 0;
+        }
+        .custom-list {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            display: grid;
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+            gap: 0 56px;
+            max-width: 980px;
+            border-top: 1px solid rgba(92, 45, 26, 0.14);
+        }
+        .custom-list li {
+            border-bottom: 1px solid rgba(92, 45, 26, 0.1);
+            padding: 14px 0;
+            color: #463b33;
+            font-size: 0.95rem;
+            line-height: 1.6;
+        }
+        .custom-list li strong {
+            color: #5C2D1A;
+            font-weight: 600;
+        }
+        .buyer-brief-list {
+            gap: 0 56px;
+        }
+        .buyer-brief-list li {
+            background: transparent;
+            border: none;
+            border-radius: 0;
+            border-bottom: 1px solid rgba(92, 45, 26, 0.1);
+            padding: 12px 0;
+        }
+        @media (max-width: 980px) {
+            .sampling-gallery {
+                grid-template-columns: 1fr;
+            }
+        }
+        @media (max-width: 640px) {
+            .spec-row {
+                grid-template-columns: 1fr;
+                gap: 2px;
+                padding: 12px 0;
+            }
+            .custom-list {
+                grid-template-columns: 1fr;
+            }
+            .product-detail-media img,
+            .sampling-gallery-item img {
+                padding: 12px;
+            }
+        }
+    </style>
 </head>
 <body class="product-detail-page">
     <nav class="product-detail-nav">
@@ -23,22 +151,16 @@
         <section class="product-detail-hero">
             <div class="container product-detail-hero-grid">
                 <div class="product-detail-copy">
-                    <span class="product-detail-kicker">OEM Long Wallet Development</span>
+                    <span class="product-detail-kicker">OEM Men's Wallet Development</span>
                     <h1>Classic Black<br>Long Wallet</h1>
-                    <p class="product-detail-lead">A long wallet and organizer reference for private-label sampling, card-slot planning and leather customization.</p>
-                    <p>This page is prepared for OEM and private-label development, with details intended for structure review, material selection and sample discussion.</p>
-                    <div class="product-detail-tags" aria-label="Product highlights">
-                        <span>Long wallet structure</span>
-                        <span>Organizer card layout</span>
-                        <span>Private-label sampling</span>
-                    </div>
+                    <p class="product-detail-lead">A long-format men's wallet reference for OEM development, built around card organization, cash storage and private-label finishing.</p>
                     <div class="product-detail-actions">
                         <a class="product-detail-button" href="../index.html?product=Men%27s%20Wallet#contact">Inquire About This Product</a>
                         <a class="product-detail-text-link" href="../products/mens-wallets.html">Back to Men's Wallets</a>
                     </div>
                 </div>
                 <figure class="product-detail-media">
-                    <img src="../images/products/classic-black-long-wallet/hero.jpg" alt="Classic black leather long wallet reference for OEM development" width="750" height="750">
+                    <img src="../images/products/classic-black-long-wallet/hero.jpg" alt="Classic black leather long wallet exterior" width="750" height="750">
                 </figure>
             </div>
         </section>
@@ -47,107 +169,75 @@
             <div class="container">
                 <div class="product-detail-section-head">
                     <span class="product-detail-kicker">Quick Specs</span>
-                    <h2>Reference Details for Buyer Review</h2>
-                    <p>These references help start a sampling discussion. Final specifications can be adjusted depending on leather, lining, slot layout, logo method, hardware and order details.</p>
+                    <h2>Reference Details</h2>
                 </div>
-                <div class="spec-grid">
-                    <div class="product-detail-card"><strong>Product type</strong><span>Men's long wallet / organizer wallet</span></div>
-                    <div class="product-detail-card"><strong>Structure</strong><span>Long wallet structure with card slots, cash compartment and organizer storage</span></div>
-                    <div class="product-detail-card"><strong>Suitable for</strong><span>Retail collections, travel accessories, brand gifts and private-label programs</span></div>
-                    <div class="product-detail-card"><strong>Customizable parts</strong><span>Leather, lining, color, logo, stitching, edge paint, hardware, slot layout and packaging</span></div>
-                    <div class="product-detail-card"><strong>MOQ reference</strong><span>200 pcs, depending on material, structure and order details</span></div>
-                    <div class="product-detail-card"><strong>Sample reference</strong><span>Around 7 days after confirming material, structure and logo direction</span></div>
-                    <div class="product-detail-card"><strong>Production reference</strong><span>Around 30 days after sample approval and order confirmation</span></div>
-                </div>
+                <ul class="spec-rows">
+                    <li class="spec-row"><span class="spec-label">Product type</span><span class="spec-value">Men's long wallet / organizer wallet</span></li>
+                    <li class="spec-row"><span class="spec-label">Structure</span><span class="spec-value">Long-format wallet &middot; card slots &middot; cash and receipt storage</span></li>
+                    <li class="spec-row"><span class="spec-label">MOQ</span><span class="spec-value">200 pcs per style per color</span></li>
+                    <li class="spec-row"><span class="spec-label">Sample</span><span class="spec-value">Approx. 7 days</span></li>
+                    <li class="spec-row"><span class="spec-label">Production</span><span class="spec-value">Approx. 30 days after approval</span></li>
+                </ul>
             </div>
         </section>
 
         <section class="product-detail-section product-detail-section-alt">
             <div class="container">
                 <div class="product-detail-section-head">
-                    <span class="product-detail-kicker">Sampling Review</span>
-                    <h2>Reference Views for Sampling Review</h2>
-                    <p>Use these views to review long wallet proportion, card capacity, cash storage, interior organization, leather surface and possible logo placement before sample development.</p>
+                    <span class="product-detail-kicker">Reference Views</span>
+                    <h2>Structure &amp; Finish</h2>
                 </div>
                 <div class="sampling-gallery">
                     <figure class="sampling-gallery-item">
-                        <img src="../images/products/classic-black-long-wallet/open.jpg" alt="Open long wallet structure reference" width="750" height="750" loading="lazy">
-                        <figcaption>Open structure reference for reviewing organizer layout, cash compartment and internal spacing.</figcaption>
+                        <img src="../images/products/classic-black-long-wallet/open.jpg" alt="Black long wallet exterior with zipper pocket" width="750" height="750" loading="lazy">
+                        <figcaption>Zipper pocket profile</figcaption>
                     </figure>
                     <figure class="sampling-gallery-item">
-                        <img src="../images/products/classic-black-long-wallet/front-back.jpg" alt="Long wallet front and back reference" width="750" height="750" loading="lazy">
-                        <figcaption>Closed front and back reference for reviewing exterior proportion, panel finish and logo position.</figcaption>
+                        <img src="../images/products/classic-black-long-wallet/front-back.jpg" alt="Black long wallet front and back profile" width="750" height="750" loading="lazy">
+                        <figcaption>Front and back profile</figcaption>
                     </figure>
                     <figure class="sampling-gallery-item">
-                        <img src="../images/products/classic-black-long-wallet/detail-card-slots.jpg" alt="Long wallet card slot layout reference" width="750" height="750" loading="lazy">
-                        <figcaption>Card-slot detail for checking slot quantity, access angle, spacing and capacity before sampling.</figcaption>
-                    </figure>
-                    <figure class="sampling-gallery-item">
-                        <img src="../images/products/classic-black-long-wallet/detail-interior.jpg" alt="Long wallet interior organization reference" width="750" height="750" loading="lazy">
-                        <figcaption>Interior detail for reviewing receipt storage, lining direction and organizer usability.</figcaption>
-                    </figure>
-                    <figure class="sampling-gallery-item">
-                        <img src="../images/products/classic-black-long-wallet/angle.jpg" alt="Long wallet angled interior reference" width="750" height="750" loading="lazy">
-                        <figcaption>Angled interior reference for checking folded feel, thickness and leather surface presentation.</figcaption>
+                        <img src="../images/products/classic-black-long-wallet/angle.jpg" alt="Open black long wallet interior structure" width="750" height="750" loading="lazy">
+                        <figcaption>Interior storage detail</figcaption>
                     </figure>
                 </div>
-                <p class="product-detail-note">Additional logo-position, hardware, lining and packaging details can be prepared during sample discussion.</p>
             </div>
         </section>
 
         <section class="product-detail-section">
             <div class="container">
                 <div class="product-detail-section-head">
-                    <span class="product-detail-kicker">Structure Details</span>
-                    <h2>Long Wallet Details Buyers Usually Confirm</h2>
-                    <p>The structure can be refined around the buyer's brief, target market, storage requirement and sample feedback.</p>
+                    <span class="product-detail-kicker">Customization</span>
+                    <h2>Made to Your Brand</h2>
                 </div>
-                <div class="product-detail-grid">
-                    <div class="product-detail-card"><strong>Long wallet format</strong><span>Extended profile, folded thickness and panel proportion can be adjusted for organizer or travel use.</span></div>
-                    <div class="product-detail-card"><strong>Card slot layout</strong><span>Slot count, pocket depth and access angle can be reviewed before sample approval.</span></div>
-                    <div class="product-detail-card"><strong>Cash and receipt storage</strong><span>Cash compartment, receipt section and inner pocket width can be adapted for the target market.</span></div>
-                    <div class="product-detail-card"><strong>Phone or travel use</strong><span>Interior spacing can be reviewed when the buyer needs a larger organizer or travel wallet function.</span></div>
-                    <div class="product-detail-card"><strong>Stitching and edge finish</strong><span>Thread color, stitch spacing, edge paint and corner finishing can be checked during sampling.</span></div>
-                    <div class="product-detail-card"><strong>Logo position</strong><span>Embossing, debossing, hot stamping, metal logo or label placement can be tested on sample.</span></div>
-                </div>
+                <ul class="custom-list">
+                    <li><strong>Leather &amp; color</strong> - black, brown or buyer-selected leather direction</li>
+                    <li><strong>Logo method</strong> - embossing, hot stamping, metal logo or label</li>
+                    <li><strong>Stitching</strong> - thread color and stitch spacing matched to sample</li>
+                    <li><strong>Edge paint</strong> - edge color and corner finish aligned to the brief</li>
+                    <li><strong>Interior layout</strong> - card slots, cash sections, ID window or zipper pocket</li>
+                    <li><strong>Packaging</strong> - retail box, sleeve, hangtag or export packing</li>
+                </ul>
             </div>
         </section>
 
         <section class="product-detail-section product-detail-section-alt">
             <div class="container">
                 <div class="product-detail-section-head">
-                    <span class="product-detail-kicker">OEM Options</span>
-                    <h2>Customization Options for Private-Label Orders</h2>
-                    <p>HASSION supports long wallet development from first reference through sample confirmation and production planning.</p>
-                </div>
-                <div class="product-detail-grid">
-                    <div class="product-detail-card"><strong>Leather and color</strong><span>Leather surface, color direction and hand feel can be selected according to the buyer's brand brief.</span></div>
-                    <div class="product-detail-card"><strong>Lining direction</strong><span>Interior lining, pocket backing and organizer sections can be adjusted during sample review.</span></div>
-                    <div class="product-detail-card"><strong>Logo method</strong><span>Embossing, debossing, hot stamping, metal logo or label applications can be reviewed on sample.</span></div>
-                    <div class="product-detail-card"><strong>Hardware option</strong><span>Zipper, puller, snap, metal logo or other hardware details can be selected when required by the design.</span></div>
-                    <div class="product-detail-card"><strong>Slot and pocket layout</strong><span>Card slot quantity, cash compartment, receipt pocket and optional phone space can be refined before production.</span></div>
-                    <div class="product-detail-card"><strong>Packaging</strong><span>Retail box, paper sleeve, barcode label, hangtag or gift packaging can be developed for OEM programs.</span></div>
-                </div>
-            </div>
-        </section>
-
-        <section class="product-detail-section">
-            <div class="container">
-                <div class="product-detail-section-head">
                     <span class="product-detail-kicker">Buyer Brief</span>
-                    <h2>What to Send Us for a Faster Quote</h2>
-                    <p>A clear brief helps the team review feasibility, sampling details and production planning more quickly.</p>
+                    <h2>What to Send for a Faster Quote</h2>
                 </div>
                 <ul class="buyer-brief-list">
-                    <li>Reference photo or physical sample</li>
-                    <li>Target wallet size and folded thickness</li>
-                    <li>Card slot, cash compartment and organizer storage requirements</li>
-                    <li>Phone, receipt or travel-use requirement, if needed</li>
-                    <li>Logo file or branding requirement</li>
-                    <li>Leather, lining and color direction</li>
-                    <li>Hardware and packaging requirement</li>
-                    <li>Estimated order quantity</li>
-                    <li>Target market or retail price range, if available</li>
+                    <li>Target market</li>
+                    <li>Wallet size and folded thickness</li>
+                    <li>Card slot quantity</li>
+                    <li>Cash or receipt storage needs</li>
+                    <li>Zipper pocket or ID window requirement</li>
+                    <li>Leather color direction</li>
+                    <li>Logo method and logo file</li>
+                    <li>Packaging requirement</li>
+                    <li>Estimated quantity</li>
+                    <li>Reference photo or sketch</li>
                 </ul>
             </div>
         </section>
@@ -155,9 +245,9 @@
         <section class="product-detail-cta">
             <div class="container product-detail-cta-inner">
                 <div>
-                    <span class="product-detail-kicker">Long Wallet OEM</span>
-                    <h2>Start a Long Wallet OEM Project</h2>
-                    <p>Share your reference, logo file, target quantity, leather direction and organizer structure requirement. Our team can help review sampling details, material options and production feasibility.</p>
+                    <span class="product-detail-kicker">Men's Wallet OEM</span>
+                    <h2>Start Your Project</h2>
+                    <p>Share your reference, quantity, logo method and structure needs for a practical sampling quote.</p>
                 </div>
                 <a class="product-detail-button product-detail-button-light" href="../index.html?product=Men%27s%20Wallet#contact">Inquire About This Product</a>
             </div>
